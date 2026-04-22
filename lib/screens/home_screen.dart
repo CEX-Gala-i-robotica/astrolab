@@ -6,7 +6,8 @@ import '../widgets/features_section.dart';
 import '../widgets/how_it_works_section.dart';
 import '../widgets/about_section.dart';
 import '../widgets/footer_section.dart';
-import '../widgets/floating_particles.dart';
+import '../widgets/cosmic_background.dart';
+import 'auth_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,54 +17,104 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final ScrollController _scrollController = ScrollController();
+  final ScrollController _scroll = ScrollController();
+  final _heroKey     = GlobalKey<HeroSectionState>();
+  final _featuresKey = GlobalKey();
+  final _aboutKey    = GlobalKey();
+
+  @override
+  void initState() {
+    super.initState();
+    _scroll.addListener(_onScroll);
+  }
+
+  void _onScroll() {
+    // Notifică HeroSection să ascundă/arate scroll hint
+    _heroKey.currentState?.onScroll(_scroll.offset);
+  }
 
   @override
   void dispose() {
-    _scrollController.dispose();
+    _scroll.removeListener(_onScroll);
+    _scroll.dispose();
     super.dispose();
   }
 
-  double _navHorizontalPadding(double width) {
-    if (width < 768) return 20;
-    if (width < 1024) return 48;
-    return 80;
+  void _handleNavigate(String section) {
+    switch (section) {
+      case 'login':
+        Navigator.of(context).push(PageRouteBuilder(
+          pageBuilder: (_, __, ___) => const AuthScreen(),
+          transitionsBuilder: (_, anim, __, child) =>
+              FadeTransition(opacity: anim, child: child),
+          transitionDuration: const Duration(milliseconds: 300),
+        ));
+        break;
+      case 'hero':
+        _scrollTo(_heroKey);
+        break;
+      case 'features':
+        _scrollTo(_featuresKey);
+        break;
+      case 'about':
+        _scrollTo(_aboutKey);
+        break;
+    }
+  }
+
+  void _scrollTo(GlobalKey key) {
+    final ctx = key.currentContext;
+    if (ctx == null) return;
+    Scrollable.ensureVisible(ctx,
+        duration: const Duration(milliseconds: 700),
+        curve: Curves.easeInOutCubic);
+  }
+
+  double _navPad(double w) {
+    if (w < 600) return 16;
+    if (w < 1024) return 40;
+    return 72;
   }
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
-    final hPad = _navHorizontalPadding(width);
+    final w    = MediaQuery.sizeOf(context).width;
+    final hPad = _navPad(w);
 
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Stack(
-        clipBehavior: Clip.none,
         children: [
-          const FloatingParticles(),
+          // Fundal cosmic animat — acoperă toată pagina
+          const CosmicBackground(),
+          // Conținut scrollabil
           CustomScrollView(
-            controller: _scrollController,
+            controller: _scroll,
             slivers: [
               SliverToBoxAdapter(
                 child: Column(
-                  children: const [
-                    HeroSection(),
-                    FeaturesSection(),
-                    HowItWorksSection(),
-                    AboutSection(),
-                    FooterSection(),
+                  children: [
+                    HeroSection(key: _heroKey, onNavigate: _handleNavigate),
+                    FeaturesSection(key: _featuresKey, onNavigate: _handleNavigate),
+                    HowItWorksSection(onNavigate: _handleNavigate),
+                    AboutSection(key: _aboutKey, onNavigate: _handleNavigate),
+                    FooterSection(onNavigate: _handleNavigate),
                   ],
                 ),
               ),
             ],
           ),
+          // Navbar floating
           Positioned(
             top: 0, left: 0, right: 0,
             child: SafeArea(
               bottom: false,
               child: Padding(
                 padding: EdgeInsets.fromLTRB(hPad, 10, hPad, 0),
-                child: Navbar(scrollController: _scrollController),
+                child: Navbar(
+                  scrollController: _scroll,
+                  onNavigate: _handleNavigate,
+                ),
               ),
             ),
           ),

@@ -1,70 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:astrolab/theme/app_theme.dart';
+import 'glowing_button.dart';
 
 class HowItWorksSection extends StatelessWidget {
-  const HowItWorksSection({super.key});
+  final void Function(String) onNavigate;
+  const HowItWorksSection({super.key, required this.onNavigate});
 
   static const List<Map<String, String>> _steps = [
-    {
-      'number': '01',
-      'title': 'Creează cont',
-      'desc': 'Înregistrare rapidă — email, Google sau Apple. Fără abonamente ascunse.',
-    },
-    {
-      'number': '02',
-      'title': 'Alege traseul tău',
-      'desc': 'Sistem solar, stele, cosmologie sau astrofizică avansată. Tu decizi.',
-    },
-    {
-      'number': '03',
-      'title': 'Completează lecții',
-      'desc': 'Lecții scurte, simulări interactive și provocări după fiecare capitol.',
-    },
-    {
-      'number': '04',
-      'title': 'Urmărește progresul',
-      'desc': 'Dashboard personal cu statistici detaliate, insigne câștigate și obiective.',
-    },
+    {'number': '01', 'title': 'Creează cont',       'desc': 'Înregistrare rapidă cu email, Google sau Apple. Gratuit și fără abonamente ascunse.'},
+    {'number': '02', 'title': 'Alege traseul',      'desc': 'Sistem solar, stele, cosmologie sau astrofizică avansată. Tu decizi de unde începi.'},
+    {'number': '03', 'title': 'Completează lecții', 'desc': 'Lecții scurte, simulări interactive și provocări după fiecare capitol.'},
+    {'number': '04', 'title': 'Urmărește progresul','desc': 'Dashboard personal cu statistici detaliate, insigne câștigate și obiective viitoare.'},
   ];
 
   @override
   Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < 768;
+    final w = MediaQuery.sizeOf(context).width;
+    final isMobile = w < 600;
+    final hPad = isMobile ? 20.0 : (w < 1024 ? 48.0 : 80.0);
 
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? 24 : 80,
-        vertical: 100,
-      ),
-      color: AppColors.background,
+      color: Colors.transparent,
+      padding: EdgeInsets.symmetric(horizontal: hPad, vertical: 96),
       child: Column(
         children: [
-          Text(
-            'CUM FUNCȚIONEAZĂ',
-            style: TextStyle(
-              fontSize: 11,
-              letterSpacing: 4,
-              color: AppColors.primary,
-              fontWeight: FontWeight.w600,
-            ),
+          const Text('CUM FUNCȚIONEAZĂ',
+              style: TextStyle(
+                  fontSize: 10, letterSpacing: 4,
+                  color: AppColors.primary, fontWeight: FontWeight.w600)),
+          const SizedBox(height: 14),
+          const Text('4 pași simpli spre stele',
+              style: AppTextStyles.sectionTitle,
+              textAlign: TextAlign.center),
+          const SizedBox(height: 60),
+          isMobile ? _vertical() : _horizontal(),
+          const SizedBox(height: 56),
+          GlowingButton(
+            label: 'Intră în platformă',
+            onPressed: () => onNavigate('login'),
+            icon: Icons.rocket_launch_rounded,
           ),
-          const SizedBox(height: 16),
-          const Text(
-            '4 pași simpli spre\nstele',
-            style: AppTextStyles.sectionTitle,
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 64),
-          isMobile
-              ? _buildVertical()
-              : _buildHorizontal(),
         ],
       ),
     );
   }
 
-  Widget _buildHorizontal() {
+  Widget _horizontal() {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: List.generate(_steps.length * 2 - 1, (i) {
@@ -78,7 +60,7 @@ class HowItWorksSection extends StatelessWidget {
                   gradient: LinearGradient(
                     colors: [
                       AppColors.primary.withOpacity(0.4),
-                      AppColors.primary.withOpacity(0.1),
+                      AppColors.primary.withOpacity(0.08),
                     ],
                   ),
                 ),
@@ -94,15 +76,14 @@ class HowItWorksSection extends StatelessWidget {
     );
   }
 
-  Widget _buildVertical() {
+  Widget _vertical() {
     return Column(
-      children: _steps.map((step) {
-        final isLast = step == _steps.last;
+      children: List.generate(_steps.length, (i) {
+        final isLast = i == _steps.length - 1;
         return Column(
           children: [
-            _StepCard(data: step, horizontal: true),
-            if (!isLast) ...[
-              const SizedBox(height: 0),
+            _StepCard(data: _steps[i], horizontal: true),
+            if (!isLast)
               Container(
                 width: 1,
                 height: 40,
@@ -113,15 +94,14 @@ class HowItWorksSection extends StatelessWidget {
                     end: Alignment.bottomCenter,
                     colors: [
                       AppColors.primary.withOpacity(0.5),
-                      AppColors.primary.withOpacity(0.1),
+                      AppColors.primary.withOpacity(0.08),
                     ],
                   ),
                 ),
               ),
-            ],
           ],
         );
-      }).toList(),
+      }),
     );
   }
 }
@@ -129,7 +109,6 @@ class HowItWorksSection extends StatelessWidget {
 class _StepCard extends StatelessWidget {
   final Map<String, String> data;
   final bool horizontal;
-
   const _StepCard({required this.data, this.horizontal = false});
 
   @override
@@ -137,62 +116,42 @@ class _StepCard extends StatelessWidget {
     if (horizontal) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildNumber(),
-          const SizedBox(width: 20),
-          Expanded(child: _buildText()),
-        ],
+        children: [_numBox(), const SizedBox(width: 18), Expanded(child: _text())],
       );
     }
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _buildNumber(),
-        const SizedBox(height: 20),
-        _buildText(),
-      ],
+      children: [_numBox(), const SizedBox(height: 18), _text()],
     );
   }
 
-  Widget _buildNumber() {
-    return Container(
-      width: 56,
-      height: 56,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        gradient: LinearGradient(
-          colors: [
-            AppColors.primary.withOpacity(0.2),
-            AppColors.primary.withOpacity(0.05),
-          ],
-        ),
-        border: Border.all(
-          color: AppColors.primary.withOpacity(0.3),
-          width: 1,
-        ),
-      ),
-      child: Center(
-        child: Text(
-          data['number']!,
+  Widget _numBox() => Container(
+    width: 56,
+    height: 56,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(16),
+      gradient: LinearGradient(colors: [
+        AppColors.primary.withOpacity(0.2),
+        AppColors.primary.withOpacity(0.05),
+      ]),
+      border: Border.all(
+          color: AppColors.primary.withOpacity(0.3), width: 1),
+    ),
+    child: Center(
+      child: Text(data['number']!,
           style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w800,
-            color: AppColors.primary,
-          ),
-        ),
-      ),
-    );
-  }
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: AppColors.primary)),
+    ),
+  );
 
-  Widget _buildText() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(data['title']!, style: AppTextStyles.cardTitle),
-        const SizedBox(height: 8),
-        Text(data['desc']!, style: AppTextStyles.cardBody),
-      ],
-    );
-  }
+  Widget _text() => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Text(data['title']!, style: AppTextStyles.cardTitle),
+      const SizedBox(height: 6),
+      Text(data['desc']!, style: AppTextStyles.cardBody),
+    ],
+  );
 }
