@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "number": 1,
+  "title": "Astronomia pentru toți - Test final",
+  "quiz": [
+    {
+      "question": "Ce studiază astronomia?",
+      "options": [
+        { "label": "a", "text": "Structura internă a Pământului" },
+        { "label": "b", "text": "Mișcarea, structura, originea și evoluția corpurilor cerești" },
+        { "label": "c", "text": "Compoziția chimică a atmosferei" },
+        { "label": "d", "text": "Fenomenele meteorologice" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este astrofizica?",
+      "options": [
+        { "label": "a", "text": "Știința care studiază mișcarea corpurilor cerești" },
+        { "label": "b", "text": "Ramură a astronomiei care studiază structura, proprietățile fizice și compoziția chimică a corpurilor cerești" },
+        { "label": "c", "text": "Știința care se ocupă cu fabricarea telescoapelor" },
+        { "label": "d", "text": "Ramură a fizicii care studiază atomii" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este cea mai apropiată planetă față de Soare?",
+      "options": [
+        { "label": "a", "text": "Venus" },
+        { "label": "b", "text": "Mercur" },
+        { "label": "c", "text": "Marte" },
+        { "label": "d", "text": "Terra" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este cea mai apropiată stea față de Pământ?",
+      "options": [
+        { "label": "a", "text": "Sirius" },
+        { "label": "b", "text": "Alpha Centauri" },
+        { "label": "c", "text": "Soarele" },
+        { "label": "d", "text": "Vega" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este cea mai mare planetă din Sistemul Solar?",
+      "options": [
+        { "label": "a", "text": "Saturn" },
+        { "label": "b", "text": "Jupiter" },
+        { "label": "c", "text": "Uranus" },
+        { "label": "d", "text": "Neptun" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este un asteroid?",
+      "options": [
+        { "label": "a", "text": "Corp din rocă sau metale, mai mic decât o planetă, care orbitează Soarele" },
+        { "label": "b", "text": "Satelit natural al lui Jupiter" },
+        { "label": "c", "text": "Corp ceresc gazos mai mare decât o planetă" },
+        { "label": "d", "text": "Cometă fără coadă" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Cum mai este numită o cometă?",
+      "options": [
+        { "label": "a", "text": "Stea cu coadă" },
+        { "label": "b", "text": "Stea căzătoare" },
+        { "label": "c", "text": "Planetă pitică" },
+        { "label": "d", "text": "Asteroid luminos" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care este viteza luminii?",
+      "options": [
+        { "label": "a", "text": "150 000 km/s" },
+        { "label": "b", "text": "300 000 km/s" },
+        { "label": "c", "text": "500 000 km/s" },
+        { "label": "d", "text": "1 000 000 km/s" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "La ce este egală o unitate astronomică (UA)?",
+      "options": [
+        { "label": "a", "text": "Distanța de la Pământ la Lună" },
+        { "label": "b", "text": "Distanța medie Pământ–Soare" },
+        { "label": "c", "text": "Distanța de la Soare la Jupiter" },
+        { "label": "d", "text": "Un an-lumină" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este „Calea Lactee”?",
+      "options": [
+        { "label": "a", "text": "Un sistem solar vecin" },
+        { "label": "b", "text": "Bandă luminoasă formată din multe stele, vizibilă pe cer în nopțile senine" },
+        { "label": "c", "text": "O nebuloasă" },
+        { "label": "d", "text": "Un grup de planete" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Unde se află centura principală de asteroizi?",
+      "options": [
+        { "label": "a", "text": "La limita Sistemului Solar" },
+        { "label": "b", "text": "Între Marte și Jupiter" },
+        { "label": "c", "text": "Între Pământ și Soare" },
+        { "label": "d", "text": "Între Jupiter și Saturn" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este Pluto?",
+      "options": [
+        { "label": "a", "text": "Planetă telurică" },
+        { "label": "b", "text": "Planetă pitică" },
+        { "label": "c", "text": "Asteroid" },
+        { "label": "d", "text": "Satelit natural al lui Neptun" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce tip de planetă este Jupiter?",
+      "options": [
+        { "label": "a", "text": "Telurică" },
+        { "label": "b", "text": "Interioară" },
+        { "label": "c", "text": "Exterioară (gigantă gazoasă)" },
+        { "label": "d", "text": "Pitică" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "De unde provin majoritatea cometelor din Sistemul Solar?",
+      "options": [
+        { "label": "a", "text": "Din centura de asteroizi" },
+        { "label": "b", "text": "Din centura lui Kuiper" },
+        { "label": "c", "text": "Din Norul lui Oort" },
+        { "label": "d", "text": "Din spațiul interstelar" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce procent din suprafața Pământului este acoperit de apă?",
+      "options": [
+        { "label": "a", "text": "1/2" },
+        { "label": "b", "text": "2/3" },
+        { "label": "c", "text": "3/4" },
+        { "label": "d", "text": "4/5" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care componentă a interiorului Pământului produce câmpul magnetic terestru?",
+      "options": [
+        { "label": "a", "text": "Mantaua" },
+        { "label": "b", "text": "Scoarța" },
+        { "label": "c", "text": "Nucleul exterior (fier și nichel fluid)" },
+        { "label": "d", "text": "Astenosfera" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este compoziția procentuală a atmosferei Pământului?",
+      "options": [
+        { "label": "a", "text": "78% azot, 21% oxigen, 1% alte gaze" },
+        { "label": "b", "text": "21% azot, 78% oxigen, 1% argon" },
+        { "label": "c", "text": "95% dioxid de carbon, 5% azot" },
+        { "label": "d", "text": "50% oxigen, 50% hidrogen" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care strat atmosferic conține stratul de ozon?",
+      "options": [
+        { "label": "a", "text": "Troposfera" },
+        { "label": "b", "text": "Stratosfera" },
+        { "label": "c", "text": "Mezosfera" },
+        { "label": "d", "text": "Ionosfera" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Cum se numește punctul de pe orbita Pământului cel mai apropiat de Soare?",
+      "options": [
+        { "label": "a", "text": "Afeliu" },
+        { "label": "b", "text": "Periheliu" },
+        { "label": "c", "text": "Apogeu" },
+        { "label": "d", "text": "Perigeu" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este originea probabilă a Lunii?",
+      "options": [
+        { "label": "a", "text": "S-a format independent în același timp cu Pământul" },
+        { "label": "b", "text": "A fost capturată de câmpul gravitațional al Pământului" },
+        { "label": "c", "text": "S-a format în urma ciocnirii unui corp uriaș cu Pământul" },
+        { "label": "d", "text": "Este un fragment desprins de pe Marte" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este perioada sinodică a Lunii (repetarea fazelor)?",
+      "options": [
+        { "label": "a", "text": "27,3 zile" },
+        { "label": "b", "text": "29,5 zile" },
+        { "label": "c", "text": "24 de ore" },
+        { "label": "d", "text": "365,25 zile" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "În ce fază a Lunii poate avea loc o eclipsă de Lună?",
+      "options": [
+        { "label": "a", "text": "Luna Nouă" },
+        { "label": "b", "text": "Primul Pătrar" },
+        { "label": "c", "text": "Luna Plină" },
+        { "label": "d", "text": "Ultimul Pătrar" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce este o eclipsă de Soare?",
+      "options": [
+        { "label": "a", "text": "Trecerea Lunii prin conul de umbră al Pământului" },
+        { "label": "b", "text": "Ocultația Soarelui de către Lună" },
+        { "label": "c", "text": "Ascunderea Lunii în spatele Pământului" },
+        { "label": "d", "text": "Trecerea Pământului între Soare și Lună" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este o constelație?",
+      "options": [
+        { "label": "a", "text": "O grupare arbitrară de stele din aceeași regiune a cerului" },
+        { "label": "b", "text": "O configurație de stele strălucitoare, ușor de recunoscut" },
+        { "label": "c", "text": "Un grup de galaxii" },
+        { "label": "d", "text": "O stea variabilă" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Câte constelații sunt recunoscute oficial de UAI?",
+      "options": [
+        { "label": "a", "text": "48" },
+        { "label": "b", "text": "88" },
+        { "label": "c", "text": "110" },
+        { "label": "d", "text": "12" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Câte constelații zodiacale sunt în împărțirea tradițională?",
+      "options": [
+        { "label": "a", "text": "12" },
+        { "label": "b", "text": "13" },
+        { "label": "c", "text": "10" },
+        { "label": "d", "text": "15" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Ce reprezintă notația „α Orionis”?",
+      "options": [
+        { "label": "a", "text": "Cea mai puțin strălucitoare stea din Orion" },
+        { "label": "b", "text": "Cea mai strălucitoare stea din Orion" },
+        { "label": "c", "text": "O stea variabilă" },
+        { "label": "d", "text": "Numărul Flamsteed" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care planetă are rotație retrogradă?",
+      "options": [
+        { "label": "a", "text": "Marte" },
+        { "label": "b", "text": "Mercur" },
+        { "label": "c", "text": "Venus" },
+        { "label": "d", "text": "Uranus" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Cum se numește cel mai înalt vulcan din Sistemul solar?",
+      "options": [
+        { "label": "a", "text": "Arsia Mons" },
+        { "label": "b", "text": "Pavonis Mons" },
+        { "label": "c", "text": "Ascraeus Mons" },
+        { "label": "d", "text": "Olympus Mons" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "question": "Ce sunt petele solare?",
+      "options": [
+        { "label": "a", "text": "Zone mai reci pe suprafața Soarelui" },
+        { "label": "b", "text": "Cratere de impact" },
+        { "label": "c", "text": "Jeturi de plasmă" },
+        { "label": "d", "text": "Regiuni fără câmp magnetic" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care satelit al lui Jupiter are un ocean de apă lichidă sub gheață?",
+      "options": [
+        { "label": "a", "text": "Io" },
+        { "label": "b", "text": "Ganymede" },
+        { "label": "c", "text": "Europa" },
+        { "label": "d", "text": "Callisto" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce planetă este denumită „planeta răsturnată”?",
+      "options": [
+        { "label": "a", "text": "Neptun" },
+        { "label": "b", "text": "Uranus" },
+        { "label": "c", "text": "Saturn" },
+        { "label": "d", "text": "Pluto" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este componenta principală a atmosferei lui Venus?",
+      "options": [
+        { "label": "a", "text": "Azot" },
+        { "label": "b", "text": "Oxigen" },
+        { "label": "c", "text": "Dioxid de carbon" },
+        { "label": "d", "text": "Metan" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce este vântul solar?",
+      "options": [
+        { "label": "a", "text": "Flux constant de particule din coroana solară" },
+        { "label": "b", "text": "Furtună magnetică" },
+        { "label": "c", "text": "Curenți de gaz din zona convectivă" },
+        { "label": "d", "text": "Radiație X" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Câți sateliți naturali are Jupiter?",
+      "options": [
+        { "label": "a", "text": "48" },
+        { "label": "b", "text": "64" },
+        { "label": "c", "text": "27" },
+        { "label": "d", "text": "13" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care planetă telurică are cea mai mare densitate?",
+      "options": [
+        { "label": "a", "text": "Marte" },
+        { "label": "b", "text": "Venus" },
+        { "label": "c", "text": "Pământ" },
+        { "label": "d", "text": "Mercur" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "question": "Cum se numește cel mai mare crater de pe Marte?",
+      "options": [
+        { "label": "a", "text": "Mare Caloris" },
+        { "label": "b", "text": "Mead" },
+        { "label": "c", "text": "Hellas Planitia" },
+        { "label": "d", "text": "Vaalhalla" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care satelit al lui Saturn are atmosferă densă de metan?",
+      "options": [
+        { "label": "a", "text": "Enceladus" },
+        { "label": "b", "text": "Mimas" },
+        { "label": "c", "text": "Hyperion" },
+        { "label": "d", "text": "Titan" }
+      ],
+      "correct_index": 3
+    },
+    {
+      "question": "Cine a descoperit Uranus?",
+      "options": [
+        { "label": "a", "text": "Galileo Galilei" },
+        { "label": "b", "text": "Giovanni Cassini" },
+        { "label": "c", "text": "William Herschel" },
+        { "label": "d", "text": "Johannes Kepler" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este temperatura medie la suprafața lui Venus?",
+      "options": [
+        { "label": "a", "text": "-63 °C" },
+        { "label": "b", "text": "-121 °C" },
+        { "label": "c", "text": "+480 °C" },
+        { "label": "d", "text": "+430 °C" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce este Marea Pată Roșie pe Jupiter?",
+      "options": [
+        { "label": "a", "text": "O zonă vulcanică" },
+        { "label": "b", "text": "O furtună gigantică" },
+        { "label": "c", "text": "O regiune magnetică" },
+        { "label": "d", "text": "Un crater de impact" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care planetă are inele vizibile cu ochiul liber?",
+      "options": [
+        { "label": "a", "text": "Jupiter" },
+        { "label": "b", "text": "Uranus" },
+        { "label": "c", "text": "Saturn" },
+        { "label": "d", "text": "Neptun" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este cea mai îndepărtată planetă de Soare?",
+      "options": [
+        { "label": "a", "text": "Neptun" },
+        { "label": "b", "text": "Uranus" },
+        { "label": "c", "text": "Saturn" },
+        { "label": "d", "text": "Pluto" }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care este cel mai mare satelit planetar din Sistemul solar?",
+      "options": [
+        { "label": "a", "text": "Titan" },
+        { "label": "b", "text": "Ganymede" },
+        { "label": "c", "text": "Callisto" },
+        { "label": "d", "text": "Luna" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce provoacă anotimpurile pe Marte?",
+      "options": [
+        { "label": "a", "text": "Distanța variabilă față de Soare" },
+        { "label": "b", "text": "Înclinarea axei de rotație" },
+        { "label": "c", "text": "Prezența calotelor polare" },
+        { "label": "d", "text": "Activitatea vulcanică" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care asteroid a fost reclasificat drept planetă pitică?",
+      "options": [
+        { "label": "a", "text": "4 Vesta" },
+        { "label": "b", "text": "2 Pallas" },
+        { "label": "c", "text": "1 Ceres" },
+        { "label": "d", "text": "3 Juno" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce procent din asteroizii centurii principale sunt de tip C (carbon)?",
+      "options": [
+        { "label": "a", "text": "15%" },
+        { "label": "b", "text": "75%" },
+        { "label": "c", "text": "50%" },
+        { "label": "d", "text": "90%" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este Norul lui Oort?",
+      "options": [
+        { "label": "a", "text": "Centură de asteroizi între Marte și Jupiter" },
+        { "label": "b", "text": "Halo sferic de nuclee cometare la marginea Sistemului Solar" },
+        { "label": "c", "text": "Disc de gheață în jurul lui Saturn" },
+        { "label": "d", "text": "Grup de planete pitice" }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Cometa Halley are o perioadă orbitală de aproximativ:",
+      "options": [
+        { "label": "a", "text": "3,3 ani" },
+        { "label": "b", "text": "33 ani" },
+        { "label": "c", "text": "76 ani" },
+        { "label": "d", "text": "2320 ani" }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Care este diferența dintre meteor și meteorit?",
+      "options": [
+        { "label": "a", "text": "Meteorul este mai mare" },
+        { "label": "b", "text": "Meteorul este dâra luminoasă, meteoritul este fragmentul căzut pe Pământ" },
+        { "label": "c", "text": "Sunt sinonime" },
+        { "label": "d", "text": "Meteoritul este o cometă" }
+      ],
+      "correct_index": 1
+    }
+  ]
+}

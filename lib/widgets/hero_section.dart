@@ -25,17 +25,25 @@ class HeroSectionState extends State<HeroSection>
   @override
   void initState() {
     super.initState();
-    _fadeCtrl = AnimationController(vsync: this, duration: const Duration(milliseconds: 900));
-    _planetCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 50))..repeat();
-    _pulseCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 3))..repeat(reverse: true);
-    _orbitCtrl = AnimationController(vsync: this, duration: const Duration(seconds: 18))..repeat();
+    _fadeCtrl = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 900));
+    _planetCtrl =
+    AnimationController(vsync: this, duration: const Duration(seconds: 50))
+      ..repeat();
+    _pulseCtrl =
+    AnimationController(vsync: this, duration: const Duration(seconds: 3))
+      ..repeat(reverse: true);
+    _orbitCtrl =
+    AnimationController(vsync: this, duration: const Duration(seconds: 18))
+      ..repeat();
 
-    _fadeAnim = CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOutCubic);
+    _fadeAnim =
+        CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOutCubic);
     _slideAnim = Tween<double>(begin: 36, end: 0).animate(
         CurvedAnimation(parent: _fadeCtrl, curve: Curves.easeOutCubic));
 
-    Future.delayed(const Duration(milliseconds: 150),
-            () { if (mounted) _fadeCtrl.forward(); });
+    Future.delayed(
+        const Duration(milliseconds: 150), () { if (mounted) _fadeCtrl.forward(); });
   }
 
   @override
@@ -75,9 +83,9 @@ class HeroSectionState extends State<HeroSection>
             AnimatedOpacity(
               opacity: _showScrollHint ? 1.0 : 0.0,
               duration: const Duration(milliseconds: 400),
-              child: Align(
+              child: const Align(
                 alignment: Alignment(0, 0.85),
-                child: _scrollHint(),
+                child: _ScrollHintWidget(),
               ),
             ),
         ],
@@ -130,7 +138,9 @@ class HeroSectionState extends State<HeroSection>
                     height: pR * 0.52,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(pR),
-                      border: Border.all(color: AppColors.secondary.withOpacity(0.22), width: 1.2),
+                      border: Border.all(
+                          color: AppColors.secondary.withOpacity(0.22),
+                          width: 1.2),
                     ),
                   ),
                 ),
@@ -145,7 +155,9 @@ class HeroSectionState extends State<HeroSection>
                     height: pR * 0.40,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(pR),
-                      border: Border.all(color: AppColors.primary.withOpacity(0.13), width: 0.8),
+                      border: Border.all(
+                          color: AppColors.primary.withOpacity(0.13),
+                          width: 0.8),
                     ),
                   ),
                 ),
@@ -156,15 +168,16 @@ class HeroSectionState extends State<HeroSection>
                 child: SizedBox(
                   width: pR * 2.76,
                   height: pR * 2.76,
-                  child: CustomPaint(painter: _MoonPainter(
-                    angle: orbitAngle,
-                    moonR: pR * 0.105,
-                    orbitRx: pR * 1.35,
-                    orbitRy: pR * 0.32,
-                    tilt: -0.22,
-                    color: AppColors.light,
-                    glowColor: AppColors.secondary,
-                  )),
+                  child: CustomPaint(
+                      painter: _MoonPainter(
+                        angle: orbitAngle,
+                        moonR: pR * 0.105,
+                        orbitRx: pR * 1.35,
+                        orbitRy: pR * 0.32,
+                        tilt: -0.22,
+                        color: AppColors.light,
+                        glowColor: AppColors.secondary,
+                      )),
                 ),
               ),
               Positioned(
@@ -173,15 +186,16 @@ class HeroSectionState extends State<HeroSection>
                 child: SizedBox(
                   width: pR * 2.20,
                   height: pR * 2.20,
-                  child: CustomPaint(painter: _MoonPainter(
-                    angle: -orbitAngle * 0.65 + pi * 0.7,
-                    moonR: pR * 0.072,
-                    orbitRx: pR * 1.07,
-                    orbitRy: pR * 0.25,
-                    tilt: -0.22,
-                    color: AppColors.secondary,
-                    glowColor: AppColors.primary,
-                  )),
+                  child: CustomPaint(
+                      painter: _MoonPainter(
+                        angle: -orbitAngle * 0.65 + pi * 0.7,
+                        moonR: pR * 0.072,
+                        orbitRx: pR * 1.07,
+                        orbitRy: pR * 0.25,
+                        tilt: -0.22,
+                        color: AppColors.secondary,
+                        glowColor: AppColors.primary,
+                      )),
                 ),
               ),
               Positioned(
@@ -204,13 +218,18 @@ class HeroSectionState extends State<HeroSection>
                       ],
                       stops: [0.0, 0.25, 0.55, 0.80, 1.0],
                     ),
-                    boxShadow: [BoxShadow(
-                      color: AppColors.primary.withOpacity(0.28 + 0.10 * sin(_pulseCtrl.value * pi)),
-                      blurRadius: pR * 0.5,
-                      spreadRadius: pR * 0.03,
-                    )],
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.primary.withOpacity(
+                            0.28 + 0.10 * sin(_pulseCtrl.value * pi)),
+                        blurRadius: pR * 0.5,
+                        spreadRadius: pR * 0.03,
+                      )
+                    ],
                   ),
-                  child: ClipOval(child: CustomPaint(painter: _SwirlPainter(progress: surfAngle))),
+                  child: ClipOval(
+                      child: CustomPaint(
+                          painter: _SwirlPainter(progress: surfAngle))),
                 ),
               ),
               Positioned(
@@ -243,7 +262,11 @@ class HeroSectionState extends State<HeroSection>
 
   Widget _content(Size size, bool isMobile, bool isTablet) {
     final hPad = isMobile ? 24.0 : (isTablet ? 48.0 : 80.0);
-    final rPad = isMobile ? hPad : isTablet ? hPad : size.width * 0.40;
+    final rPad = isMobile
+        ? hPad
+        : isTablet
+        ? hPad
+        : (size.width * 0.40).clamp(80.0, size.width - 420.0);
 
     if (isMobile) {
       return SafeArea(
@@ -260,37 +283,63 @@ class HeroSectionState extends State<HeroSection>
       );
     }
 
+    // Desktop/tablet: LayoutBuilder gives us the exact available height
     return Positioned.fill(
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(hPad, 80, rPad, 80),
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: _animContent(isMobile, includeScrollHint: false),
-        ),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          return Padding(
+            padding: EdgeInsets.fromLTRB(hPad, 0, rPad, 0),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: _animContent(
+                isMobile,
+                availableHeight: constraints.maxHeight,
+                includeScrollHint: false,
+              ),
+            ),
+          );
+        },
       ),
     );
   }
 
-  Widget _animContent(bool isMobile, {required bool includeScrollHint}) => AnimatedBuilder(
-    animation: _fadeAnim,
-    builder: (_, child) => Opacity(
-      opacity: _fadeAnim.value,
-      child: Transform.translate(offset: Offset(0, _slideAnim.value), child: child),
-    ),
-    child: _textBody(isMobile, includeScrollHint: includeScrollHint),
-  );
+  Widget _animContent(
+      bool isMobile, {
+        double? availableHeight,
+        required bool includeScrollHint,
+      }) =>
+      AnimatedBuilder(
+        animation: _fadeAnim,
+        builder: (_, child) => Opacity(
+          opacity: _fadeAnim.value,
+          child: Transform.translate(
+              offset: Offset(0, _slideAnim.value), child: child),
+        ),
+        child: _textBody(
+          isMobile,
+          availableHeight: availableHeight,
+          includeScrollHint: includeScrollHint,
+        ),
+      );
 
-  Widget _textBody(bool isMobile, {required bool includeScrollHint}) {
+  Widget _textBody(
+      bool isMobile, {
+        double? availableHeight,
+        required bool includeScrollHint,
+      }) {
     final ts = isMobile ? 34.0 : 52.0;
-    return Column(
+
+    final content = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
       children: [
+        // Badge
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
           decoration: BoxDecoration(
             color: AppColors.primary.withOpacity(0.09),
-            border: Border.all(color: AppColors.primary.withOpacity(0.4), width: 1),
+            border: Border.all(
+                color: AppColors.primary.withOpacity(0.4), width: 1),
             borderRadius: BorderRadius.circular(50),
           ),
           child: Row(mainAxisSize: MainAxisSize.min, children: [
@@ -301,7 +350,8 @@ class HeroSectionState extends State<HeroSection>
                 height: 6,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: AppColors.primary.withOpacity(0.6 + 0.4 * sin(_pulseCtrl.value * pi)),
+                  color: AppColors.primary
+                      .withOpacity(0.6 + 0.4 * sin(_pulseCtrl.value * pi)),
                 ),
               ),
             ),
@@ -311,16 +361,23 @@ class HeroSectionState extends State<HeroSection>
           ]),
         ),
         const SizedBox(height: 24),
-        RichText(text: TextSpan(children: [
-          TextSpan(text: 'Explorează\nUniversul\n',
-              style: AppTextStyles.heroTitle.copyWith(fontSize: ts)),
-          TextSpan(text: 'ca Niciodată\nÎnainte',
-              style: AppTextStyles.heroTitleAccent.copyWith(fontSize: ts)),
-        ])),
+        RichText(
+          softWrap: true,
+          overflow: TextOverflow.visible,
+          text: TextSpan(children: [
+            TextSpan(
+                text: 'Explorează\nUniversul\n',
+                style: AppTextStyles.heroTitle.copyWith(fontSize: ts)),
+            TextSpan(
+                text: 'ca Niciodată\nÎnainte',
+                style: AppTextStyles.heroTitleAccent.copyWith(fontSize: ts)),
+          ]),
+        ),
         const SizedBox(height: 20),
         Text(
           'Lecții imersive, simulări spațiale 3D și provocări\ngamificate pentru toți curioșii cosmosului.',
-          style: AppTextStyles.heroSubtitle.copyWith(fontSize: isMobile ? 14 : 16),
+          style: AppTextStyles.heroSubtitle
+              .copyWith(fontSize: isMobile ? 14 : 16),
         ),
         const SizedBox(height: 32),
         Wrap(spacing: 12, runSpacing: 12, children: [
@@ -343,30 +400,55 @@ class HeroSectionState extends State<HeroSection>
           AnimatedOpacity(
             opacity: _showScrollHint ? 1.0 : 0.0,
             duration: const Duration(milliseconds: 400),
-            child: Center(child: _scrollHint()),
+            child: const Center(child: _ScrollHintWidget()),
           ),
         ],
       ],
     );
+
+    // On desktop: wrap in ConstrainedBox so the Column can never exceed
+    // the available viewport height. NeverScrollableScrollPhysics keeps
+    // the section non-scrollable while silently clipping the overflow.
+    if (availableHeight != null) {
+      return ConstrainedBox(
+        constraints: BoxConstraints(maxHeight: availableHeight),
+        child: OverflowBox(
+          maxHeight: double.infinity,
+          alignment: Alignment.centerLeft,
+          child: content,
+        ),
+      );
+    }
+
+    return content;
   }
 
-  Widget _stats() => Wrap(
-    spacing: 0,
-    runSpacing: 16,
-    children: [
-      _stat('10K+', 'Elevi activi'),
-      _div(),
-      _stat('200+', 'Lecții'),
-      _div(),
-      _stat('50+', 'Simulări'),
-    ],
+  Widget _stats() => FittedBox(
+    fit: BoxFit.scaleDown,
+    alignment: Alignment.centerLeft,
+    child: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        _stat('10K+', 'Elevi activi'),
+        _div(),
+        _stat('200+', 'Lecții'),
+        _div(),
+        _stat('50+', 'Simulări'),
+      ],
+    ),
   );
 
   Widget _stat(String v, String l) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(v, style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: AppColors.primary)),
-      Text(l, style: const TextStyle(fontSize: 11, color: AppColors.textMuted)),
+      Text(v,
+          style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w800,
+              color: AppColors.primary)),
+      Text(l,
+          style: const TextStyle(
+              fontSize: 11, color: AppColors.textMuted)),
     ],
   );
 
@@ -376,32 +458,46 @@ class HeroSectionState extends State<HeroSection>
     margin: const EdgeInsets.symmetric(horizontal: 20),
     color: AppColors.primary.withOpacity(0.2),
   );
+}
 
-  Widget _scrollHint() => Column(
-    mainAxisSize: MainAxisSize.min,
-    children: [
-      const Text('Derulează',
-          style: TextStyle(fontSize: 10, color: AppColors.textMuted, letterSpacing: 2)),
-      const SizedBox(height: 6),
-      Container(
-        width: 1,
-        height: 32,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [AppColors.primary.withOpacity(0.6), Colors.transparent],
+class _ScrollHintWidget extends StatelessWidget {
+  const _ScrollHintWidget();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const Text('Derulează',
+            style: TextStyle(
+                fontSize: 10,
+                color: AppColors.textMuted,
+                letterSpacing: 2)),
+        const SizedBox(height: 6),
+        Container(
+          width: 1,
+          height: 32,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                AppColors.primary.withOpacity(0.6),
+                Colors.transparent,
+              ],
+            ),
           ),
         ),
-      ),
-    ],
-  );
+      ],
+    );
+  }
 }
 
 class _MoonPainter extends CustomPainter {
   final double angle, moonR, orbitRx, orbitRy, tilt;
   final Color color, glowColor;
-  _MoonPainter({
+
+  const _MoonPainter({
     required this.angle,
     required this.moonR,
     required this.orbitRx,
@@ -417,11 +513,18 @@ class _MoonPainter extends CustomPainter {
     final rawX = orbitRx * cos(angle), rawY = orbitRy * sin(angle);
     final mx = cx + rawX * cos(tilt) - rawY * sin(tilt);
     final my = cy + rawX * sin(tilt) + rawY * cos(tilt);
-    canvas.drawCircle(Offset(mx, my), moonR * 2.0,
-        Paint()..color = glowColor.withOpacity(0.22)
+    canvas.drawCircle(
+        Offset(mx, my),
+        moonR * 2.0,
+        Paint()
+          ..color = glowColor.withOpacity(0.22)
           ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8));
-    canvas.drawCircle(Offset(mx, my), moonR,
-        Paint()..color = color..style = PaintingStyle.fill);
+    canvas.drawCircle(
+        Offset(mx, my),
+        moonR,
+        Paint()
+          ..color = color
+          ..style = PaintingStyle.fill);
   }
 
   @override
@@ -430,15 +533,19 @@ class _MoonPainter extends CustomPainter {
 
 class _SwirlPainter extends CustomPainter {
   final double progress;
-  _SwirlPainter({required this.progress});
+
+  const _SwirlPainter({required this.progress});
 
   @override
   void paint(Canvas canvas, Size size) {
     final cx = size.width / 2, cy = size.height / 2;
-    final p = Paint()..style = PaintingStyle.stroke
-      ..strokeWidth = size.width * 0.016..strokeCap = StrokeCap.round;
+    final p = Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.016
+      ..strokeCap = StrokeCap.round;
     for (int i = 0; i < 6; i++) {
-      p.color = Colors.white.withOpacity(0.05 + 0.04 * sin(progress * 2 + i));
+      p.color =
+          Colors.white.withOpacity(0.05 + 0.04 * sin(progress * 2 + i));
       final path = Path();
       bool first = true;
       for (double t = 0; t <= 1.0; t += 0.025) {
@@ -458,5 +565,6 @@ class _SwirlPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant _SwirlPainter old) => old.progress != progress;
+  bool shouldRepaint(covariant _SwirlPainter old) =>
+      old.progress != progress;
 }

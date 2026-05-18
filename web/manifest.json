@@ -1,11 +1,11 @@
 {
-    "name": "astrolab",
-    "short_name": "astrolab",
+    "name": "AstroLab",
+    "short_name": "AstroLab",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "AstroLab is a web-based application that allows users to explore the solar system and plan their astronomy journey.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

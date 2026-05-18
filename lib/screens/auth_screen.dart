@@ -1,10 +1,10 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:astrolab/theme/app_theme.dart';
 import '../services/auth_service.dart';
 import '../services/session_service.dart';
 import '../widgets/app_planet_logo.dart';
 import '../widgets/cosmic_background.dart';
+import 'dashboard_screen.dart';
 
 /// Ecran complet de autentificare / înregistrare
 /// Logică identică cu Login.cs + SignUp.cs din proiectul C# WPF
@@ -88,7 +88,7 @@ class _AuthScreenState extends State<AuthScreen>
 
       if (_isLogin) {
         // [Login.cs → OpenDashboardOrSetup]
-        await _openDashboardOrSetup(result.idToken!, result.uid!);
+        await _openDashboardOrSetup(result.idToken!, result.uid!, email);
       } else {
         // Înregistrare reușită — îl trimitem direct la login
         setState(() {
@@ -104,26 +104,41 @@ class _AuthScreenState extends State<AuthScreen>
   }
 
   /// [Login.cs → OpenDashboardOrSetup]
-  Future<void> _openDashboardOrSetup(String token, String uid) async {
+  Future<void> _openDashboardOrSetup(String token, String uid, String email) async {
     final needsSetup = await AuthService.needsProfileSetup(token, uid);
     if (!mounted) return;
-    if (needsSetup) {
-      // TODO: Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const ProfileSetupScreen()));
-      _showSnack('Bun venit! Completează-ți profilul.');
-      Navigator.of(context).pop();
-    } else {
-      // TODO: Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const DashboardScreen()));
-      _showSnack('Bun venit înapoi!');
-      Navigator.of(context).pop();
-    }
+
+    // Navigare către Dashboard — înlocuiește ecranul curent
+    Navigator.of(context).pushReplacement(
+      PageRouteBuilder(
+        pageBuilder: (_, animation, __) => DashboardScreen(
+          email: email,
+          uid:   uid,
+          needsProfileSetup: needsSetup,
+        ),
+        transitionsBuilder: (_, animation, __, child) => FadeTransition(
+          opacity: animation,
+          child: child,
+        ),
+        transitionDuration: const Duration(milliseconds: 400),
+      ),
+    );
+  }
+
+  void _showSnack(String msg) {
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+      content: Text(msg),
+      backgroundColor: AppColors.surface,
+      behavior: SnackBarBehavior.floating,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    ));
   }
 
   /// [Login.cs → ForgotPasswordLink_Click]
   Future<void> _forgotPassword() async {
     final email = _emailCtrl.text.trim();
     if (email.isEmpty) {
-      setState(() => _errorMsg =
-      'Introdu email-ul pentru a reseta parola.');
+      setState(() => _errorMsg = 'Introdu email-ul pentru a reseta parola.');
       return;
     }
     setState(() { _busy = true; _errorMsg = null; });
@@ -136,15 +151,6 @@ class _AuthScreenState extends State<AuthScreen>
       setState(() => _errorMsg =
       'Nu am putut trimite emailul. Verifică adresa introdusă.');
     }
-  }
-
-  void _showSnack(String msg) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-      content: Text(msg),
-      backgroundColor: AppColors.surface,
-      behavior: SnackBarBehavior.floating,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-    ));
   }
 
   // ── BUILD ──────────────────────────────────────────────────────────────────
@@ -350,8 +356,7 @@ class _AuthScreenState extends State<AuthScreen>
     ),
     validator: (v) {
       if (v == null || v.isEmpty) return 'Parola obligatorie';
-      if (!_isLogin && v.length < 6)
-        return 'Minim 6 caractere';
+      if (!_isLogin && v.length < 6) return 'Minim 6 caractere';
       return null;
     },
   );
@@ -368,12 +373,10 @@ class _AuthScreenState extends State<AuthScreen>
         controller: controller,
         obscureText: obscure,
         validator: validator,
-        style: const TextStyle(
-            color: AppColors.textPrimary, fontSize: 14),
+        style: const TextStyle(color: AppColors.textPrimary, fontSize: 14),
         decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(
-              color: AppColors.textMuted, fontSize: 13),
+          hintStyle: const TextStyle(color: AppColors.textMuted, fontSize: 13),
           prefixIcon: Icon(icon, color: AppColors.textMuted, size: 18),
           suffixIcon: suffixIcon,
           filled: true,
@@ -382,17 +385,16 @@ class _AuthScreenState extends State<AuthScreen>
           const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(
-                  color: AppColors.primary.withOpacity(0.15))),
+              borderSide:
+              BorderSide(color: AppColors.primary.withOpacity(0.15))),
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(
-                  color: AppColors.primary.withOpacity(0.15))),
+              borderSide:
+              BorderSide(color: AppColors.primary.withOpacity(0.15))),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: BorderSide(
-                  color: AppColors.primary.withOpacity(0.55),
-                  width: 1.5)),
+                  color: AppColors.primary.withOpacity(0.55), width: 1.5)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
               borderSide: const BorderSide(color: Colors.redAccent)),
@@ -410,11 +412,9 @@ class _AuthScreenState extends State<AuthScreen>
     child: TextButton(
       onPressed: _busy ? null : _forgotPassword,
       style: TextButton.styleFrom(
-          padding: EdgeInsets.zero,
-          minimumSize: Size.zero),
+          padding: EdgeInsets.zero, minimumSize: Size.zero),
       child: const Text('Ai uitat parola?',
-          style: TextStyle(
-              fontSize: 12, color: AppColors.secondary)),
+          style: TextStyle(fontSize: 12, color: AppColors.secondary)),
     ),
   );
 
@@ -425,30 +425,26 @@ class _AuthScreenState extends State<AuthScreen>
         height: 20,
         child: Checkbox(
           value: _rememberMe,
-          onChanged: (v) =>
-              setState(() => _rememberMe = v ?? false),
+          onChanged: (v) => setState(() => _rememberMe = v ?? false),
           activeColor: AppColors.primary,
-          side: BorderSide(
-              color: AppColors.primary.withOpacity(0.4)),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4)),
+          side: BorderSide(color: AppColors.primary.withOpacity(0.4)),
+          shape:
+          RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         ),
       ),
       const SizedBox(width: 8),
       const Text('Ține-mă minte',
-          style: TextStyle(
-              fontSize: 12, color: AppColors.textMuted)),
+          style: TextStyle(fontSize: 12, color: AppColors.textMuted)),
     ],
   );
 
   Widget _errorBanner() => Container(
-    padding: const EdgeInsets.symmetric(
-        horizontal: 14, vertical: 10),
+    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
     decoration: BoxDecoration(
       color: Colors.red.withOpacity(0.12),
       borderRadius: BorderRadius.circular(10),
-      border: Border.all(
-          color: Colors.red.withOpacity(0.3), width: 0.5),
+      border:
+      Border.all(color: Colors.red.withOpacity(0.3), width: 0.5),
     ),
     child: Row(
       children: [
@@ -472,32 +468,52 @@ class _AuthScreenState extends State<AuthScreen>
 
   Widget _dividerOr() => Row(children: [
     Expanded(
-        child: Divider(
-            color: AppColors.primary.withOpacity(0.15))),
+        child:
+        Divider(color: AppColors.primary.withOpacity(0.15))),
     const Padding(
       padding: EdgeInsets.symmetric(horizontal: 12),
       child: Text('sau',
-          style: TextStyle(
-              fontSize: 12, color: AppColors.textMuted)),
+          style: TextStyle(fontSize: 12, color: AppColors.textMuted)),
     ),
     Expanded(
-        child: Divider(
-            color: AppColors.primary.withOpacity(0.15))),
+        child:
+        Divider(color: AppColors.primary.withOpacity(0.15))),
   ]);
 
   Widget _socialButtons() => _SocialBtn(
     label: 'Continuă cu Google',
     icon: Icons.g_mobiledata_rounded,
-    onTap: () => _showSnack('Google login — configurează OAuth în auth_service.dart'),
+    onTap: _busy ? () {} : _signInWithGoogle,
     fullWidth: true,
   );
+
+  /// [Login.cs → GoogleLoginButton_Click]
+  Future<void> _signInWithGoogle() async {
+    setState(() { _busy = true; _errorMsg = null; });
+
+    final result = await AuthService.signInWithGoogle();
+
+    if (!mounted) return;
+
+    if (result.ok) {
+      await SessionService.save(
+        email:      result.email!,
+        idToken:    result.idToken!,
+        uid:        result.uid!,
+        rememberMe: true, // Google login → mereu "ține-mă minte"
+      );
+      await _openDashboardOrSetup(result.idToken!, result.uid!, result.email!);
+    } else {
+      setState(() { _busy = false; _errorMsg = result.error; });
+    }
+  }
 }
 
 // ── Reusable sub-widgets ──────────────────────────────────────────────────────
 
 class _GradientButton extends StatefulWidget {
-  final String label;
-  final bool   busy;
+  final String       label;
+  final bool         busy;
   final VoidCallback onPressed;
   const _GradientButton(
       {required this.label, required this.busy, required this.onPressed});
@@ -561,10 +577,10 @@ class _GradientButtonState extends State<_GradientButton> {
 }
 
 class _SocialBtn extends StatelessWidget {
-  final String label;
-  final IconData icon;
+  final String       label;
+  final IconData     icon;
   final VoidCallback onTap;
-  final bool fullWidth;
+  final bool         fullWidth;
 
   const _SocialBtn({
     required this.label,
@@ -578,14 +594,14 @@ class _SocialBtn extends StatelessWidget {
     final btn = OutlinedButton.icon(
       onPressed: onTap,
       icon: Icon(icon, color: AppColors.textSecondary, size: 22),
-      label: Text(
-        label,
-        style: const TextStyle(color: AppColors.textSecondary, fontSize: 14),
-      ),
+      label: Text(label,
+          style: const TextStyle(
+              color: AppColors.textSecondary, fontSize: 14)),
       style: OutlinedButton.styleFrom(
         padding: const EdgeInsets.symmetric(vertical: 14),
         side: BorderSide(color: AppColors.primary.withOpacity(0.25)),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12)),
       ),
     );
     return fullWidth ? SizedBox(width: double.infinity, child: btn) : btn;

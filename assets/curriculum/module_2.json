@@ -1,0 +1,4179 @@
+{
+  "schemaVersion": 1,
+  "number": 2,
+  "title": "Ne pregătim pentru olimpiadă!",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Distanţe şi dimensiuni astronomice",
+      "lessons": [
+        "**Unităţi de măsură**\n\n• Imensitatea spațiului necesită exprimarea distanțelor astronomice folosind unități de măsură foarte mari. Astfel, în cadrul Sistemului solar, se folosește ca unitate de măsură, unitatea astronomică (UA). $1 \\text{ UA} = 149,6 \\times 10^6 \\text{ km}$.\n\n• Pentru exprimarea distanţelor între stele, a dimensiunilor grupurilor de stele şi galaxiilor, se utilizează ca unitate de măsură anul lumină: $1 \\text{ a.l.} = 9,46 \\times 10^{12} \\text{ km} = 63\\,271 \\text{ UA}$.\n\n• Unitate mai mare decât anul lumină este parsecul: $1 \\text{ pc} = 3,26 \\text{ a.l.} = 206\\,265 \\text{ UA} = 30,8 \\times 10^{12} \\text{ km}$.\n\n• Exemple de distanţe astronomice extreme:\n  - Cea mai îndepărtată planetă mare din Sistemul Solar, Neptun, se află la $30 \\text{ UA}$ faţă de Soare.\n  - Cel mai îndepărtat asteroid care se rotește în jurul Soarelui este Sedna, care ajunge la $960 \\text{ UA}$ faţă de Soare.\n  - Cea mai îndepărtată sondă spațială lansată de oameni este Voyager 1, care a ajuns la peste $160 \\text{ UA}$ faţă de noi.\n  - Se consideră că gravitația Soarelui este egalată de cea a stelelor vecine la o depărtare de $125\\,000 \\text{ UA} = 2 \\text{ a.l.}$\n  - Până la cea mai apropiată stea, Proxima Centauri, distanța este de $272\\,000 \\text{ UA} = 4,3 \\text{ a.l.}$\n  - Cea mai îndepărtată galaxie din Universul observabil se află la $13$ miliarde de ani-lumină de noi.",
+        "**Determinarea distanţelor în Sistemul solar**\n\n• Se numeşte **paralaxă diurnă** a unui astru unghiul sub care se vede din centrul acelui astru raza terestră corespunzătoare locului de observaţie. Valoarea maximă a acestui unghi este atinsă la apusul sau răsăritul astrului şi corespunde paralaxei orizontale ecuatoriale, notată $p$.\n\n• Distanţa până la astru se determină cu formula: $D = \\frac{R_P}{p}$, unde $R_P$ este raza Pământului, iar $p$ este exprimată în radiani. ($1 \\text{ radian} = 206\\,265''$).\n\n• Exemple:\n  - Paralaxa Lunii este $p_L = 57'02'' = 3422''$, deci $D_L = 384\\,413 \\text{ km}$.\n  - Paralaxa Soarelui $p_S = 8,8''$, deci $D_S = 149\\,495\\,246 \\text{ km}$.",
+        "**Determinarea distanţelor până la stele**\n\n• Se numeşte **paralaxă stelară anuală** unghiul sub care un observator ipotetic aflat în centrul stelei ar vedea raza orbitei terestre atunci când linia Soare–stea este perpendiculară pe direcţia Pământ–Soare.\n\n• Pentru determinarea paralaxei, astronomii măsoară poziţiile unei stele în raport cu alte stele aflate în aceeaşi direcţie. Pământul descrie în jurul Soarelui în timp de un an orbita sa, care poate fi asimilată cu un cerc cu centrul în Soare.\n\n• Din cauza acestei mişcări a Pământului, o stea nu rămâne fixă faţă de un observator, ci descrie aparent o elipsă pe bolta cerească. Prin această metodă, în prezent, se pot determina paralaxe până la valoarea de $0,001''$.\n\n• Paralaxa cu cea mai mare valoare este cea a stelei **Proxima Centauri**, respectiv $0,742''$.\n\n• Distanţa până la stea se calculează cu formula: $r[\\text{pc}] = \\frac{1}{p[\\text{arcsec}]}$ (distanţa în parseci, dacă $p$ este exprimat în secunde de arc).\n\n• Pentru Proxima Centauri: $r = \\frac{1}{0,742} = 1,347 \\text{ pc} = 4,39 \\text{ ani-lumină}$.",
+        "**Determinarea dimensiunilor corpurilor cereşti**\n\n• Considerăm un astru $S$, cu raza $R$, aflat la distanţa $r$ faţă de centrul Pământului. De pe Pământ putem măsura unghiul sub care se vede diametrul astrului, $2\\beta$.\n\n• Relaţia dintre raza astrului şi unghiul sub care se observă ea este: $R = r \\times \\sin \\beta$ sau, pentru unghiuri mici ($\\beta < 50^\\circ$), $R = r \\times \\frac{\\beta''}{206\\,265''}$.",
+        "**Calcule matematice privind eclipsele**\n\n**I. Calculul lungimii conului de umbră al Pământului:**\n$$\\frac{SS'}{PP'} = \\frac{SV}{PV} \\Rightarrow PV = L_{\\text{con}} = \\frac{R_P \\times SP}{R_S - R_P} \\Rightarrow L_{\\text{con}} = 1\\,389\\,893 \\text{ km} = 218 R_P$$\n\n**II. Calculul lăţimii conului de umbră la distanţa la care orbitează Luna:**\n$$\\sin P'VP = \\frac{R_P}{PV} = \\frac{x}{LV} \\Rightarrow x = \\frac{R_P \\times (L_{\\text{con}} - PL)}{L_{\\text{con}}} \\Rightarrow \\text{Lăţimea conului} = 2x = 9216,5 \\text{ km} = 5,3 R_{\\text{Lună}}$$\n\n**III. Calculul lungimii conului de umbră al Lunii:**\n$$\\frac{LV}{SV} = \\frac{R_{\\text{Lună}}}{R_{\\text{Soare}}} \\Rightarrow LV = L_{\\text{con}} = 375\\,850 \\text{ km} = 59 R_P$$\n\n**IV. Calculul lăţimii benzii de totalitate, la Ecuator:**\n$$\\sin LVL' = \\frac{R_L}{LV} = \\frac{x}{LV - LP + R_P} \\Rightarrow x = 88 \\text{ km}$$, dacă Luna e la perigeu ($r_P = LP = 363\\,258 \\text{ km}$)."
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 0,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Planeta noastră are formă de sferă, cu raza $R_P = 6400 \\text{ km}$, iar Luna, satelitul său natural, are o rază $R_L = 1700 \\text{ km}$. Distanţa dintre centrul Pământului şi centrul Lunii este de aproximativ $385.000 \\text{ km}$. Cât vor reprezenta aceste distanţe într-o machetă la scară a sistemului Pământ-Lună, la scara de reprezentare $1 : 100.000.000$?",
+              "answer_fields": [
+                {
+                  "label": "Raza Pământului",
+                  "unit": "cm",
+                  "correct_value": 6.4,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Raza Lunii",
+                  "unit": "cm",
+                  "correct_value": 1.7,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Distanța Pământ-Lună",
+                  "unit": "cm",
+                  "correct_value": 385,
+                  "tolerance": 5
+                }
+              ],
+              "explanation": "Scara 1:100.000.000 înseamnă că 1 cm în machetă reprezintă 1.000 km în realitate. Raza Pământului: 6400 km / 1000 = 6,4 cm. Raza Lunii: 1700 km / 1000 = 1,7 cm. Distanța: 385.000 km / 1000 = 385 cm = 3,85 m."
+            },
+            {
+              "type": "open",
+              "question": "Soarele are diametrul de aproximativ $1.400.000 \\text{ km}$. Dacă vrem să realizăm un model la scară al Sistemului Solar, cât trebuie să fie scara de reprezentare astfel încât Soarele să aibă diametrul de $14 \\text{ cm}$? Estimaţi distanţele până la planete şi dimensiunile planetelor în acest model, folosind datele din tabel.",
+              "answer_fields": [
+                {
+                  "label": "Scara (1 : X)",
+                  "unit": "",
+                  "correct_value": 10000000000,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Distanța Mercur",
+                  "unit": "m",
+                  "correct_value": 5.7,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Diametrul Mercur",
+                  "unit": "mm",
+                  "correct_value": 0.48,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Distanța Venus",
+                  "unit": "m",
+                  "correct_value": 10.8,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Diametrul Venus",
+                  "unit": "mm",
+                  "correct_value": 1.21,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Distanța Pământ",
+                  "unit": "m",
+                  "correct_value": 15,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Diametrul Pământ",
+                  "unit": "mm",
+                  "correct_value": 1.27,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Distanța Marte",
+                  "unit": "m",
+                  "correct_value": 22.8,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Diametrul Marte",
+                  "unit": "mm",
+                  "correct_value": 0.68,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Distanța Jupiter",
+                  "unit": "m",
+                  "correct_value": 78,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Diametrul Jupiter",
+                  "unit": "mm",
+                  "correct_value": 14.28,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Distanța Saturn",
+                  "unit": "m",
+                  "correct_value": 142.5,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Diametrul Saturn",
+                  "unit": "mm",
+                  "correct_value": 12.06,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "Distanța Uranus",
+                  "unit": "m",
+                  "correct_value": 285,
+                  "tolerance": 2
+                },
+                {
+                  "label": "Diametrul Uranus",
+                  "unit": "mm",
+                  "correct_value": 5.13,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Distanța Neptun",
+                  "unit": "m",
+                  "correct_value": 450,
+                  "tolerance": 2
+                },
+                {
+                  "label": "Diametrul Neptun",
+                  "unit": "mm",
+                  "correct_value": 4.91,
+                  "tolerance": 0.05
+                }
+              ],
+              "explanation": "Scara: diametrul real / diametrul model = 1.400.000 km / 14 cm = 100.000 km/cm, adică 1:10^10. 1 UA = 150 mil. km = 15 m în model. Planetele: distanțele se obțin înmulțind UA cu 15 m, diametrele se obțin împărțind diametrul real la 10^10."
+            },
+            {
+              "type": "open",
+              "question": "În modelul descris mai sus (scara $1 : 10.000.000.000$), calculaţi cât ar fi distanţa până la cea mai apropiată stea ($4,3 \\text{ a.l.}$), până la centrul galaxiei noastre ($30.000 \\text{ a.l.}$) şi cât de mare ar trebui să fie reprezentarea galaxiei noastre (considerând diametrul Căii Lactee de aproximativ $100.000 \\text{ a.l.}$).",
+              "answer_fields": [
+                {
+                  "label": "Distanța până la Proxima Centauri",
+                  "unit": "km",
+                  "correct_value": 4067.8,
+                  "tolerance": 10
+                },
+                {
+                  "label": "Distanța până la centrul galaxiei",
+                  "unit": "km",
+                  "correct_value": 28380000,
+                  "tolerance": 100000
+                },
+                {
+                  "label": "Diametrul Căii Lactee în model",
+                  "unit": "km",
+                  "correct_value": 94600000,
+                  "tolerance": 100000
+                }
+              ],
+              "explanation": "1 an-lumină = $9,46 \\times 10^{12}$ km. La scara 1:10^10, 1 cm în model = 100.000 km reali. Distanța stea: $4,3 \\times 9,46\\times10^{12} / 10^{10} = 4,3 \\times 946 = 4067,8$ km. La fel pentru celelalte."
+            },
+            {
+              "type": "open",
+              "question": "Dacă ne propunem să realizăm un model la scară al Grupului Local de galaxii şi vrem să reprezentăm galaxia noastră printr-un nasture (diametru $1 \\text{ cm}$), cât va fi distanţa până la galaxia Andromeda? (estimată la $2,6 \\text{ milioane a.l.}$) Dar până la Roiul de galaxii din Virgo? ($60 \\text{ milioane a.l.}$)",
+              "answer_fields": [
+                {
+                  "label": "Distanța până la Andromeda",
+                  "unit": "cm",
+                  "correct_value": 26,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Distanța până la Roiul Virgo",
+                  "unit": "cm",
+                  "correct_value": 600,
+                  "tolerance": 10
+                }
+              ],
+              "explanation": "Diametrul real al Căii Lactee ≈ 100.000 a.l. Dacă în model are 1 cm, scara este 1 cm : 100.000 a.l. = 1 : 10^5 a.l./cm. Distanța la Andromeda: $2,6\\times10^6 / 10^5 = 26$ cm. Virgo: $60\\times10^6 / 10^5 = 600$ cm = 6 m."
+            }
+          ]
+        },
+        {
+          "after_lesson": 3,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Planeta Jupiter se află la o distanţă medie faţă de Soare de 5,2 UA. Calculaţi paralaxa sa ecuatorială.",
+              "answer_fields": [
+                {
+                  "label": "Paralaxa ecuatorială a lui Jupiter",
+                  "unit": "″",
+                  "correct_value": 1.69,
+                  "tolerance": 0.01
+                }
+              ],
+              "explanation": "Formula paralaxei unei planete în funcție de distanța sa în UA ($d$) este $p = \\frac{p_{\\odot}}{d}$, unde $p_{\\odot} = 8,8''$ este paralaxa Soarelui. La distanța medie de 5,2 UA, $p = \\frac{8,8}{5,2} \\approx 1,69''$. (La opoziție, când planeta este mai aproape, paralaxa ar fi mai mare, aproximativ $2,1''$)."
+            },
+            {
+              "type": "open",
+              "question": "Ce diametru are planeta Jupiter, dacă acesta se vede, de pe Pământ, sub un unghi de $46''$?",
+              "answer_fields": [
+                {
+                  "label": "Diametrul lui Jupiter",
+                  "unit": "km",
+                  "correct_value": 142800,
+                  "tolerance": 500
+                }
+              ],
+              "explanation": "Diametrul liniar $D$ se calculează cu formula $D = d \\times \\frac{\\alpha''}{206265}$. Folosind distanța exactă pentru care diametrul aparent este $46''$, se obține diametrul standard de $142.800$ km."
+            },
+            {
+              "type": "open",
+              "question": "Uranus are o paralaxă de 0,483″. Calculaţi distanţa până la această planetă.",
+              "answer_fields": [
+                {
+                  "label": "Distanța până la Uranus",
+                  "unit": "UA",
+                  "correct_value": 18.22,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "Distanța până la Uranus",
+                  "unit": "km",
+                  "correct_value": 2720000000,
+                  "tolerance": 10000000
+                }
+              ],
+              "explanation": "Formula distanței în UA pe baza paralaxei ecuatoriale: $d = \\frac{p_{\\odot}}{p} = \\frac{8,8}{0,483} \\approx 18,22$ UA. În kilometri: $18,22 \\times 149.600.000 \\approx 2,726 \\times 10^9$ km."
+            },
+            {
+              "type": "open",
+              "question": "Steaua Sirius se află la o distanţă de 8,65 a.l. Calculaţi paralaxa anuală a acestei stele.",
+              "answer_fields": [
+                {
+                  "label": "Paralaxa anuală a lui Sirius",
+                  "unit": "″",
+                  "correct_value": 0.377,
+                  "tolerance": 0.001
+                }
+              ],
+              "explanation": "Distanța în parseci: $d = \\frac{8,65}{3,26} \\approx 2,653$ pc. Paralaxa anuală este $p = \\frac{1}{d} \\approx 0,377''$."
+            },
+            {
+              "type": "open",
+              "question": "Steaua Polaris are o paralaxă anuală de 0,005″. Să se determine distanţa până la Polaris.",
+              "answer_fields": [
+                {
+                  "label": "Distanța",
+                  "unit": "pc",
+                  "correct_value": 200,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Distanța",
+                  "unit": "a.l.",
+                  "correct_value": 652,
+                  "tolerance": 2
+                }
+              ],
+              "explanation": "$d = \\frac{1}{p} = \\frac{1}{0,005} = 200$ pc. Transformare în ani-lumină: $200 \\times 3,26 = 652$ a.l."
+            },
+            {
+              "type": "open",
+              "question": "Paralaxa Soarelui este $8,8''$ atunci când raza discului său aparent este $16' 1''$. Determinaţi raportul $R_{\\text{Soare}} / R_{\\text{Pământ}}$.",
+              "answer_fields": [
+                {
+                  "label": "Raportul $R_{\\text{Soare}} / R_{\\text{Pământ}}$",
+                  "unit": "",
+                  "correct_value": 109.2,
+                  "tolerance": 0.1
+                }
+              ],
+              "explanation": "Raza aparentă: $16' 1'' = 961''$. Raportul: $\\frac{961}{8,8} \\approx 109,2$."
+            },
+            {
+              "type": "open",
+              "question": "Luna are paralaxa de 57′ şi raza de 1738 km. Cât este diametrul său aparent?",
+              "answer_fields": [
+                {
+                  "label": "Diametrul aparent al Lunii",
+                  "unit": "′",
+                  "correct_value": 31.04,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "Diametrul aparent al Lunii (minute și secunde)",
+                  "unit": "",
+                  "correct_value": "31′ 6″",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Cu $R_P \\approx 6378$ km, $\\rho = 57' \\times \\frac{1738}{6378} \\approx 15,52'$. Diametrul aparent = $2\\rho = 31,04' = 31' 6''$."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Care este valoarea unei unități astronomice (UA)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$149,6 \\times 10^6$ km"
+            },
+            {
+              "label": "b",
+              "text": "$9,46 \\times 10^{12}$ km"
+            },
+            {
+              "label": "c",
+              "text": "$30,8 \\times 10^{12}$ km"
+            },
+            {
+              "label": "d",
+              "text": "$206.265$ km"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Câți kilometri are un an-lumină?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$149,6 \\times 10^6$ km"
+            },
+            {
+              "label": "b",
+              "text": "$9,46 \\times 10^{12}$ km"
+            },
+            {
+              "label": "c",
+              "text": "$30,8 \\times 10^{12}$ km"
+            },
+            {
+              "label": "d",
+              "text": "$206.265 \\times 10^6$ km"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Câte unități astronomice are un parsec?",
+          "options": [
+            {
+              "label": "a",
+              "text": "63.271 UA"
+            },
+            {
+              "label": "b",
+              "text": "206.265 UA"
+            },
+            {
+              "label": "c",
+              "text": "$30,8 \\times 10^{12}$ UA"
+            },
+            {
+              "label": "d",
+              "text": "$149,6 \\times 10^6$ UA"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Câți ani-lumină are un parsec?",
+          "options": [
+            {
+              "label": "a",
+              "text": "1,34"
+            },
+            {
+              "label": "b",
+              "text": "3,26"
+            },
+            {
+              "label": "c",
+              "text": "4,3"
+            },
+            {
+              "label": "d",
+              "text": "206.265"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este paralaxa diurnă?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Unghiul sub care se vede raza terestră din centrul astrului"
+            },
+            {
+              "label": "b",
+              "text": "Unghiul sub care se vede raza orbitei terestre de la o stea"
+            },
+            {
+              "label": "c",
+              "text": "Mișcarea aparentă a Soarelui pe ecliptică"
+            },
+            {
+              "label": "d",
+              "text": "Variația strălucirii unei stele"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care este paralaxa Lunii (valoarea)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$8,8''$"
+            },
+            {
+              "label": "b",
+              "text": "$57'02''$ ($3422''$)"
+            },
+            {
+              "label": "c",
+              "text": "$0,742''$"
+            },
+            {
+              "label": "d",
+              "text": "$0,001''$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este formula distanței în Sistemul solar folosind paralaxa?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$D = R_P \\times p$"
+            },
+            {
+              "label": "b",
+              "text": "$D = R_P / p$"
+            },
+            {
+              "label": "c",
+              "text": "$D = p / R_P$"
+            },
+            {
+              "label": "d",
+              "text": "$D = R_P \\times p^2$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Câte secunde de arc are un radian?",
+          "options": [
+            {
+              "label": "a",
+              "text": "3600"
+            },
+            {
+              "label": "b",
+              "text": "57,3"
+            },
+            {
+              "label": "c",
+              "text": "206.265"
+            },
+            {
+              "label": "d",
+              "text": "63.241"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este paralaxa stelară anuală?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Unghiul sub care se vede raza orbitei terestre de la o stea"
+            },
+            {
+              "label": "b",
+              "text": "Unghiul sub care se vede raza Pământului de la o stea"
+            },
+            {
+              "label": "c",
+              "text": "Mișcarea proprie a stelei"
+            },
+            {
+              "label": "d",
+              "text": "Variația radială a vitezei"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care este paralaxa stelei Proxima Centauri?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$0,001''$"
+            },
+            {
+              "label": "b",
+              "text": "$0,742''$"
+            },
+            {
+              "label": "c",
+              "text": "$8,8''$"
+            },
+            {
+              "label": "d",
+              "text": "$57'02''$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "La ce distanță în parseci se află Proxima Centauri?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$0,742$ pc"
+            },
+            {
+              "label": "b",
+              "text": "$1,347$ pc"
+            },
+            {
+              "label": "c",
+              "text": "$4,3$ pc"
+            },
+            {
+              "label": "d",
+              "text": "$3,26$ pc"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Formula distanței în parseci în funcție de paralaxă (în secunde de arc) este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$r = p$"
+            },
+            {
+              "label": "b",
+              "text": "$r = 1/p$"
+            },
+            {
+              "label": "c",
+              "text": "$r = p^2$"
+            },
+            {
+              "label": "d",
+              "text": "$r = \\sqrt{p}$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este cea mai îndepărtată planetă mare din Sistemul Solar?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Uranus"
+            },
+            {
+              "label": "b",
+              "text": "Neptun"
+            },
+            {
+              "label": "c",
+              "text": "Saturn"
+            },
+            {
+              "label": "d",
+              "text": "Pluto"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Până la ce distanță se consideră că gravitația Soarelui este egalată de cea a stelelor vecine?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$125.000$ UA = 2 a.l."
+            },
+            {
+              "label": "b",
+              "text": "$272.000$ UA = 4,3 a.l."
+            },
+            {
+              "label": "c",
+              "text": "$30$ UA"
+            },
+            {
+              "label": "d",
+              "text": "$960$ UA"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce măsoară unghiul $2\\beta$ în determinarea dimensiunilor corpurilor cerești?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Diametrul aparent al astrului"
+            },
+            {
+              "label": "b",
+              "text": "Paralaxa astrului"
+            },
+            {
+              "label": "c",
+              "text": "Distanța zenitală"
+            },
+            {
+              "label": "d",
+              "text": "Azimutul"
+            }
+          ],
+          "correct_index": 0
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Sfera cerească. Repere pe cer",
+      "lessons": [
+        "**Sfera cerească**\n\n• Într-o noapte senină, un observator vede cerul înstelat ca o boltă sferică, bolta cerească. Urmărind o stea în timpul nopţii, vedem că ea se ridică încet deasupra orizontului până ce culminează (ajunge la înălţimea maximă), apoi coboară şi dispare sub orizont. Repetând observaţia cu alte stele, ajungem la concluzia că stelele nu-şi schimbă poziţiile unele faţă de altele, dar întregul ansamblu al lor se roteşte în jurul nostru, de la răsărit spre apus.\n\n• În raport cu orice observator de pe suprafaţa Pământului, cerul înstelat efectuează o **mişcare diurnă aparentă**, rotindu-se de la Est spre Vest (mişcare **retrogradă**), în sens invers faţă de mişcarea de rotaţie reală a Pământului (mişcare **directă**, de la Vest spre Est).\n\n• Pentru a uşura studiul poziţiilor şi mişcărilor aştrilor pe bolta cerească, îi vom considera proiectaţi pe o sferă imaginară, denumită **sferă cerească**, cu raza arbitrară şi centrul în locul observatorului.\n\n**Elementele sferei cereşti:**\n- **Orizontul matematic** – cercul mare pe sfera cerească ce separă emisfera vizibilă (cerul) de cea invizibilă. Pe orizont se află punctele cardinale (N, S, E, V).\n- **Meridiana locului** – direcţia Nord–Sud în planul orizontal, reprezentând meridianul terestru care trece prin locul observatorului.\n- **Verticala locului** – direcţia perpendiculară pe planul orizontului matematic. Intersectează sfera cerească în **Zenit** (punctul deasupra capului) şi **Nadir** (punctul diametral opus).\n- Dacă ne aflăm în emisfera nordică a Pământului, deasupra punctului cardinal Nord vom găsi întotdeauna **Steaua Polară**, singurul astru care nu participă la mişcarea aparentă diurnă. Steaua Polară marchează **Polul Nord Ceresc**; punctul diametral opus este **Polul Sud Ceresc**.\n- **Axa lumii** – direcţia care uneşte cei doi poli ai sferei cereşti, reprezentând prelungirea axei de rotaţie a Pământului până la sfera cerească.\n- Orice punct (astru) al sferei cereşti descrie în 24 de ore un cerc cu centrul pe Axa lumii. Acest cerc se numeşte **paralelul ceresc** al astrului.\n- **Planul ecuatorului ceresc** – planul perpendicular pe Axa lumii care trece prin centrul sferei cereşti. Intersecţia cu sfera cerească este **Ecuatorul ceresc** (cerc mare). Punctele cardinale Est şi Vest sunt intersecţia Ecuatorului ceresc cu Orizontul matematic.\n- **Planul meridian al locului de observaţie** – planul care cuprinde Axa lumii şi verticala locului. În acest plan se află punctele cardinale Nord şi Sud, Steaua Polară şi Zenitul. La culminaţia superioară, un astru ajunge la înălţime maximă faţă de orizont; la culminaţia inferioară, la înălţime minimă.",
+        "**Coordonate orizontale**\n\n• În acest sistem de coordonate cereşti, axa fundamentală are direcţia verticalei locului de observare $O$, având ca pol pe sfera cerească Zenitul $Z$ al locului. Planul fundamental este planul orizontal al locului, care intersectează sfera cerească după cercul mare reprezentat de orizontul matematic. Verticalul astrului $\\sigma$ intersectează orizontul locului în punctul $\\sigma_0$.\n\n• Coordonatele astrului în sistemul orizontal sunt: **azimutul ceresc** ($A$) şi **înălţimea** ($h$).\n  - **Azimutul ($A$)** – unghiul format de planul meridianului ceresc al locului cu planul verticalului ceresc al astrului. Se măsoară pe cercul mare al orizontului, plecând de la punctul cardinal Sud, în sens retrograd (sensul mişcării diurne aparente) spre punctul cardinal Vest, până la intersecţia cu verticalul ceresc al astrului. $0^\\circ \\le A \\le 360^\\circ$.\n  - **Înălţimea ($h$)** – unghiul din planul vertical al astrului, format de direcţia astrului cu planul orizontului adevărat al locului. $-90^\\circ \\le h \\le +90^\\circ$.\n\n• În locul înălţimii, în practică este mai uşor de estimat **distanţa zenitală** ($z$) – unghiul în planul vertical al astrului, format de verticala locului cu direcţia astrului. Între înălţime şi distanţa zenitală există relaţia: $h + z = 90^\\circ$.\n\n• Coordonatele orizontale depind de poziţia observatorului şi de momentul observaţiei – sunt numite **coordonate locale**.",
+        "**Coordonate orare**\n\n• În acest sistem, axa fundamentală are direcţia axei lumii $PP'$, având ca pol pe sfera cerească Polul Nord Ceresc $P$. Planul fundamental este planul ecuatorului ceresc, care intersectează sfera cerească după cercul mare fundamental – ecuatorul ceresc $QQ'$. Cercul orar (de declinaţie) al astrului $\\sigma$ intersectează ecuatorul ceresc în punctul $\\sigma_e$.\n\n• Coordonatele astrului $\\sigma$ în sistemul orar sunt: **unghiul orar** ($H$) şi **declinaţia** ($\\delta$) (sau **distanţa polară** $p$).\n  - **Unghiul orar ($H$)** – unghiul format de planul meridianului ceresc al locului cu planul cercului orar al astrului (care se intersectează după direcţia axei lumii $PP'$). Se măsoară de la meridian spre vest, de la $0^\\circ$ la $360^\\circ$ (sau de la $0^\\text{h}$ la $24^\\text{h}$).\n  - **Declinația ($\\delta$)** – unghiul format de direcţia astrului cu planul ecuatorului ceresc. Valori între $-90^\\circ$ şi $+90^\\circ$.\n  - **Distanţa polară ($p$)** – unghiul format de axa lumii cu direcţia astrului. Între declinaţie şi distanţa polară: $\\delta + p = 90^\\circ$.\n\n• Aştrii aflaţi pe acelaşi paralel ceresc au aceeaşi declinaţie şi aceeaşi distanţă polară.\n\n• În mişcarea diurnă aparentă, declinaţia $\\delta$ rămâne constantă (caracteristică a astrului), în timp ce unghiul orar $H$ variază, depinzând şi de locul de observaţie. De aceea, coordonatele orare se numesc **coordonate semilocale**.",
+        "**Coordonate ecuatoriale**\n\n• Sistemul de coordonate ecuatoriale pe bolta cerească este analog cu coordonatele geografice pe suprafaţa Pământului. Pământul este o sferă mai mică la centrul sferei cereşti. Prelungim axa polilor Pământului până intersectează sfera cerească – obţinem polii cereşti. Ecuatorul are proiecţia lui pe sfera cerească – ecuatorul ceresc.\n\n• Pe sfera cerească (pe ecuator) se măsoară **ascensia dreaptă** ($\\alpha$), analogă longitudinii terestre. Distanţa de $15^\\circ$ pe ecuatorul ceresc este egală cu $1^\\text{h}$ în ascensie dreaptă ($1^\\text{min} = 15'$, $1^\\text{s} = 15''$).\n\n• **Punctul vernal** (notat $\\gamma$) – punctul de pe cer în care ajunge Soarele în ziua echinocţiului de primăvară (21 martie). Din acest punct se măsoară ascensia dreaptă, plecând spre est, de la $0^\\text{h}$ la $24^\\text{h}$. Diametral opus se află **punctul autumnal** ($\\omega$), la ascensie dreaptă $12^\\text{h}$ (echinocţiul de toamnă, 23 septembrie).\n\n• Cercurile de latitudine de pe glob se proiectează pe sfera cerească ca **cercuri de declinaţie**. De la ecuator spre Polul Nord Ceresc, declinaţia este pozitivă ($0^\\circ$ la $+90^\\circ$); spre Polul Sud – negativă ($0^\\circ$ la $-90^\\circ$).\n\n• Pentru a localiza un astru pe harta cerului, folosim cele două coordonate ecuatoriale: **ascensia dreaptă** ($\\alpha$) şi **declinaţia** ($\\delta$). De exemplu, steaua Vega (α Lyrae) are $\\alpha = 18^\\text{h} 37^\\text{min}$, $\\delta = +38^\\circ 47'$.\n\n**Formule utile:**\n- Înălţimea maximă (culminaţie superioară): $h_M = 90^\\circ - \\theta + \\delta$ (unde $\\theta$ este latitudinea observatorului).\n- Înălţimea minimă (culminaţie inferioară): $h_m = -(90^\\circ - \\theta - \\delta)$.\n- Condiţia ca un astru să fie circumpolar: $\\delta > 90^\\circ - \\theta$.\n- Înălţimea Polului Nord Ceresc: $h_{\\text{Polară}} = \\theta$."
+      ],
+      "quiz": [
+        {
+          "question": "Ce mișcare efectuează cerul înstelat în raport cu un observator terestru?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Mișcare directă (de la Vest la Est)"
+            },
+            {
+              "label": "b",
+              "text": "Mișcare retrogradă (de la Est la Vest)"
+            },
+            {
+              "label": "c",
+              "text": "Stă fix"
+            },
+            {
+              "label": "d",
+              "text": "Se mișcă haotic"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numește punctul de pe sfera cerească aflat deasupra capului observatorului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Nadir"
+            },
+            {
+              "label": "b",
+              "text": "Zenit"
+            },
+            {
+              "label": "c",
+              "text": "Polul Nord Ceresc"
+            },
+            {
+              "label": "d",
+              "text": "Ecuatorul ceresc"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este orizontul matematic?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Cercul mare care separă emisfera vizibilă de cea invizibilă"
+            },
+            {
+              "label": "b",
+              "text": "Linia orizontului real"
+            },
+            {
+              "label": "c",
+              "text": "Planul ecuatorului ceresc"
+            },
+            {
+              "label": "d",
+              "text": "Meridianul locului"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care stea marchează Polul Nord Ceresc?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Vega"
+            },
+            {
+              "label": "b",
+              "text": "Sirius"
+            },
+            {
+              "label": "c",
+              "text": "Steaua Polară"
+            },
+            {
+              "label": "d",
+              "text": "Betelgeuse"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce reprezintă axa lumii?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Prelungirea axei de rotație a Pământului"
+            },
+            {
+              "label": "b",
+              "text": "Verticala locului"
+            },
+            {
+              "label": "c",
+              "text": "Direcția către Soare"
+            },
+            {
+              "label": "d",
+              "text": "Intersecția dintre ecuator și ecliptică"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Cum se numesc cercurile descrise de stele în mișcarea diurnă?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Cercuri meridiane"
+            },
+            {
+              "label": "b",
+              "text": "Paralele cerești"
+            },
+            {
+              "label": "c",
+              "text": "Ecliptică"
+            },
+            {
+              "label": "d",
+              "text": "Orizont"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "În sistemul de coordonate orizontale, ce măsoară azimutul?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Înălțimea deasupra orizontului"
+            },
+            {
+              "label": "b",
+              "text": "Unghiul de la Sud spre Vest până la verticalul astrului"
+            },
+            {
+              "label": "c",
+              "text": "Distanța zenitală"
+            },
+            {
+              "label": "d",
+              "text": "Ascensia dreaptă"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este domeniul de valori pentru înălțimea unui astru (h)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$0^\\circ$ la $360^\\circ$"
+            },
+            {
+              "label": "b",
+              "text": "$-90^\\circ$ la $+90^\\circ$"
+            },
+            {
+              "label": "c",
+              "text": "$0^\\circ$ la $90^\\circ$"
+            },
+            {
+              "label": "d",
+              "text": "$-180^\\circ$ la $+180^\\circ$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Relația dintre înălțimea (h) și distanța zenitală (z) este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$h + z = 90^\\circ$"
+            },
+            {
+              "label": "b",
+              "text": "$h + z = 180^\\circ$"
+            },
+            {
+              "label": "c",
+              "text": "$h = z$"
+            },
+            {
+              "label": "d",
+              "text": "$h - z = 90^\\circ$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce măsoară declinația (δ) în coordonatele orare?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Unghiul de la ecuatorul ceresc spre astru"
+            },
+            {
+              "label": "b",
+              "text": "Unghiul de la meridian spre vest"
+            },
+            {
+              "label": "c",
+              "text": "Distanța de la zenit"
+            },
+            {
+              "label": "d",
+              "text": "Distanța de la Polul Nord Ceresc"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce este ascensia dreaptă (α)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Unghiul orar măsurat de la punctul vernal spre est"
+            },
+            {
+              "label": "b",
+              "text": "Distanța de la Polul Nord Ceresc"
+            },
+            {
+              "label": "c",
+              "text": "Unghiul de la meridian spre vest"
+            },
+            {
+              "label": "d",
+              "text": "Latitudinea cerească"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce reprezintă punctul vernal (γ)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Punctul în care Soarele ajunge la echinocțiul de primăvară"
+            },
+            {
+              "label": "b",
+              "text": "Polul Nord Ceresc"
+            },
+            {
+              "label": "c",
+              "text": "Zenitul"
+            },
+            {
+              "label": "d",
+              "text": "Intersecția dintre ecliptică și ecuatorul ceresc la toamnă"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Cât este unghiul dintre planul eclipticii și planul ecuatorului ceresc?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$23^\\circ 27'$"
+            },
+            {
+              "label": "b",
+              "text": "$66^\\circ 33'$"
+            },
+            {
+              "label": "c",
+              "text": "$45^\\circ$"
+            },
+            {
+              "label": "d",
+              "text": "$90^\\circ$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Formula înălțimii maxime la culminația superioară este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$h_M = 90^\\circ - \\theta - \\delta$"
+            },
+            {
+              "label": "b",
+              "text": "$h_M = 90^\\circ - \\theta + \\delta$"
+            },
+            {
+              "label": "c",
+              "text": "$h_M = \\theta + \\delta$"
+            },
+            {
+              "label": "d",
+              "text": "$h_M = 90^\\circ + \\theta - \\delta$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Condiția ca un astru să fie circumpolar pentru un observator la latitudinea θ este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$\\delta > 90^\\circ - \\theta$"
+            },
+            {
+              "label": "b",
+              "text": "$\\delta < 90^\\circ - \\theta$"
+            },
+            {
+              "label": "c",
+              "text": "$\\delta = 0^\\circ$"
+            },
+            {
+              "label": "d",
+              "text": "$\\delta = 90^\\circ$"
+            }
+          ],
+          "correct_index": 0
+        }
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 3,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Steaua Arcturus are declinaţia δ = +19°. La ce înălţime maximă faţă de orizont ajunge această stea pentru un observator aflat la latitudinea de 45°? De la ce latitudine poate fi observată ca stea circumpolară?",
+              "answer_fields": [
+                {
+                  "label": "Înălțimea maximă",
+                  "unit": "°",
+                  "correct_value": 64,
+                  "tolerance": 0.5
+                },
+                {
+                  "label": "Latitudinea minimă pentru stea circumpolară",
+                  "unit": "°",
+                  "correct_value": 71,
+                  "tolerance": 0.5
+                }
+              ],
+              "explanation": "Înălțimea maximă se calculează cu formula $h_M = 90^\\circ - \\theta + \\delta = 90 - 45 + 19 = 64^\\circ$. Condiția ca o stea să fie circumpolară este $\\delta \\ge 90^\\circ - \\theta$, adică $19 \\ge 90 - \\theta \\Rightarrow \\theta \\ge 71^\\circ$."
+            },
+            {
+              "type": "open",
+              "question": "O stea circumpolară atinge înălţimea maximă faţă de orizont (la culminaţie superioară) $h_1 = +55^\\circ$ şi înălţimea minimă, $h_2 = +15^\\circ$ (la culminaţia inferioară), în timpul mişcării sale aparente diurne. Să se afle declinaţia stelei şi latitudinea locului de observaţie, considerând ambele cazuri posibile (culminaţie superioară la sud sau la nord de zenit).",
+              "answer_fields": [
+                {
+                  "label": "Declinația (caz culminație la sud de zenit)",
+                  "unit": "°",
+                  "correct_value": 35,
+                  "tolerance": 0.5
+                },
+                {
+                  "label": "Latitudinea (caz culminație la sud de zenit)",
+                  "unit": "°",
+                  "correct_value": 70,
+                  "tolerance": 0.5
+                },
+                {
+                  "label": "Declinația (caz culminație la nord de zenit)",
+                  "unit": "°",
+                  "correct_value": 70,
+                  "tolerance": 0.5
+                },
+                {
+                  "label": "Latitudinea (caz culminație la nord de zenit)",
+                  "unit": "°",
+                  "correct_value": 35,
+                  "tolerance": 0.5
+                }
+              ],
+              "explanation": "**Cazul 1 - culminație la sud de zenit:** Declinația $\\delta = \\frac{h_M + h_m}{2} = \\frac{55+15}{2} = 35^\\circ$. Latitudinea $\\theta = 90^\\circ + \\delta - h_M = 90 + 35 - 55 = 70^\\circ$.\n\n**Cazul 2 - culminație la nord de zenit:** Distanța polară $p = \\frac{h_M - h_m}{2} = \\frac{55-15}{2} = 20^\\circ$. Declinația $\\delta = 90^\\circ - p = 70^\\circ$. Latitudinea $\\theta = h_m + p = 15 + 20 = 35^\\circ$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Mișcarea aparentă a Soarelui",
+      "lessons": [
+        "**Mișcarea aparentă a Soarelui pe sfera cerească**\n\nFaţă de un observator aflat pe suprafaţa Pământului, Soarele descrie pe bolta cerească două mişcări:\n- În fiecare zi răsare şi apune împreună cu toţi ceilalţi aştri, deci participă la **mişcarea aparentă diurnă** a sferei cereşti. O rotaţie completă durează 24 de ore, adică o zi solară.\n- De la o zi la alta, Soarele îşi modifică înălţimea maximă faţă de orizont, punctele de răsărit şi apus şi poziţia printre stelele fixe ale sferei cereşti, aceasta fiind **mişcarea sa aparentă anuală**.\nRotaţia completă faţă de stelele fixe are loc în timp de 365 zile şi 6 ore, durată numită **an tropic**.",
+        "**Ecliptica**\n\n- **Ecliptica** este cercul mare pe sfera cerească ce reprezintă traiectoria aparentă a Soarelui printre stele în timp de un an.\n- Planul eclipticii este planul traiectoriei reale a Pământului în jurul Soarelui şi este înclinat faţă de planul ecuatorului ceresc cu un unghi de $23^\\circ 27'$.\n- Stelele nu îşi schimbă poziţia faţă de punctul vernal. Soarele, Luna, planetele, corpurile din Sistemul solar îşi modifică permanent poziţia, deplasându-se pe cer printre constelaţii, în apropierea eclipticii.",
+        "**Coordonatele ecuatoriale ale Soarelui**\n\nCoordonatele ecuatoriale ale Soarelui variază pe parcursul anului. Distingem 4 puncte importante pe ecliptică:\n- **Punctul echinocţiului de primăvară (punctul vernal – γ)** – 21 martie: $\\delta = 0^\\circ$, $\\alpha = 0^\\text{h}$.\n- **Punctul solstiţiului de vară (ε)** – 22 iunie: $\\delta = +23^\\circ 27'$, $\\alpha = 6^\\text{h}$.\n- **Punctul echinocţiului de toamnă (punctul autumnal – ω)** – 23 septembrie: $\\delta = 0^\\circ$, $\\alpha = 12^\\text{h}$.\n- **Punctul solstiţiului de iarnă (ε')** – 22 decembrie: $\\delta = -23^\\circ 27'$, $\\alpha = 18^\\text{h}$.",
+        "**Consecinţele mişcării aparente anuale a Soarelui: Anotimpurile**\n\nSuccesiunea anotimpurilor este o consecinţă directă a înclinării axei de rotaţie a Pământului faţă de planul eclipticii. Unghiul dintre planul ecuatorului terestru şi planul eclipticii este de aproximativ $23,5^\\circ$.\n- **Primăvara astronomică** începe la 21 martie (echinocţiul de primăvară) şi se termină la 22 iunie.\n- **Vara astronomică** începe la 22 iunie (solstiţiul de vară) şi se termină la 23 septembrie.\n- **Toamna astronomică** începe la 23 septembrie (echinocţiul de toamnă) şi se termină la 22 decembrie.\n- **Iarna astronomică** începe la 22 decembrie (solstiţiul de iarnă) şi se încheie la 21 martie.\nAcestea sunt anotimpurile în emisfera nordică a Pământului. În emisfera sudică, ele sunt inversate.",
+        "**Consecinţele mişcării aparente anuale a Soarelui: Zonele climatice ale Pământului**\n\nCăldura primită de la Soare pe suprafaţa Pământului depinde de înălţimea maximă atinsă de Soare şi de durata mişcării sale diurne deasupra orizontului.\n- **Tropicul Racului** – paralela terestră pentru care $\\theta = +23^\\circ 27'$. Punctele acestuia au Soarele la zenit la solstiţiul de vară.\n- **Tropicul Capricornului** – paralela terestră de latitudine $\\theta = -23^\\circ 27'$. Soarele ajunge aici la zenit la solstiţiul de iarnă.\n- **Cercul Polar de Nord** – paralela de latitudine $\\theta = 90^\\circ - 23^\\circ 27' = +66^\\circ 33'$.\n- **Cercul Polar de Sud** – paralela terestră cu $\\theta = -66^\\circ 33'$.\n\nTropicele şi cercurile polare împart suprafaţa Pământului în cinci zone climatice:\n- **Zona caldă** – între cele două tropice;\n- **Două zone temperate** (de nord şi de sud) – de la tropice până la cercurile polare;\n- **Două zone polare** – caracterizate prin existenţa zilelor şi nopţilor polare (cu durată mai mare de 24 ore).",
+        "**Consecinţele mişcării aparente anuale a Soarelui: Inegalitatea zilelor și nopților**\n\nDeoarece în cursul mişcării anuale aparente declinaţia Soarelui variază, prin compunerea acestei mişcări cu mişcarea diurnă aparentă, rezultă pentru Soare o mişcare aparentă în spirală pe sfera cerească. În fiecare zi Soarele descrie o spiră, urcând sau coborând în funcţie de anotimp. Astfel, în timp de jumătate de an coboară între paralelul ceresc cu $\\delta = +23^\\circ 27'$ şi cel cu $\\delta = -23^\\circ 27'$, apoi, în cealaltă jumătate a anului, urcă din nou la declinaţia maximă.\n\n- La **declinaţia maximă a Soarelui** (solstiţiul de vară) – observatorii din emisfera nordică au cea mai lungă zi-lumină.\n- La **declinaţia minimă a Soarelui** (solstiţiul de iarnă) – cea mai scurtă zi-lumină în emisfera nordică.\n- În **zilele de echinocţiu** – ziua şi noaptea sunt egale, fiecare având 12 ore.\n- La **poli** – câte o zi polară de 6 luni şi câte o noapte polară de 6 luni.\n- La **ecuator** – ziua este tot timpul egală cu noaptea.",
+        "**Deplasarea aparentă a Soarelui printre constelaţiile zodiacale**\n\n| Nr. | Constelația | Perioada reală | Perioada astrologică |\n|-----|-------------|----------------|----------------------|\n| 1 | LEU | 11 august – 18 septembrie | 23 iulie – 22 august |\n| 2 | FECIOARA | 18 septembrie – 1 noiembrie | 23 august – 21 septembrie |\n| 3 | BALANŢA | 1 noiembrie – 22 noiembrie | 22 septembrie – 22 octombrie |\n| 4 | SCORPION | 22 noiembrie – 1 decembrie | 23 octombrie – 21 noiembrie |\n| 5 | OFIUCUS | 1 decembrie – 19 decembrie | – |\n| 6 | SĂGETĂTOR | 19 decembrie – 19 ianuarie | 22 noiembrie – 21 decembrie |\n| 7 | CAPRICORN | 19 ianuarie – 18 februarie | 22 decembrie – 19 ianuarie |\n| 8 | VĂRSĂTOR | 18 februarie – 13 martie | 20 ianuarie – 18 februarie |\n| 9 | PEŞTI | 13 martie – 20 aprilie | 19 februarie – 20 martie |\n| 10 | BERBEC | 20 aprilie – 13 mai | 21 martie – 20 aprilie |\n| 11 | TAUR | 13 mai – 21 iunie | 21 aprilie – 21 mai |\n| 12 | GEMENI | 21 iunie – 20 iulie | 22 mai – 21 iunie |\n| 13 | RAC | 20 iulie – 11 august | 22 iunie – 22 iulie |"
+      ],
+      "quiz": [
+        {
+          "question": "Cât timp durează o rotație completă a Soarelui în mișcarea aparentă diurnă?",
+          "options": [
+            {
+              "label": "a",
+              "text": "365 de zile"
+            },
+            {
+              "label": "b",
+              "text": "24 de ore"
+            },
+            {
+              "label": "c",
+              "text": "27,3 zile"
+            },
+            {
+              "label": "d",
+              "text": "12 ore"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă ecliptica?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Cercul mare pe sfera cerească ce reprezintă traiectoria aparentă a Soarelui printre stele într-un an"
+            },
+            {
+              "label": "b",
+              "text": "Planul orbitei Lunii în jurul Pământului"
+            },
+            {
+              "label": "c",
+              "text": "Ecuatorul ceresc"
+            },
+            {
+              "label": "d",
+              "text": "Traiectoria aparentă a planetelor"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care este unghiul dintre planul eclipticii și planul ecuatorului ceresc?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$23^\\circ 27'$"
+            },
+            {
+              "label": "b",
+              "text": "$45^\\circ$"
+            },
+            {
+              "label": "c",
+              "text": "$66^\\circ 33'$"
+            },
+            {
+              "label": "d",
+              "text": "$90^\\circ$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "În ce zi a anului Soarele are declinația $+23^\\circ 27'$ și ascensia dreaptă $6^\\text{h}$?",
+          "options": [
+            {
+              "label": "a",
+              "text": "21 martie"
+            },
+            {
+              "label": "b",
+              "text": "22 iunie"
+            },
+            {
+              "label": "c",
+              "text": "23 septembrie"
+            },
+            {
+              "label": "d",
+              "text": "22 decembrie"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numește punctul de pe ecliptică corespunzător datei de 21 martie?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Punctul vernal (echinocțiul de primăvară)"
+            },
+            {
+              "label": "b",
+              "text": "Punctul solstițiului de vară"
+            },
+            {
+              "label": "c",
+              "text": "Punctul autumnal"
+            },
+            {
+              "label": "d",
+              "text": "Punctul solstițiului de iarnă"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce consecință directă are înclinarea axei de rotație a Pământului față de planul eclipticii?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Succesiunea anotimpurilor"
+            },
+            {
+              "label": "b",
+              "text": "Fazele Lunii"
+            },
+            {
+              "label": "c",
+              "text": "Eclipsele"
+            },
+            {
+              "label": "d",
+              "text": "Mișcarea diurnă aparentă"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "În emisfera nordică, vara astronomică începe la:",
+          "options": [
+            {
+              "label": "a",
+              "text": "21 martie"
+            },
+            {
+              "label": "b",
+              "text": "22 iunie"
+            },
+            {
+              "label": "c",
+              "text": "23 septembrie"
+            },
+            {
+              "label": "d",
+              "text": "22 decembrie"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă Tropicul Racului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Paralela terestră de latitudine $+23^\\circ 27'$"
+            },
+            {
+              "label": "b",
+              "text": "Paralela terestră de latitudine $-23^\\circ 27'$"
+            },
+            {
+              "label": "c",
+              "text": "Cercul polar de Nord"
+            },
+            {
+              "label": "d",
+              "text": "Cercul polar de Sud"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "La ce dată Soarele ajunge la zenit pe Tropicul Capricornului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "22 iunie"
+            },
+            {
+              "label": "b",
+              "text": "21 martie"
+            },
+            {
+              "label": "c",
+              "text": "22 decembrie"
+            },
+            {
+              "label": "d",
+              "text": "23 septembrie"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este latitudinea Cercului Polar de Nord?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$+23^\\circ 27'$"
+            },
+            {
+              "label": "b",
+              "text": "$-23^\\circ 27'$"
+            },
+            {
+              "label": "c",
+              "text": "$+66^\\circ 33'$"
+            },
+            {
+              "label": "d",
+              "text": "$-66^\\circ 33'$"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce caracterizează zonele polare ale Pământului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Soarele la zenit de două ori pe an"
+            },
+            {
+              "label": "b",
+              "text": "Existența zilelor și nopților polare cu durată mai mare de 24 ore"
+            },
+            {
+              "label": "c",
+              "text": "Temperaturi medii ridicate tot timpul anului"
+            },
+            {
+              "label": "d",
+              "text": "Echinocții care durează o lună"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Când are loc cea mai lungă zi-lumină în emisfera nordică?",
+          "options": [
+            {
+              "label": "a",
+              "text": "La echinocțiul de primăvară"
+            },
+            {
+              "label": "b",
+              "text": "La solstițiul de vară"
+            },
+            {
+              "label": "c",
+              "text": "La echinocțiul de toamnă"
+            },
+            {
+              "label": "d",
+              "text": "La solstițiul de iarnă"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Câte constelații zodiacale traversează Soarele de-a lungul unui an (inclusiv Ophiucus)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "12"
+            },
+            {
+              "label": "b",
+              "text": "13"
+            },
+            {
+              "label": "c",
+              "text": "10"
+            },
+            {
+              "label": "d",
+              "text": "15"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "În ce perioadă a anului Soarele se află în constelația Ophiucus?",
+          "options": [
+            {
+              "label": "a",
+              "text": "20 aprilie – 13 mai"
+            },
+            {
+              "label": "b",
+              "text": "1 decembrie – 19 decembrie"
+            },
+            {
+              "label": "c",
+              "text": "11 august – 18 septembrie"
+            },
+            {
+              "label": "d",
+              "text": "13 martie – 20 aprilie"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "La poli, o zi polară durează:",
+          "options": [
+            {
+              "label": "a",
+              "text": "24 de ore"
+            },
+            {
+              "label": "b",
+              "text": "6 luni"
+            },
+            {
+              "label": "c",
+              "text": "3 luni"
+            },
+            {
+              "label": "d",
+              "text": "12 ore"
+            }
+          ],
+          "correct_index": 1
+        }
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 6,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Pentru un observator de la latitudinea θ, care este cea mai mare înălțime a Soarelui față de orizont în decursul unui an? Dar cea mai mică înălțime? Precizați valorile coordonatelor ecuatoriale și ecliptice (geocentrice) ale Soarelui la începutul fiecărui anotimp astronomic.",
+              "answer_fields": [
+                {
+                  "label": "Formula înălțimii maxime (h_max)",
+                  "unit": "",
+                  "correct_value": "90° - θ + 23°27'",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Formula înălțimii minime (h_min)",
+                  "unit": "",
+                  "correct_value": "90° - θ - 23°27'",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Primăvară: α",
+                  "unit": "h",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Primăvară: δ",
+                  "unit": "°",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Vară: α",
+                  "unit": "h",
+                  "correct_value": 6,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Vară: δ",
+                  "unit": "°",
+                  "correct_value": 23.45,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Toamnă: α",
+                  "unit": "h",
+                  "correct_value": 12,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Toamnă: δ",
+                  "unit": "°",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Iarnă: α",
+                  "unit": "h",
+                  "correct_value": 18,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Iarnă: δ",
+                  "unit": "°",
+                  "correct_value": -23.45,
+                  "tolerance": 0.02
+                }
+              ],
+              "explanation": "La echinocții, Soarele are δ=0° și α=0h (primăvară) sau 12h (toamnă). La solstiții, δ=±23°27' și α=6h (vară) sau 18h (iarnă). Înălțimea maximă la culminație: $h_{\\text{max}} = 90^\\circ - \\theta + \\delta$; $h_{\\text{min}} = 90^\\circ - \\theta - \\delta$."
+            },
+            {
+              "type": "open",
+              "question": "De la ce latitudini se poate vedea Soarele la amiază exact la zenit, în data de: a) 21 martie; b) 22 iunie; c) 23 septembrie; d) 22 decembrie?",
+              "answer_fields": [
+                {
+                  "label": "21 martie (latitudine)",
+                  "unit": "°",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "22 iunie (latitudine)",
+                  "unit": "°",
+                  "correct_value": 23.45,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "23 septembrie (latitudine)",
+                  "unit": "°",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "22 decembrie (latitudine)",
+                  "unit": "°",
+                  "correct_value": -23.45,
+                  "tolerance": 0.02
+                }
+              ],
+              "explanation": "Soarele este la zenit când declinația δ = latitudinea θ. La 21 martie și 23 septembrie δ=0° → ecuator. La 22 iunie δ=+23°27' → Tropicul Racului. La 22 decembrie δ=-23°27' → Tropicul Capricornului."
+            },
+            {
+              "type": "open",
+              "question": "De la ce latitudini se poate vedea Soarele la amiază, la orizont, în zilele de: a) 21 martie; b) 22 iunie; c) 23 septembrie; d) 22 decembrie?",
+              "answer_fields": [
+                {
+                  "label": "21 martie (latitudine nordică)",
+                  "unit": "°",
+                  "correct_value": 90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "21 martie (latitudine sudică)",
+                  "unit": "°",
+                  "correct_value": -90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "22 iunie (latitudine)",
+                  "unit": "°",
+                  "correct_value": -66.55,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "23 septembrie (latitudine nordică)",
+                  "unit": "°",
+                  "correct_value": 90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "23 septembrie (latitudine sudică)",
+                  "unit": "°",
+                  "correct_value": -90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "22 decembrie (latitudine)",
+                  "unit": "°",
+                  "correct_value": 66.55,
+                  "tolerance": 0.02
+                }
+              ],
+              "explanation": "Soarele la orizont (h=0) la amiază înseamnă $90^\\circ - \\theta + \\delta = 0 \\Rightarrow \\theta = 90^\\circ + \\delta$. La 21 martie/23 septembrie δ=0 → poli. La 22 iunie δ=+23°27' → θ= -66°33' (Cercul Polar de Sud). La 22 decembrie δ=-23°27' → θ= +66°33' (Cercul Polar de Nord)."
+            },
+            {
+              "type": "open",
+              "question": "Care este înălțimea maximă față de orizont la care ajunge Soarele în mișcarea sa aparentă anuală, pentru un observator de pe Pământ aflat la următoarele latitudini geografice: a) θ=0°; b) θ=+23,5°; c) θ=+66,5°; d) θ=+90°?",
+              "answer_fields": [
+                {
+                  "label": "θ=0° (h_max)",
+                  "unit": "°",
+                  "correct_value": 90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "θ=+23,5° (h_max)",
+                  "unit": "°",
+                  "correct_value": 90,
+                  "tolerance": 0
+                },
+                {
+                  "label": "θ=+66,5° (h_max)",
+                  "unit": "°",
+                  "correct_value": 47,
+                  "tolerance": 0.5
+                },
+                {
+                  "label": "θ=+90° (h_max)",
+                  "unit": "°",
+                  "correct_value": 23.5,
+                  "tolerance": 0.2
+                }
+              ],
+              "explanation": "$h_{\\text{max}} = 90^\\circ - \\theta + \\delta_{\\text{max}}$, cu $\\delta_{\\text{max}}=23,5^\\circ$. La ecuator (0°) → 90°; la tropic (23,5°) → 90°; la Cercul Polar (66,5°) → 47°; la pol (90°) → 23,5°."
+            },
+            {
+              "type": "open",
+              "question": "La ce dată avem cea mai lungă zi-lumină şi cea mai scurtă noapte din an în ţara noastră? Dar pentru cineva aflat la Cercul Polar de Nord? La ce dată avem cea mai lungă noapte din an în ţara noastră? Dar pentru cineva aflat la tropicul Capricornului?",
+              "answer_fields": [
+                {
+                  "label": "România – cea mai lungă zi",
+                  "unit": "",
+                  "correct_value": "22 iunie",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Cercul Polar Nord – cea mai lungă zi",
+                  "unit": "",
+                  "correct_value": "22 iunie",
+                  "tolerance": 0
+                },
+                {
+                  "label": "România – cea mai lungă noapte",
+                  "unit": "",
+                  "correct_value": "22 decembrie",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Tropicul Capricornului – cea mai lungă noapte",
+                  "unit": "",
+                  "correct_value": "22 iunie",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "În emisfera nordică (România) cea mai lungă zi = solstițiul de vară (22 iunie); cea mai lungă noapte = solstițiul de iarnă (22 decembrie). La Cercul Polar de Nord, pe 22 iunie ziua durează 24h. În emisfera sudică anotimpurile sunt inversate, deci la Tropicul Capricornului cea mai lungă noapte este pe 22 iunie."
+            },
+            {
+              "type": "open",
+              "question": "a) Stabiliţi intervalul de valori în care se încadrează coordonatele ecliptice heliocentrice ale Pământului şi Lunii pe parcursul unui an tropic. b) Determinaţi longitudinea ecliptică a Soarelui la trecerea prin perigeu (3 ianuarie) şi apogeu (3 iulie).",
+              "answer_fields": [
+                {
+                  "label": "Longitudinea heliocentrică a Pământului (min-max)",
+                  "unit": "°",
+                  "correct_value": "[0,360)",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Latitudinea heliocentrică a Pământului",
+                  "unit": "°",
+                  "correct_value": "~0",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Longitudinea heliocentrică a Lunii (min-max)",
+                  "unit": "°",
+                  "correct_value": "[0,360)",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Latitudinea heliocentrică a Lunii (min-max)",
+                  "unit": "°",
+                  "correct_value": "[-5.15, +5.15]",
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Longitudinea Soarelui la perigeu (~3 ian)",
+                  "unit": "°",
+                  "correct_value": 283,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Longitudinea Soarelui la apogeu (~3 iul)",
+                  "unit": "°",
+                  "correct_value": 103,
+                  "tolerance": 1
+                }
+              ],
+              "explanation": "Orbita Pământului definește ecliptica, deci β≈0. Luna are orbita înclinată cu ~5°9'. Perigeul Pământului (cel mai apropiat de Soare) este în jur de 3 ianuarie, când longitudinea heliocentrică a Soarelui este ~283°. La apogeu (3 iulie) este ~103°."
+            },
+            {
+              "type": "open",
+              "question": "La o anumită dată, noaptea la Cercul Polar de Nord durează 24h. Cât de lungă e noaptea la aceeaşi dată, la Cercul Polar de Sud?",
+              "answer_fields": [
+                {
+                  "label": "Durata nopții la Cercul Polar de Sud",
+                  "unit": "h",
+                  "correct_value": 0,
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Fenomenele sunt simetrice. Dacă la Cercul Polar de Nord noaptea durează 24h (deci este 22 decembrie, solstițiul de iarnă nordic), atunci la Cercul Polar de Sud este 22 decembrie, dar acolo este zi polară (24h de lumină), deci noaptea = 0h."
+            },
+            {
+              "type": "open",
+              "question": "În ziua de 15 mai, declinaţia Soarelui este de $18^\\circ 56'$. Care este latitudinea unui observator pentru care Soarele ajunge la înălţimea maximă faţă de orizont de $64^\\circ 45'$?",
+              "answer_fields": [
+                {
+                  "label": "Latitudine (cazul 1, nordică)",
+                  "unit": "°",
+                  "correct_value": 44.183,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Latitudine (cazul 2, sudică)",
+                  "unit": "°",
+                  "correct_value": -6.317,
+                  "tolerance": 0.02
+                }
+              ],
+              "explanation": "Formula $h_{\\text{max}} = 90^\\circ - |\\theta - \\delta|$. $|\\theta - \\delta| = 90^\\circ - 64^\\circ 45' = 25^\\circ 15'$. Rezultă două soluții: $\\theta = \\delta + 25^\\circ 15' = 44^\\circ 11'$ sau $\\theta = \\delta - 25^\\circ 15' = -6^\\circ 19'$."
+            },
+            {
+              "type": "open",
+              "question": "Ascensia dreaptă a Soarelui pe data de 1 iunie este $4^\\text{h} 35^\\text{min}$, iar declinaţia este $22^\\circ 00'$. Să se afle longitudinile şi latitudinile ecliptice ale Soarelui şi Lunii, Luna fiind în faza de Prim Pătrar.",
+              "answer_fields": [
+                {
+                  "label": "Longitudinea ecliptică a Soarelui",
+                  "unit": "°",
+                  "correct_value": 71,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Latitudinea ecliptică a Soarelui",
+                  "unit": "°",
+                  "correct_value": 0,
+                  "tolerance": 0
+                },
+                {
+                  "label": "Longitudinea ecliptică a Lunii (Primul Pătrar)",
+                  "unit": "°",
+                  "correct_value": 161,
+                  "tolerance": 1
+                },
+                {
+                  "label": "Latitudinea ecliptică a Lunii (domeniu posibil)",
+                  "unit": "°",
+                  "correct_value": "între -5° și +5°",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Coordonatele ecliptice ale Soarelui se obțin din ecuatoriale ($\\delta=22^\\circ$, $\\alpha=4^\\text{h}35^\\text{m} \\approx 68,75^\\circ$). Longitudinea ecliptică aproximativă: $\\lambda\\approx71^\\circ$. Latitudinea $\\beta=0$. La Luna Primul Pătrar, diferența de longitudine ecliptică față de Soare este de $90^\\circ$, deci $\\lambda_L \\approx 161^\\circ$. Latitudinea Lunii poate varia între $-5^\\circ$ și $+5^\\circ$."
+            },
+            {
+              "type": "open",
+              "question": "Cât este lungimea umbrei unui gnomon de 1 metru, la amiază, în Galaţi ($\\theta=45^\\circ$) în data de: a) 22 iunie; b) 22 decembrie; c) 21 martie; d) 23 septembrie?",
+              "answer_fields": [
+                {
+                  "label": "22 iunie – lungime umbră",
+                  "unit": "m",
+                  "correct_value": 0.39,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "22 decembrie – lungime umbră",
+                  "unit": "m",
+                  "correct_value": 2.53,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "21 martie – lungime umbră",
+                  "unit": "m",
+                  "correct_value": 1,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "23 septembrie – lungime umbră",
+                  "unit": "m",
+                  "correct_value": 1,
+                  "tolerance": 0.01
+                }
+              ],
+              "explanation": "Înălțimea Soarelui la amiază: $h = 90^\\circ - \\theta + \\delta$. Pentru Galați $\\theta=45^\\circ$. La 22 iunie $\\delta=+23,45^\\circ \\rightarrow h\\approx68,45^\\circ \\rightarrow l = 1/\\tan(68,45^\\circ) \\approx 0,39\\text{ m}$. La 22 decembrie $\\delta=-23,45^\\circ \\rightarrow h\\approx21,55^\\circ \\rightarrow l\\approx2,53\\text{ m}$. La echinocții $\\delta=0^\\circ$, $h=45^\\circ \\rightarrow l=1\\text{ m}$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Mișcările planetelor. Legile lui Kepler",
+      "lessons": [
+        "**Legea I – Legea orbitelor**\n\nToate planetele se mişcă în jurul Soarelui pe traiectorii eliptice, Soarele aflându-se în unul din focarele elipsei.\n\nElipsa este o curbă plană definită ca locul geometric al punctelor pentru care suma distanţelor la două puncte fixe numite focare este constantă. Punctul cel mai apropiat de Soare se numeşte **periheliu**, iar cel mai îndepărtat, **afeliu**.\n\nPentru orice traiectorie eliptică se definesc următoarele elemente:\n- semiaxa mare, $a$;\n- semiaxa mică, $b$;\n- excentricitatea liniară, $e = \\sqrt{a^2 - b^2}$;\n- excentricitatea relativă, $\\varepsilon = e/a$.\n\nExemple: $\\varepsilon_{\\text{Pământ}} = 0,017$; $\\varepsilon_{\\text{Mercur}} = 0,206$.\n\nFormule utile:\n$$r_P = a(1 - \\varepsilon)$$\n$$r_A = a(1 + \\varepsilon)$$\n$$r_P + r_A = 2a$$",
+        "**Legea a II-a – Legea ariilor**\n\nRaza vectoare care uneşte Soarele cu planeta descrie arii egale în intervale de timp egale. De aceea, planeta se deplasează mai repede la periheliu şi mai lent la afeliu.\n\nDacă $S_1$ şi $S_2$ sunt ariile descrise în intervale egale de timp, atunci:\n$$S_1 = S_2$$",
+        "**Legea a III-a – Legea perioadelor**\n\nPătratele perioadelor de revoluţie ale planetelor în jurul Soarelui sunt proporţionale cu cuburile semiaxelor mari ale elipselor lor:\n$$\\frac{T_1^2}{T_2^2} = \\frac{a_1^3}{a_2^3}$$\n\nDacă perioadele siderale $T$ se exprimă în **ani tereştri** şi semiaxele mari ale orbitelor se exprimă în **UA** ($1\\text{ UA} = 149\\,600\\,000\\text{ km}$), atunci:\n$$T^2 = a^3$$",
+        "**Legea a III-a generalizată**\n\nForma generală a celei de-a treia legi Kepler, valabilă pentru oricare două corpuri care se rotesc în jurul centrului de masă comun:\n$$\\frac{T^2}{a^3} = \\frac{4\\pi^2}{K(M+m)}$$\n\nunde $M$ este masa corpului central, $m$ este masa corpului care orbitează, iar $K$ este constanta atracţiei universale: $K = 6,67 \\times 10^{-11}\\text{ Nm}^2/\\text{kg}^2$.\n\nPentru două sisteme gravitaţionale diferite:\n$$\\frac{T_1^2}{a_1^3(M_1+m_1)} = \\frac{T_2^2}{a_2^3(M_2+m_2)}$$\n\n**Observaţii:** Toate orbitele planetelor sunt parcurse în acelaşi sens – **sensul astronomic direct**. Planele orbitelor planetare sunt foarte apropiate de planul eclipticii (planul orbitei Pământului)."
+      ],
+      "quiz": [
+        {
+          "question": "Cine a descoperit legile mișcării planetelor?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Galileo Galilei"
+            },
+            {
+              "label": "b",
+              "text": "Johannes Kepler"
+            },
+            {
+              "label": "c",
+              "text": "Isaac Newton"
+            },
+            {
+              "label": "d",
+              "text": "Tycho Brahe"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Conform Legii I a lui Kepler, traiectoriile planetelor sunt:",
+          "options": [
+            {
+              "label": "a",
+              "text": "Cercuri perfecte"
+            },
+            {
+              "label": "b",
+              "text": "Elipse cu Soarele într-un focar"
+            },
+            {
+              "label": "c",
+              "text": "Parabole"
+            },
+            {
+              "label": "d",
+              "text": "Hiperbole"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numește punctul de pe orbita unei planete cel mai apropiat de Soare?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Afeliu"
+            },
+            {
+              "label": "b",
+              "text": "Periheliu"
+            },
+            {
+              "label": "c",
+              "text": "Apogeu"
+            },
+            {
+              "label": "d",
+              "text": "Perigeu"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce excentricitate relativă are orbita Pământului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "0,206"
+            },
+            {
+              "label": "b",
+              "text": "0,017"
+            },
+            {
+              "label": "c",
+              "text": "0,5"
+            },
+            {
+              "label": "d",
+              "text": "0,99"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se calculează distanța la periheliu ($r_P$) în funcție de semiaxa mare ($a$) și excentricitatea ($\\varepsilon$)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$r_P = a(1+\\varepsilon)$"
+            },
+            {
+              "label": "b",
+              "text": "$r_P = a(1-\\varepsilon)$"
+            },
+            {
+              "label": "c",
+              "text": "$r_P = a\\varepsilon$"
+            },
+            {
+              "label": "d",
+              "text": "$r_P = a/\\varepsilon$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce afirmă Legea a II-a a lui Kepler (legea ariilor)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Planetele se mișcă pe orbite eliptice"
+            },
+            {
+              "label": "b",
+              "text": "Raza vectoare descrie arii egale în intervale de timp egale"
+            },
+            {
+              "label": "c",
+              "text": "$T^2 \\propto a^3$"
+            },
+            {
+              "label": "d",
+              "text": "Forța gravitațională este invers proporțională cu pătratul distanței"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Unde are planeta viteza maximă pe orbita sa?",
+          "options": [
+            {
+              "label": "a",
+              "text": "La afeliu"
+            },
+            {
+              "label": "b",
+              "text": "La periheliu"
+            },
+            {
+              "label": "c",
+              "text": "La jumătatea distanței dintre periheliu și afeliu"
+            },
+            {
+              "label": "d",
+              "text": "Viteza este constantă"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este expresia Legii a III-a a lui Kepler (pentru planetele din Sistemul Solar, cu $T$ în ani și $a$ în UA)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "$T = a$"
+            },
+            {
+              "label": "b",
+              "text": "$T^2 = a^3$"
+            },
+            {
+              "label": "c",
+              "text": "$T^3 = a^2$"
+            },
+            {
+              "label": "d",
+              "text": "$T = a^2$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Dacă o planetă are semiaxa mare a orbitei de 4 UA, care este perioada sa de revoluție (în ani)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "4 ani"
+            },
+            {
+              "label": "b",
+              "text": "8 ani"
+            },
+            {
+              "label": "c",
+              "text": "16 ani"
+            },
+            {
+              "label": "d",
+              "text": "2 ani"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "În ce sens se mișcă planetele în jurul Soarelui?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Sens retrograd (de la Est la Vest)"
+            },
+            {
+              "label": "b",
+              "text": "Sens astronomic direct (de la Vest la Est)"
+            },
+            {
+              "label": "c",
+              "text": "Unele în sens direct, altele în sens retrograd"
+            },
+            {
+              "label": "d",
+              "text": "Mișcarea este haotică"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă semiaxa mare a unei orbite eliptice?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Jumătate din diametrul cel mai lung al elipsei"
+            },
+            {
+              "label": "b",
+              "text": "Distanța de la centrul elipsei la un focar"
+            },
+            {
+              "label": "c",
+              "text": "Distanța dintre cele două focare"
+            },
+            {
+              "label": "d",
+              "text": "Raza cercului circumscris elipsei"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care planetă are cea mai mare excentricitate orbitală dintre planetele mari?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Pământul"
+            },
+            {
+              "label": "b",
+              "text": "Mercur"
+            },
+            {
+              "label": "c",
+              "text": "Venus"
+            },
+            {
+              "label": "d",
+              "text": "Jupiter"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Legea a III-a generalizată include masele corpurilor. În Sistemul Solar, ce masă este dominantă în calcul?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Masa Pământului"
+            },
+            {
+              "label": "b",
+              "text": "Masa Soarelui"
+            },
+            {
+              "label": "c",
+              "text": "Masa lui Jupiter"
+            },
+            {
+              "label": "d",
+              "text": "Masa Lunii"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este viteza areolară?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Viteza cu care se mișcă planeta pe orbită"
+            },
+            {
+              "label": "b",
+              "text": "Viteza de variație a ariei măturate de raza vectoare"
+            },
+            {
+              "label": "c",
+              "text": "Viteza unghiulară a planetei"
+            },
+            {
+              "label": "d",
+              "text": "Viteza de rotație a planetei în jurul axei"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Dacă o planetă are perioada orbitală de 8 ani, care este semiaxa mare a orbitei sale (în UA)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "2 UA"
+            },
+            {
+              "label": "b",
+              "text": "4 UA"
+            },
+            {
+              "label": "c",
+              "text": "8 UA"
+            },
+            {
+              "label": "d",
+              "text": "16 UA"
+            }
+          ],
+          "correct_index": 1
+        }
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 4,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Orbita unui asteroid din sistemul solar are semiaxa mare de 4 UA şi distanţa minimă faţă de Soare de 0,4 UA. Să se afle: excentricitatea orbitei, distanţa faţă de Soare la afeliu şi perioada siderală a asteroidului.",
+              "answer_fields": [
+                {
+                  "label": "Excentricitatea orbitei (e)",
+                  "unit": "",
+                  "correct_value": 0.9,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "Distanța la afeliu (r_A)",
+                  "unit": "UA",
+                  "correct_value": 7.6,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Perioada siderală (T)",
+                  "unit": "ani",
+                  "correct_value": 8,
+                  "tolerance": 0.1
+                }
+              ],
+              "explanation": "Distanța la periheliu: $r_P = a(1-e) \\Rightarrow 0,4 = 4(1-e) \\Rightarrow e = 0,9$. Distanța la afeliu: $r_A = a(1+e) = 4(1+0,9) = 7,6$ UA. Perioada: $T^2 = a^3 = 4^3 = 64 \\Rightarrow T = 8$ ani."
+            },
+            {
+              "type": "open",
+              "question": "Perioada orbitală a planetei pitice Ceres este de 6 ani. Să se afle raza orbitei sale şi viteza medie de revoluţie în jurul Soarelui. Ştiind diametrul planetei Ceres $D = 1000$ km, să se determine diametrul unghiular aparent atunci când Ceres este la opoziţie.",
+              "answer_fields": [
+                {
+                  "label": "Raza orbitei (semiaxa mare a)",
+                  "unit": "UA",
+                  "correct_value": 3.3,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Viteza medie de revoluție (v)",
+                  "unit": "km/s",
+                  "correct_value": 16.4,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Diametrul unghiular la opoziție (α)",
+                  "unit": "″",
+                  "correct_value": 0.59,
+                  "tolerance": 0.02
+                }
+              ],
+              "explanation": "Din $T^2 = a^3 \\Rightarrow a = \\sqrt[3]{6^2} = \\sqrt[3]{36} \\approx 3,3$ UA. Viteza medie: $v = 2\\pi a / T$, cu $a$ în km ($3,3\\times149,6\\times10^6$ km) și $T$ în secunde ($6\\times365,25\\times86400$) $\\Rightarrow v \\approx 16,4$ km/s. La opoziție, distanța Pământ-Ceres: $d = a - 1 = 2,3$ UA $\\approx 344\\times10^6$ km. Diametrul unghiular: $\\alpha'' = (D/d) \\times 206265 = (1000 / 344\\times10^6) \\times 206265 \\approx 0,59''$."
+            },
+            {
+              "type": "open",
+              "question": "Care dintre planetele Neptun şi Pluto se apropie cel mai mult de Soare? Se cunosc: $a_N = 30,1$ UA, $e_N = 0,009$, $a_{\\text{Pluto}} = 39,5$ UA, $e_{\\text{Pluto}} = 0,250$.",
+              "answer_fields": [
+                {
+                  "label": "Numele planetei care se apropie cel mai mult de Soare",
+                  "unit": "",
+                  "correct_value": "Pluto",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Distanța minimă a lui Neptun (r_P,N)",
+                  "unit": "UA",
+                  "correct_value": 29.83,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "Distanța minimă a lui Pluto (r_P,Pluto)",
+                  "unit": "UA",
+                  "correct_value": 29.62,
+                  "tolerance": 0.01
+                }
+              ],
+              "explanation": "Distanța la periheliu: $r_P = a(1-e)$. Pentru Neptun: $30,1\\times(1-0,009)=29,83$ UA. Pentru Pluto: $39,5\\times(1-0,250)=29,62$ UA. Deoarece $29,62 < 29,83$, Pluto ajunge mai aproape de Soare."
+            },
+            {
+              "type": "open",
+              "question": "Semiaxa mare a orbitei unui asteroid este de $1,568$ UA şi distanţa la periheliu este $1,170$ UA. Să se afle perioada siderală a asteroidului, distanţa maximă la care poate ajunge faţă de Soare şi excentricitatea orbitei sale. Să se determine viteza maximă şi viteza minimă pe orbită.",
+              "answer_fields": [
+                {
+                  "label": "Perioada siderală (T)",
+                  "unit": "ani",
+                  "correct_value": 1.96,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Distanța la afeliu (r_A)",
+                  "unit": "UA",
+                  "correct_value": 1.966,
+                  "tolerance": 0.005
+                },
+                {
+                  "label": "Excentricitatea (e)",
+                  "unit": "",
+                  "correct_value": 0.254,
+                  "tolerance": 0.002
+                },
+                {
+                  "label": "Viteza maximă (v_max)",
+                  "unit": "km/s",
+                  "correct_value": 34.3,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Viteza minimă (v_min)",
+                  "unit": "km/s",
+                  "correct_value": 20.4,
+                  "tolerance": 0.2
+                }
+              ],
+              "explanation": "$T^2 = a^3 = 1,568^3 \\approx 3,856 \\Rightarrow T \\approx 1,96$ ani. $r_P = a(1-e) \\Rightarrow 1,170 = 1,568(1-e) \\Rightarrow e \\approx 0,254$. $r_A = a(1+e) = 1,568\\times1,254 \\approx 1,966$ UA. Viteza medie la 1 UA: $v_0 = 29,78$ km/s. Viteza medie a asteroidului: $v_m = v_0/\\sqrt{a} = 29,78/\\sqrt{1,568} \\approx 23,78$ km/s. Apoi $v_{\\text{max}} = v_m\\sqrt{(1+e)/(1-e)} \\approx 23,78\\times\\sqrt{1,254/0,746} \\approx 34,3$ km/s, $v_{\\text{min}} = v_m\\sqrt{(1-e)/(1+e)} \\approx 20,4$ km/s."
+            },
+            {
+              "type": "open",
+              "question": "Planetoidul Sedna se roteşte în jurul Soarelui pe o orbită cu semiaxa mare egală cu $524$ UA şi excentricitatea $e = 0,832$. Să se afle distanţa faţă de Soare şi viteza la afeliu, distanţa şi viteza la periheliu, precum şi perioada siderală a planetoidului.",
+              "answer_fields": [
+                {
+                  "label": "Distanța la periheliu (r_P)",
+                  "unit": "UA",
+                  "correct_value": 88.03,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Viteza la periheliu (v_max)",
+                  "unit": "km/s",
+                  "correct_value": 4.64,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Distanța la afeliu (r_A)",
+                  "unit": "UA",
+                  "correct_value": 959.97,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Viteza la afeliu (v_min)",
+                  "unit": "km/s",
+                  "correct_value": 0.43,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "Perioada siderală (T)",
+                  "unit": "ani",
+                  "correct_value": 12000,
+                  "tolerance": 100
+                }
+              ],
+              "explanation": "$r_P = a(1-e) = 524\\times(1-0,832)=88,03$ UA. $r_A = a(1+e)=524\\times1,832=959,97$ UA. $T^2 = a^3 = 524^3 \\approx 143.877.824 \\Rightarrow T \\approx 12.000$ ani. Viteza medie la 1 UA: $29,78$ km/s. Viteza medie a Sednei: $v_0 = 29,78/\\sqrt{524} \\approx 1,30$ km/s. $v_{\\text{max}} = v_0\\sqrt{(1+e)/(1-e)} = 1,30\\times\\sqrt{1,832/0,168} \\approx 4,64$ km/s. $v_{\\text{min}} = v_0\\sqrt{(1-e)/(1+e)} \\approx 0,43$ km/s."
+            },
+            {
+              "type": "open",
+              "question": "Un satelit artificial al Soarelui, aflat pe o orbită circulară în jurul acestuia, are o perioadă siderală de $11,55$ zile. Să se afle distanţa faţă de centrul Soarelui la care se roteşte satelitul, viteza unghiulară şi liniară pe orbită. ($M_{\\text{Soare}} = 2\\times10^{30}$ kg, $K = 6,67\\times10^{-11}$ Nm$^2$/kg$^2$)",
+              "answer_fields": [
+                {
+                  "label": "Distanța față de centrul Soarelui (r)",
+                  "unit": "km",
+                  "correct_value": 15000000,
+                  "tolerance": 100000
+                },
+                {
+                  "label": "Distanța în UA",
+                  "unit": "UA",
+                  "correct_value": 0.1,
+                  "tolerance": 0.005
+                },
+                {
+                  "label": "Viteza unghiulară (ω)",
+                  "unit": "rad/s",
+                  "correct_value": 0.0000063,
+                  "tolerance": 2e-7
+                },
+                {
+                  "label": "Viteza liniară (v)",
+                  "unit": "km/s",
+                  "correct_value": 94.5,
+                  "tolerance": 0.5
+                }
+              ],
+              "explanation": "Folosim legea a III-a generalizată: $T^2 = \\frac{4\\pi^2 r^3}{K M}$. Rezultă $r^3 = \\frac{K M T^2}{4\\pi^2}$. $T = 11,55\\times86400 \\approx 997.920$ s. Calculând: $r^3 \\approx \\frac{6,67\\times10^{-11}\\times2\\times10^{30}\\times(9,98\\times10^5)^2}{4\\pi^2} \\approx 3,375\\times10^{24} \\Rightarrow r \\approx 1,5\\times10^{10}$ m $= 15.000.000$ km $= 0,1$ UA. Viteza liniară: $v = \\sqrt{\\frac{K M}{r}} \\approx \\sqrt{\\frac{1,334\\times10^{20}}{1,5\\times10^{10}}} \\approx 94.500$ m/s $= 94,5$ km/s. Viteza unghiulară: $\\omega = v/r = 94.500 / 1,5\\times10^{10} \\approx 6,3\\times10^{-6}$ rad/s."
+            },
+            {
+              "type": "open",
+              "question": "O cometă are excentricitatea orbitei $e = 0,905$ şi distanţa la periheliu $r_P = 0,976$ UA. Calculaţi semiaxa mare a orbitei, perioada orbitală, distanţa la afeliu şi vitezele extreme pe orbită.",
+              "answer_fields": [
+                {
+                  "label": "Semiaxa mare (a)",
+                  "unit": "UA",
+                  "correct_value": 10.27,
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "Perioada orbitală (T)",
+                  "unit": "ani",
+                  "correct_value": 32.9,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Distanța la afeliu (r_A)",
+                  "unit": "UA",
+                  "correct_value": 19.56,
+                  "tolerance": 0.05
+                },
+                {
+                  "label": "Viteza maximă (v_max)",
+                  "unit": "km/s",
+                  "correct_value": 41.8,
+                  "tolerance": 0.2
+                },
+                {
+                  "label": "Viteza minimă (v_min)",
+                  "unit": "km/s",
+                  "correct_value": 2.1,
+                  "tolerance": 0.05
+                }
+              ],
+              "explanation": "$r_P = a(1-e) \\Rightarrow a = \\frac{0,976}{1-0,905} = \\frac{0,976}{0,095} \\approx 10,27$ UA. $T^2 = a^3 = 10,27^3 \\approx 1083 \\Rightarrow T \\approx 32,9$ ani. $r_A = a(1+e) = 10,27\\times1,905 \\approx 19,56$ UA. Viteza medie la 1 UA: $29,78$ km/s. Viteza medie a cometei: $v_0 = 29,78/\\sqrt{10,27} \\approx 9,29$ km/s. $v_{\\text{max}} = v_0 \\sqrt{(1+e)/(1-e)} = 9,29\\times\\sqrt{1,905/0,095} \\approx 41,8$ km/s. $v_{\\text{min}} = v_0 \\sqrt{(1-e)/(1+e)} \\approx 2,1$ km/s."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Evoluția cunoștințelor despre Univers",
+      "lessons": [
+        "**Astronomia în antichitate**\n\nAstronomia este una dintre cele mai vechi științe. Începuturile astronomiei datează din epoca civilizației asiro-babiloniene, cu aproximativ 6000 de ani în urmă. Stelele și constelațiile au fost numite și reprezentate din cele mai vechi timpuri de marile civilizații antice: grecii, romanii, egiptenii, chinezii, arabii, indienii.\n\n**Hipparh din Niceea (190 – 125 î.e.n.)** – considerat cel mai mare astronom al antichității grecești. El a determinat durata anului ca fiind 365 de zile și un sfert și durata lunii sinodice. A alcătuit primul catalog de stele, cu peste 850 de obiecte, împărțind stelele vizibile cu ochiul liber în 6 clase de strălucire (magnitudine). A introdus sistemul hexazecimal (cercul în 360°, gradul în 60', minutul în 60'').\n\n**Claudius Ptolemeu (90 – 168 î.e.n.)** – matematician și astronom de origine greacă, a trăit în Alexandria. În lucrarea sa „Almagesta” descrie sistemul geocentric (Pământul în centru, cu Soarele, Luna și planetele rotindu-se în jurul lui). Catalogul său stelar cuprindea 1025 de stele grupate în 48 de constelații (constelații antice).\n\n**Realizări ale astronomiei antice:** diferențierea între stele și planete; forma sferică a Pământului; măsurarea dimensiunilor Terrei și a distanței până la Lună; Soarele, Luna și Pământul formează un sistem a cărui limită este orbita lui Saturn; stelele considerate fixe pe o sferă care înglobează sistemul geocentric.",
+        "**Astronomia în Evul Mediu și Renaștere**\n\nLa începutul Evului Mediu, în Europa, ascensiunea creștinismului a dus la distrugerea manuscriselor științifice. Astronomia a decăzut, dar firul a fost continuat de civilizații din afara Europei: China (observații precise), India (punerea la îndoială a geocentrismului), lumea arabă (păstrătoarea progresului științific).\n\n**Nicolaus Copernic (1473–1543)** – astronom polonez, a demonstrat că Pământul, împreună cu celelalte planete, se rotește în jurul Soarelui (sistem heliocentric). A explicat științific succesiunea anotimpurilor și precesia echinocțiilor.\n\n**Tycho Brahe (1546–1601)** – astronom danez, a demonstrat că stelele și cometele nu sunt fenomene atmosferice. A descoperit o supernovă în constelația Cassiopeia (1572). Măsurătorile sale precise au permis elaborarea unui model realist al Sistemului Solar. A determinat înclinarea eclipticii și mișcarea anuală a perigeului Soarelui.\n\n**Galileo Galilei (1564–1642)** – astronom și fizician italian, marcând începutul științei moderne. Construindu-și o lunetă (1609), a descoperit munții și craterele Lunii, a văzut miliarde de stele în Calea Lactee, a descoperit cei patru sateliți galileeni ai lui Jupiter (Io, Europa, Ganymede, Callisto), petele solare, inelele lui Saturn și fazele lui Venus. Observațiile sale au confirmat teoria heliocentrică. Pentru susținerea heliocentrismului a fost judecat de Inchiziție și obligat să se dezică. Legenda spune că ar fi rostit: „E pur si move!” (Și totuși se mișcă).",
+        "**De la Kepler la Newton. Descoperiri ulterioare**\n\n**Johannes Kepler (1571–1630)** – astronom german, a elaborat cele trei legi ale mișcării planetelor folosind observațiile lui Tycho Brahe. A arătat că Soarele se rotește în jurul axei sale în același sens cu mișcarea planetelor. A explicat tranzitul lui Mercur și Venus și lumina roșiatică din timpul eclipsei de Lună. A fost supranumit „legiuitorul cerului”.\n\n**Isaac Newton (1642–1727)** – fizician și matematician englez, a construit primul telescop cu oglindă. A enunțat legea atracției universale, explicând mișcările planetelor (legile lui Kepler), fenomenul mareelor și turtirea Pământului la poli. A înțeles că aceeași forță guvernează căderea unui măr și mișcarea Lunii. A studiat dispersia luminii și a introdus noțiunea de foton.\n\n**Edmund Halley (1656–1742)** – astronom englez, a descoperit mișcările proprii ale stelelor, a determinat distanța Pământ-Soare (UA) prin observarea tranzitului lui Venus. A descoperit periodicitatea cometei care îi poartă numele (perioadă 76 de ani; ultima trecere în 1986).\n\n**Charles Messier (1730–1817)** – astronom francez, a creat primul catalog de obiecte deep-sky (nebuloase, roiuri de stele, galaxii) – Catalogul Messier, cu 110 obiecte. A descoperit 21 de comete.\n\n**Descoperirea planetelor:** Uranus (William Herschel, 1781); Neptun (Urbain Le Verrier, 1846); Pluto (Clyde Tombaugh, 1930). Herschel a descoperit și sateliți ai lui Uranus și Saturn, a măsurat rotația lui Saturn, a descoperit radiațiile infraroșii, a determinat forma galaxiei noastre și a introdus termenul de „asteroid”.",
+        "**Astronomia în secolul XX și personalități moderne**\n\n**Albert Einstein (1879–1955)** – fizician german, a revoluționat fizica cu teoria relativității generale (1916). A formulat celebra ecuație $E = mc^2$, arătând legătura dintre materie și energie.\n\n**Edwin Hubble (1889–1953)** – astronom american, a descoperit primele galaxii în afara Căii Lactee (1924). A demonstrat că „nebuloasa” Andromeda este un sistem stelar asemănător galaxiei noastre. A clasificat galaxiile în funcție de structură (1926). A descoperit că galaxiile se îndepărtează de noi cu viteze cu atât mai mari cu cât sunt mai departe (legea Hubble), ceea ce demonstrează expansiunea Universului. Aceasta susține teoria Big Bang-ului. Pe baza legii Hubble se estimează vârsta Universului la aproximativ 13,7 miliarde de ani."
+      ],
+      "quiz": [
+        {
+          "question": "Care dintre următorii astronomi ai antichității a alcătuit primul catalog de stele, împărțind stelele vizibile cu ochiul liber în 6 clase de strălucire (magnitudine)?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Claudius Ptolemeu"
+            },
+            {
+              "label": "b",
+              "text": "Hipparh din Niceea"
+            },
+            {
+              "label": "c",
+              "text": "Tycho Brahe"
+            },
+            {
+              "label": "d",
+              "text": "Nicolaus Copernic"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce sistem a descris Claudius Ptolemeu în lucrarea sa „Almagesta”?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Sistemul heliocentric"
+            },
+            {
+              "label": "b",
+              "text": "Sistemul geocentric"
+            },
+            {
+              "label": "c",
+              "text": "Sistemul geodezic"
+            },
+            {
+              "label": "d",
+              "text": "Sistemul fractal"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următorii astronomi a demonstrat că Pământul se rotește în jurul Soarelui, elaborând sistemul heliocentric?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Galileo Galilei"
+            },
+            {
+              "label": "b",
+              "text": "Tycho Brahe"
+            },
+            {
+              "label": "c",
+              "text": "Nicolaus Copernic"
+            },
+            {
+              "label": "d",
+              "text": "Isaac Newton"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce a descoperit Galileo Galilei observând Luna cu luneta?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Inelele lui Saturn"
+            },
+            {
+              "label": "b",
+              "text": "Munții și craterele Lunii"
+            },
+            {
+              "label": "c",
+              "text": "Sateliții lui Jupiter"
+            },
+            {
+              "label": "d",
+              "text": "Fazele lui Venus"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următoarele planete a fost descoperită de William Herschel în 1781?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Neptun"
+            },
+            {
+              "label": "b",
+              "text": "Uranus"
+            },
+            {
+              "label": "c",
+              "text": "Pluto"
+            },
+            {
+              "label": "d",
+              "text": "Saturn"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cometa Halley are o perioadă de revoluție de aproximativ:",
+          "options": [
+            {
+              "label": "a",
+              "text": "33 de ani"
+            },
+            {
+              "label": "b",
+              "text": "76 de ani"
+            },
+            {
+              "label": "c",
+              "text": "11 ani"
+            },
+            {
+              "label": "d",
+              "text": "100 de ani"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cine a enunțat legea atracției universale?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Johannes Kepler"
+            },
+            {
+              "label": "b",
+              "text": "Galileo Galilei"
+            },
+            {
+              "label": "c",
+              "text": "Isaac Newton"
+            },
+            {
+              "label": "d",
+              "text": "Edmund Halley"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce a demonstrat Tycho Brahe prin studiul cometelor?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Că au perioade regulate"
+            },
+            {
+              "label": "b",
+              "text": "Că sunt fenomene atmosferice"
+            },
+            {
+              "label": "c",
+              "text": "Că sunt corpuri cerești"
+            },
+            {
+              "label": "d",
+              "text": "Că provin din afara Sistemului Solar"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este numele celor patru sateliți mari ai lui Jupiter descoperiți de Galileo Galilei?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Io, Europa, Ganymede, Callisto"
+            },
+            {
+              "label": "b",
+              "text": "Titan, Rhea, Iapetus, Dione"
+            },
+            {
+              "label": "c",
+              "text": "Phobos, Deimos, Triton, Charon"
+            },
+            {
+              "label": "d",
+              "text": "Miranda, Ariel, Umbriel, Titania"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce a demonstrat existența fazelor planetei Venus observate de Galileo?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Că Venus are atmosferă"
+            },
+            {
+              "label": "b",
+              "text": "Că Venus se rotește în jurul Pământului"
+            },
+            {
+              "label": "c",
+              "text": "Că Venus se rotește în jurul Soarelui"
+            },
+            {
+              "label": "d",
+              "text": "Că Venus este o stea"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care dintre următorii oameni de știință a formulat teoria relativității generale?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Edwin Hubble"
+            },
+            {
+              "label": "b",
+              "text": "Albert Einstein"
+            },
+            {
+              "label": "c",
+              "text": "Isaac Newton"
+            },
+            {
+              "label": "d",
+              "text": "Charles Messier"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce a descoperit Edwin Hubble în 1924?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Expansiunea Universului"
+            },
+            {
+              "label": "b",
+              "text": "Calea Lactee"
+            },
+            {
+              "label": "c",
+              "text": "Că Andromeda este o galaxie separată"
+            },
+            {
+              "label": "d",
+              "text": "Radiația cosmică de fond"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Legea Hubble afirmă că:",
+          "options": [
+            {
+              "label": "a",
+              "text": "Galaxiile se îndepărtează cu viteze direct proporționale cu distanța"
+            },
+            {
+              "label": "b",
+              "text": "Galaxiile se apropie unele de altele"
+            },
+            {
+              "label": "c",
+              "text": "Stelele sunt fixe pe sfera cerească"
+            },
+            {
+              "label": "d",
+              "text": "Universul este staționar"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Cine a descoperit planeta Neptun în 1846?",
+          "options": [
+            {
+              "label": "a",
+              "text": "William Herschel"
+            },
+            {
+              "label": "b",
+              "text": "Galileo Galilei"
+            },
+            {
+              "label": "c",
+              "text": "Urbain Le Verrier"
+            },
+            {
+              "label": "d",
+              "text": "Clyde Tombaugh"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este Catalogul Messier?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Un catalog de stele variabile"
+            },
+            {
+              "label": "b",
+              "text": "Un catalog de comete"
+            },
+            {
+              "label": "c",
+              "text": "Un catalog de obiecte deep-sky (nebuloase, roiuri, galaxii)"
+            },
+            {
+              "label": "d",
+              "text": "Un catalog de planete pitice"
+            }
+          ],
+          "correct_index": 2
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Luminozitate, strălucire şi magnitudine",
+      "lessons": [
+        "**Legătura între luminozitate, strălucire şi magnitudine**\n\nÎntr-o noapte senină, pe bolta cerească, o persoană cu vederea normală poate distinge până la 3000 de stele. Unele strălucesc atât de puternic încât ne ajută să identificăm constelaţiile din care fac parte. Altele sunt atât de slabe în strălucire, încât abia le putem distinge pe cer. Şi altele, miliarde de miliarde de stele, pot fi văzute doar cu ajutorul instrumentelor optice. Diferenţele între strălucirile stelelor sunt produse în principal de distanţele diferite care ne despart de ele.\n\nAstronomul grec Hipparh (sec. II î.e.n.) a împărţit stelele vizibile cu ochiul liber după strălucirea lor aparentă în 6 clase de magnitudini. Stelele cele mai strălucitoare le-a considerat de magnitudinea 1, iar cele aflate la limita vizibilităţii de magnitudinea 6. Clasificarea lui Hipparh s-a păstrat, fiind extinsă la corpuri mai strălucitoare (magnitudini negative) sau mai slabe (magnitudini >6).\n\n**Strălucirea aparentă (E)** – puterea energetică a luminii recepţionate de la o stea pe unitatea de suprafaţă, aşezată perpendicular pe direcţia către stea; se măsoară în W/m².\n\n**Luminozitatea (L)** – energia radiaţiei totale emise de suprafaţa unui astru în unitatea de timp; se măsoară în waţi (W). $L = 4\\pi r^2 E$. Luminozitatea Soarelui este $L_\\odot = 3,8 \\times 10^{26}$ W.\n\n**Formula lui Pogson (magnitudinea aparentă m):** $\\frac{E}{E_0} = 10^{-0,4(m-m_0)}$ sau $m - m_0 = -2,5\\lg\\frac{E}{E_0}$. O stea de magnitudine 6 este de 100 de ori mai slabă decât una de magnitudine 1.\n\nExemple de magnitudini aparente: Soarele $m = -26,7$, Luna plină $m = -12,6$, Polaris $m = +2,1$, cele mai slabe stele vizibile prin telescoape spaţiale ajung la $m = +30$.\n\n**Magnitudinea absolută (M)** – magnitudinea pe care ar avea-o steaua dacă s-ar afla la distanţa standard de 10 parseci (1 pc = 3,26 ani-lumină). Relaţia dintre magnitudinea aparentă şi cea absolută: $M = m + 5 - 5\\lg r$, unde $r$ se exprimă în parseci.\n\nExemplu: Soarele are $m = -26,7$, $M = +4,87$. Sirius are $m = -1,4$, $M = +1,4$, iar distanţa rezultată este $r = 2,75$ pc = 8,97 a.l.",
+        "**Determinarea dimensiunilor şi temperaturii unei stele cunoscând strălucirea ei**\n\nMajoritatea stelelor au luminozitate constantă. Luminozitatea $L$ depinde de raza $R$ şi de temperatura efectivă $T$ la suprafaţa stelei prin legea Stefan-Boltzmann: $$L = 4\\pi R^2 \\sigma T^4$$ unde $\\sigma = 5,67 \\times 10^{-8}$ W/(m²·K⁴) este constanta Stefan-Boltzmann. Cunoscând $L$ şi $T$ putem afla raza $R$, sau invers.",
+        "**Magnitudinile grupurilor de stele**\n\nPentru un sistem stelar cu două componente de magnitudini $m_1$ şi $m_2$, luminozitatea totală este suma luminozităţilor componentelor, iar magnitudinea totală se obţine din: $$10^{-0,4 m} = 10^{-0,4 m_1} + 10^{-0,4 m_2}$$\n\nRoiurile stelare sunt grupuri de stele legate gravitaţional, cu origine comună. Există roiuri deschise şi roiuri globulare. Pentru un roi cu $N$ stele de magnitudine aparentă $m_s$ (considerate identice), magnitudinea totală a roiului este dată de: $$10^{-0,4 m} = N \\times 10^{-0,4 m_s}$$",
+        "**Stele variabile**\n\nMajoritatea stelelor au strălucire constantă în timp, dar există stele a căror strălucire variază – **stele variabile**. După natura fenomenului, se împart în:\n- **Pseudo-variabile (extrinseci)** – de fapt stele duble cu eclipsă; variaţia strălucirii apare datorită eclipsării reciproce a componentelor.\n- **Variabile intrinseci** – variaţia este legată de procese fizice din interior; stelele se extind şi se contractă periodic (**pulsaţie stelară**).\n\nPrima stea variabilă descoperită (1596) este **Mira Ceti** (în Constelaţia Balena), cu perioadă de 331 de zile. În Catalogul General al Stelelor Variabile sunt cuprinse aproape 40 000 de stele variabile din galaxia noastră şi 10 000 din alte galaxii.\n\n**Cefeidele** – stele variabile cu perioada de pulsaţie între 1 şi 70 de zile şi amplitudine între 0,1 şi 2 magnitudini. Sunt stele masive, de peste 100 de ori mai luminoase decât Soarele. Luminozitatea lor este direct proporţională cu perioada de pulsaţie. De exemplu, o cefeidă cu perioada de 3 zile este de 800 de ori mai strălucitoare decât Soarele, iar una cu perioada de 30 de zile este de aproximativ 10 000 de ori mai strălucitoare. Proprietatea cefeidelor de a avea o relaţie perioadă-luminozitate permite determinarea distanţelor până la galaxiile îndepărtate în care sunt identificate."
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 3,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Să se enumere, în ordine descrescătoare a strălucirilor lor aparente, primele şapte corpuri cereşti din Sistemul Solar, vizibile cu ochiul liber de pe Pământ.",
+              "answer_fields": [
+                {
+                  "label": "Cel mai strălucitor (1)",
+                  "unit": "",
+                  "correct_value": "Soarele",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 2-lea",
+                  "unit": "",
+                  "correct_value": "Luna",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 3-lea",
+                  "unit": "",
+                  "correct_value": "Venus",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 4-lea",
+                  "unit": "",
+                  "correct_value": "Jupiter",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 5-lea",
+                  "unit": "",
+                  "correct_value": "Marte",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 6-lea",
+                  "unit": "",
+                  "correct_value": "Mercur",
+                  "tolerance": 0
+                },
+                {
+                  "label": "Al 7-lea",
+                  "unit": "",
+                  "correct_value": "Saturn",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Magnitudinile aparente maxime: Soarele $-26,7$; Luna $-12,7$; Venus $-4,9$; Jupiter $-2,9$; Marte $-2,9$ (la opoziții mari); Mercur $-1,9$; Saturn $-0,5$. Ordinea descrescătoare a strălucirii (crescătoare a magnitudinii) este cea dată."
+            },
+            {
+              "type": "open",
+              "question": "Să se enumere în ordine descrescătoare a strălucirilor lor aparente, 10 stele din şirul de mai jos, cu magnitudini între valorile 0 şi 1. (Sirius a fost exclusă deoarece $m=-1,46$). Stelele: Vega, Capella, Arcturus, Betelgeuse, Altair, Rigel, Procyon, Spica, Antares, Aldebaran.",
+              "answer_fields": [
+                {
+                  "label": "1 (cea mai strălucitoare)",
+                  "unit": "",
+                  "correct_value": "Arcturus",
+                  "tolerance": 0
+                },
+                {
+                  "label": "2",
+                  "unit": "",
+                  "correct_value": "Vega",
+                  "tolerance": 0
+                },
+                {
+                  "label": "3",
+                  "unit": "",
+                  "correct_value": "Capella",
+                  "tolerance": 0
+                },
+                {
+                  "label": "4",
+                  "unit": "",
+                  "correct_value": "Rigel",
+                  "tolerance": 0
+                },
+                {
+                  "label": "5",
+                  "unit": "",
+                  "correct_value": "Procyon",
+                  "tolerance": 0
+                },
+                {
+                  "label": "6",
+                  "unit": "",
+                  "correct_value": "Betelgeuse",
+                  "tolerance": 0
+                },
+                {
+                  "label": "7",
+                  "unit": "",
+                  "correct_value": "Altair",
+                  "tolerance": 0
+                },
+                {
+                  "label": "8",
+                  "unit": "",
+                  "correct_value": "Aldebaran",
+                  "tolerance": 0
+                },
+                {
+                  "label": "9",
+                  "unit": "",
+                  "correct_value": "Antares",
+                  "tolerance": 0
+                },
+                {
+                  "label": "10",
+                  "unit": "",
+                  "correct_value": "Spica",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Ordinea după magnitudinea aparentă (crescătoare): Arcturus $(-0,05)$, Vega $(0,03)$, Capella $(0,08)$, Rigel $(0,13)$, Procyon $(0,34)$, Betelgeuse $(0,42)$, Altair $(0,77)$, Aldebaran $(0,85)$, Antares $(1,06)$, Spica $(1,04)$. Atenție: Antares și Spica au valori peste 1, dar sunt incluse în listă ca exercițiu."
+            },
+            {
+              "type": "open",
+              "question": "Folosind datele din tabel şi diagrama H-R, răspunde la următoarele întrebări:\n\n| Numele stelei | M | m | Clasa spectrală | Clasa luminozitate |\n|---------------|----|----|-----------------|---------------------|\n| Aldebaran | -0,2 | +0,9 | K5 | III |\n| Alfa Centauri | +4,1 | 0,0 | G2 | V |\n| Antares | -4,5 | +0,9 | M1 | I |\n| Canopus | -3,1 | -0,2 | F0 | II |\n| Fomalhaut | +2,0 | +1,2 | A1 | V |\n| Regulus | -0,5 | +1,4 | B7 | V |\n| Sirius | +1,4 | -1,4 | A1 | V |\n| Spica | -3,6 | +0,9 | B1 | V |\n\na) Care este steaua cea mai strălucitoare (aparent)? Care este cea mai slabă ca strălucire aparentă?\nb) Care stea are luminozitatea cea mai mare? Dar cea mai mică?\nc) Care stea are cea mai mare temperatură la suprafaţă? Dar cea mai mică?\nd) Care stea este cea mai asemănătoare cu Soarele?\ne) Care stea are cel mai mare diametru?\nf) Care dintre stelele aflate în secvenţa principală (clasa V) are cea mai mare masă?\ng) Care dintre stelele aflate în secvenţa principală are cea mai mare durată de „viaţă”?",
+              "answer_fields": [
+                {
+                  "label": "a) cea mai strălucitoare aparent",
+                  "unit": "",
+                  "correct_value": "Sirius",
+                  "tolerance": 0
+                },
+                {
+                  "label": "a) cea mai slabă aparent",
+                  "unit": "",
+                  "correct_value": "Regulus",
+                  "tolerance": 0
+                },
+                {
+                  "label": "b) luminozitatea cea mai mare",
+                  "unit": "",
+                  "correct_value": "Antares",
+                  "tolerance": 0
+                },
+                {
+                  "label": "b) luminozitatea cea mai mică",
+                  "unit": "",
+                  "correct_value": "Alfa Centauri",
+                  "tolerance": 0
+                },
+                {
+                  "label": "c) temperatura cea mai mare",
+                  "unit": "",
+                  "correct_value": "Spica",
+                  "tolerance": 0
+                },
+                {
+                  "label": "c) temperatura cea mai mică",
+                  "unit": "",
+                  "correct_value": "Antares",
+                  "tolerance": 0
+                },
+                {
+                  "label": "d) cea mai asemănătoare cu Soarele",
+                  "unit": "",
+                  "correct_value": "Alfa Centauri",
+                  "tolerance": 0
+                },
+                {
+                  "label": "e) cel mai mare diametru",
+                  "unit": "",
+                  "correct_value": "Antares",
+                  "tolerance": 0
+                },
+                {
+                  "label": "f) cea mai mare masă (secv. principală)",
+                  "unit": "",
+                  "correct_value": "Spica",
+                  "tolerance": 0
+                },
+                {
+                  "label": "g) cea mai mare durată de viață (secv. principală)",
+                  "unit": "",
+                  "correct_value": "Alfa Centauri",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "a) $m$ minim = $-1,4$ (Sirius); $m$ maxim = $+1,4$ (Regulus). b) $M$ minim = $-4,5$ (Antares) → luminozitate maximă; $M$ maxim = $+4,1$ (Alfa Centauri) → luminozitate minimă. c) Clasa spectrală B1 (Spica) e cea mai fierbinte; M1 (Antares) cea mai rece. d) Alfa Centauri are exact clasa G2 V ca Soarele. e) Supergigantă roșie (M1 I) – Antares are diametrul enorm. f) Pe secvenţa principală, stelele mai fierbinți (B1) sunt mai masive. g) Stelele mai puțin masive trăiesc mai mult – Alfa Centauri (G2 V)."
+            },
+            {
+              "type": "open",
+              "question": "Dacă steaua Alfa Centauri ar fi observată de la o distanţă de 10 ori mai mare decât cea de acum, strălucirea ei aparentă: a) ar creşte de 100 de ori; b) ar scădea de 100 de ori; c) ar rămâne constantă.",
+              "answer_fields": [
+                {
+                  "label": "Răspuns literă",
+                  "unit": "",
+                  "correct_value": "b",
+                  "tolerance": 0
+                },
+                {
+                  "label": "De câte ori se modifică strălucirea",
+                  "unit": "",
+                  "correct_value": "100",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Conform legii inversului pătratului distanței, strălucirea aparentă $E \\propto 1/r^2$. Dacă r crește de 10 ori, E scade de $10^2 = 100$ de ori."
+            },
+            {
+              "type": "open",
+              "question": "Luminozitatea unei stele se poate determina cunoscând: a) magnitudinea aparentă şi masa; b) magnitudinea aparentă şi temperatura; c) magnitudinea aparentă şi distanţa.",
+              "answer_fields": [
+                {
+                  "label": "Răspuns literă",
+                  "unit": "",
+                  "correct_value": "c",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Cunoscând magnitudinea aparentă $m$ și distanța $r$, se calculează magnitudinea absolută $M = m + 5 - 5\\lg r$. Magnitudinea absolută este direct legată de luminozitatea reală a stelei."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Ce a introdus Hipparh în clasificarea stelelor?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Clasele de luminozitate (I, II, III, etc.)"
+            },
+            {
+              "label": "b",
+              "text": "Magnitudinile stelare aparente (1 … 6)"
+            },
+            {
+              "label": "c",
+              "text": "Clasele spectrale (O, B, A, F, G, K, M)"
+            },
+            {
+              "label": "d",
+              "text": "Stelele variabile"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Formula lui Pogson exprimă relația dintre strălucirile a două stele și:",
+          "options": [
+            {
+              "label": "a",
+              "text": "distanțele lor"
+            },
+            {
+              "label": "b",
+              "text": "temperaturile lor"
+            },
+            {
+              "label": "c",
+              "text": "magnitudinile lor aparente"
+            },
+            {
+              "label": "d",
+              "text": "luminozitățile lor"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "O stea cu magnitudinea aparentă $m = 1$ este de câte ori mai strălucitoare decât o stea cu $m = 6$?",
+          "options": [
+            {
+              "label": "a",
+              "text": "5 ori"
+            },
+            {
+              "label": "b",
+              "text": "50 de ori"
+            },
+            {
+              "label": "c",
+              "text": "100 de ori"
+            },
+            {
+              "label": "d",
+              "text": "1000 de ori"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Magnitudinea aparentă a Soarelui este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "-26,7"
+            },
+            {
+              "label": "b",
+              "text": "-12,6"
+            },
+            {
+              "label": "c",
+              "text": "+4,87"
+            },
+            {
+              "label": "d",
+              "text": "+2,1"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce măsoară magnitudinea absolută a unei stele?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Strălucirea aparentă de pe Pământ"
+            },
+            {
+              "label": "b",
+              "text": "Strălucirea la distanța de 10 parseci"
+            },
+            {
+              "label": "c",
+              "text": "Temperatura la suprafață"
+            },
+            {
+              "label": "d",
+              "text": "Raza stelei"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Steaua Sirius are $m = -1,4$ și $M = +1,4$. Distanța până la Sirius (în parseci) este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "1,0 pc"
+            },
+            {
+              "label": "b",
+              "text": "2,75 pc"
+            },
+            {
+              "label": "c",
+              "text": "5,0 pc"
+            },
+            {
+              "label": "d",
+              "text": "10 pc"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Formula de legătură dintre magnitudinea aparentă m și magnitudinea absolută M este (r în parseci):",
+          "options": [
+            {
+              "label": "a",
+              "text": "$M = m + 5\\lg r - 5$"
+            },
+            {
+              "label": "b",
+              "text": "$M = m - 5\\lg r + 5$"
+            },
+            {
+              "label": "c",
+              "text": "$M = m + 5 - 5\\lg r$"
+            },
+            {
+              "label": "d",
+              "text": "$M = m - 5 - 5\\lg r$"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Luminozitatea unei stele depinde de:",
+          "options": [
+            {
+              "label": "a",
+              "text": "rază şi temperatură"
+            },
+            {
+              "label": "b",
+              "text": "masă şi distanţă"
+            },
+            {
+              "label": "c",
+              "text": "magnitudinea aparentă şi distanţă"
+            },
+            {
+              "label": "d",
+              "text": "doar de temperatură"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Constanta Stefan-Boltzmann (σ) are valoarea:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$5,67 \\times 10^{-8}\\ \\text{W}/(\\text{m}^2\\cdot\\text{K}^4)$"
+            },
+            {
+              "label": "b",
+              "text": "$6,67 \\times 10^{-11}\\ \\text{Nm}^2/\\text{kg}^2$"
+            },
+            {
+              "label": "c",
+              "text": "$3,8 \\times 10^{26}\\ \\text{W}$"
+            },
+            {
+              "label": "d",
+              "text": "$9,46 \\times 10^{12}\\ \\text{km}$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Cum se numesc stelele a căror strălucire variază datorită eclipselor reciproce într-un sistem binar?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Cefeide"
+            },
+            {
+              "label": "b",
+              "text": "Variabile intrinseci"
+            },
+            {
+              "label": "c",
+              "text": "Pseudo-variabile (extrinseci)"
+            },
+            {
+              "label": "d",
+              "text": "Nova"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce sunt cefeidele?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Stele duble cu eclipsă"
+            },
+            {
+              "label": "b",
+              "text": "Stele variabile intrinseci, cu relație perioadă-luminozitate"
+            },
+            {
+              "label": "c",
+              "text": "Stele neutronice"
+            },
+            {
+              "label": "d",
+              "text": "Găuri negre"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Relația dintre luminozitate, rază și temperatură a unei stele este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$L = 4\\pi R^2\\sigma T^4$"
+            },
+            {
+              "label": "b",
+              "text": "$L = 4\\pi R^2\\sigma T^2$"
+            },
+            {
+              "label": "c",
+              "text": "$L = 4\\pi R\\sigma T^4$"
+            },
+            {
+              "label": "d",
+              "text": "$L = \\pi R^2\\sigma T^4$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Steaua Mira Ceti este cunoscută pentru:",
+          "options": [
+            {
+              "label": "a",
+              "text": "a fost prima stea variabilă descoperită"
+            },
+            {
+              "label": "b",
+              "text": "are cea mai mare magnitudine absolută"
+            },
+            {
+              "label": "c",
+              "text": "face parte din roiul Pleiade"
+            },
+            {
+              "label": "d",
+              "text": "este o cefeidă"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Dacă distanța până la o stea se dublează, strălucirea ei aparentă:",
+          "options": [
+            {
+              "label": "a",
+              "text": "se dublează"
+            },
+            {
+              "label": "b",
+              "text": "se înjumătățește"
+            },
+            {
+              "label": "c",
+              "text": "crește de 4 ori"
+            },
+            {
+              "label": "d",
+              "text": "scade de 4 ori"
+            }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Magnitudinea absolută a Soarelui este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "-26,7"
+            },
+            {
+              "label": "b",
+              "text": "-12,6"
+            },
+            {
+              "label": "c",
+              "text": "+4,87"
+            },
+            {
+              "label": "d",
+              "text": "+2,1"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "O cefeidă cu perioada de 30 de zile este de aproximativ câte ori mai luminoasă decât Soarele?",
+          "options": [
+            {
+              "label": "a",
+              "text": "800 de ori"
+            },
+            {
+              "label": "b",
+              "text": "10 000 de ori"
+            },
+            {
+              "label": "c",
+              "text": "100 de ori"
+            },
+            {
+              "label": "d",
+              "text": "1 000 000 de ori"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Steaua cu cea mai mare temperatură la suprafață dintre: Sirius (A1V), Spica (B1V), Aldebaran (K5III), Antares (M1I) este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "Sirius"
+            },
+            {
+              "label": "b",
+              "text": "Spica"
+            },
+            {
+              "label": "c",
+              "text": "Aldebaran"
+            },
+            {
+              "label": "d",
+              "text": "Antares"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Pentru un roi de stele cu N stele identice de magnitudine aparentă m_s, magnitudinea totală se calculează cu:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$m = m_s - 2,5\\lg N$"
+            },
+            {
+              "label": "b",
+              "text": "$m = m_s + 2,5\\lg N$"
+            },
+            {
+              "label": "c",
+              "text": "$m = m_s - 5\\lg N$"
+            },
+            {
+              "label": "d",
+              "text": "$m = m_s + 5\\lg N$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care stea din tabel (exercițiul 3) are cea mai mare luminozitate reală?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Sirius"
+            },
+            {
+              "label": "b",
+              "text": "Spica"
+            },
+            {
+              "label": "c",
+              "text": "Antares"
+            },
+            {
+              "label": "d",
+              "text": "Aldebaran"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care dintre următoarele stele este o supergigantă roșie?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Aldebaran"
+            },
+            {
+              "label": "b",
+              "text": "Betelgeuse"
+            },
+            {
+              "label": "c",
+              "text": "Rigel"
+            },
+            {
+              "label": "d",
+              "text": "Sirius"
+            }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Instrumente optice folosite în astronomie",
+      "lessons": [
+        "**Componentele instrumentelor astronomice**\n\nOrice instrument astronomic de observaţie se compune dintr-o parte optică (lentile, oglinzi) şi o parte mecanică (montura). Partea optică are menirea de a forma imaginea obiectului observat, cea mecanică menţine elementele părţii optice, asigurând şi manevrabilitatea instrumentului.\n\n**Luneta astronomică** – aparat optic afocal alcătuit din două lentile: obiectiv şi ocular, aflate într-un tub de legătură. Se numeşte instrument afocal pentru că focarul imagine al obiectivului coincide cu focarul obiect al ocularului. Mai este numită **telescop refractor**.\n\n**Telescopul (reflector)** – aparat optic cu obiectivul format dintr-o oglindă (sferică sau parabolică) şi un ocular format dintr-o lentilă (convergentă – Kepler, divergentă – Galilei) sau două lentile (ocularele Ramsden sau Huygens). Imaginile formate sunt virtuale, răsturnate şi mult mai mari decât obiectele luminoase.\n\n**Telescopul newtonian** – cel mai des folosit de astronomii amatori: obiectivul este o oglindă sferică sau parabolică (oglinda principală) care strânge razele de lumină către focar. O oglindă secundară plană, înclinată la 45°, reflectă fasciculul luminos către ocular.",
+        "**Mărimi caracteristice ale instrumentelor astronomice**\n\n**Grosismentul (puterea de mărire)** – raportul dintre tangenta dimensiunii unghiulare a imaginii date de telescop ($\\alpha_2$) şi tangenta dimensiunii unghiulare reale a obiectului ($\\alpha_1$): $$G = \\frac{\\tan \\alpha_2}{\\tan \\alpha_1} = \\frac{F}{f}$$ unde $F$ este distanţa focală a obiectivului, iar $f$ – distanţa focală a ocularului. Grosismentul se poate modifica prin alegerea unor oculare diferite ($f$ între 0,4 mm şi 40 mm). Un $G$ prea mare nu este avantajos (imagini mai puţin luminoase, agitate din cauza turbulenţei atmosferice).\n\n**Puterea de separare (limita de rezoluţie)** – distanţa unghiulară minimă dintre două obiecte punctiforme luminoase pentru care imaginile formate sunt distincte. Ochul uman separă două puncte la distanţă unghiulară minimă de $1'$. Limita teoretică: $$\\zeta'' = \\frac{250000 \\lambda}{D}$$ ($\\lambda$ şi $D$ în aceeaşi unitate). În practică: $$\\theta'' = \\frac{120''}{D} \\quad (D \\text{ în mm})$$\n\n**Grosismentul rezolvant** – grosismentul minim care permite, prin mărirea imaginii, să se depăşească limita de rezoluţie a ochiului observatorului: $G_R = R$ (mm), unde $R$ este raza obiectivului în mm.\n\n**Puterea de pătrundere** – magnitudinea limită care poate fi observată prin instrument: $$m_{\\text{limită}} = 6 + 5\\lg\\frac{D}{d}$$ cu $d$ – diametrul pupilei ochiului uman ($d \\approx 6$ mm pe timp de noapte). Pentru $d=6$ mm: $$m_{\\text{limită}} = 7,1 + 5\\lg D \\quad (D \\text{ în cm})$$"
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 1,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Un telescop are obiectivul cu un diametru de 90 mm şi distanţa focală de 1200 mm.\na) Cât trebuie să fie distanţa focală a ocularului, dacă diametrul său este de 6 mm?\nb) Cât este grosismentul telescopului?\nc) Ce diametru unghiular ar avea discul Lunii văzut prin acest telescop? (Diametrul unghiular real al Lunii ≈ 0,5°)",
+              "answer_fields": [
+                {
+                  "label": "a) distanța focală a ocularului",
+                  "unit": "mm",
+                  "correct_value": 6,
+                  "tolerance": 0.1
+                },
+                {
+                  "label": "b) grosismentul",
+                  "unit": "",
+                  "correct_value": 200,
+                  "tolerance": 1
+                },
+                {
+                  "label": "c) diametrul unghiular aparent al Lunii",
+                  "unit": "°",
+                  "correct_value": 100,
+                  "tolerance": 1
+                }
+              ],
+              "explanation": "a) În general, distanța focală a ocularului nu se determină din diametrul său. Probabil se cere doar valoarea dată: f = 6 mm (se folosește la calculul grosismentului). b) $G = F/f$ = $1200/6 = 200$. c) Diametrul unghiular aparent = diametrul real × grosisment = $0,5^\\circ \\times 200 = 100^\\circ$ (valoare teoretică, în realitate câmpul vizual al telescopului este limitat)."
+            },
+            {
+              "type": "open",
+              "question": "A) Distanţa dintre componentele sistemului binar ζ Herculis este 1,38”. Cât trebuie să fie diametrul minim al unui telescop pentru a rezolva sistemul?\nB) Dacă distanţa focală a obiectivului este 80 cm, cât ar trebui să fie distanţa focală a ocularului pentru a putea vedea separat componentele? Rezoluţia ochiului observatorului este 2’.",
+              "answer_fields": [
+                {
+                  "label": "A) diametrul minim al obiectivului",
+                  "unit": "mm",
+                  "correct_value": 87,
+                  "tolerance": 1
+                },
+                {
+                  "label": "B) distanța focală a ocularului",
+                  "unit": "mm",
+                  "correct_value": 9.2,
+                  "tolerance": 0.1
+                }
+              ],
+              "explanation": "A) Folosim formula practică a limitei de rezoluţie: $\\theta = 120'' / D$. Se impune $\\theta \\le 1,38''$, deci $D \\ge 120 / 1,38$ ≈ 87 mm. B) Pentru a vedea separat componentele, grosismentul trebuie să aducă separaţia unghiulară reală ($1,38''$) la o valoare cel puțin egală cu rezoluţia ochiului ($2' = 120''$). Deci $G \\ge 120'' / 1,38''$ ≈ 87. $G = F/f$, deci $f = F/G$ = $800\\text{ mm}/87 \\approx 9,2\\text{ mm}$."
+            },
+            {
+              "type": "open",
+              "question": "Luna a fost fotografiată printr-un telescop cu diametrul de 20 cm şi distanţa focală de 150 cm. Timpul de expunere a fost 0,1 s.\na) Cât ar fi trebuit să fie timpul de expunere, pentru aceeaşi calitate a imaginii, la un alt telescop cu diametru de 15 cm şi distanţa focală de 200 cm?\nb) Dacă fiecare telescop e dotat cu un ocular cu distanţa focală de 25 mm, cât este mărirea unghiulară a fiecărui telescop?\nc) Cât este diametrul unghiular al imaginii Lunii, văzută prin fiecare dintre aceste telescoape? (Diametrul unghiular real al Lunii ≈ 0,5°)",
+              "answer_fields": [
+                {
+                  "label": "a) timp de expunere pentru telescopul 2",
+                  "unit": "s",
+                  "correct_value": 0.18,
+                  "tolerance": 0.01
+                },
+                {
+                  "label": "b) mărire telescop 1",
+                  "unit": "",
+                  "correct_value": 60,
+                  "tolerance": 1
+                },
+                {
+                  "label": "b) mărire telescop 2",
+                  "unit": "",
+                  "correct_value": 80,
+                  "tolerance": 1
+                },
+                {
+                  "label": "c) diametrul unghiular aparent cu tel.1",
+                  "unit": "°",
+                  "correct_value": 30,
+                  "tolerance": 1
+                },
+                {
+                  "label": "c) diametrul unghiular aparent cu tel.2",
+                  "unit": "°",
+                  "correct_value": 40,
+                  "tolerance": 1
+                }
+              ],
+              "explanation": "a) Timpul de expunere este invers proporțional cu aria obiectivului (colectarea luminii). Raportul ariilor: $(D_2/D_1)^2 = (15/20)^2 = 0,5625$. Timpul necesar pentru același flux: $t_2 = t_1 \\times (D_1^2/D_2^2) = 0,1 \\times (400/225) \\approx 0,1778\\text{ s} \\approx 0,18\\text{ s}$. b) $G_1 = F_1/f = 1500\\text{ mm}/25\\text{ mm} = 60$; $G_2 = F_2/f = 2000\\text{ mm}/25\\text{ mm} = 80$. c) Diametrul unghiular aparent = diametrul real × G: pentru tel.1: $0,5^\\circ \\times 60 = 30^\\circ$; pentru tel.2: $0,5^\\circ \\times 80 = 40^\\circ$."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Care dintre următoarele instrumente are obiectivul format dintr-o oglindă?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Luneta astronomică"
+            },
+            {
+              "label": "b",
+              "text": "Telescopul reflector"
+            },
+            {
+              "label": "c",
+              "text": "Microscopul"
+            },
+            {
+              "label": "d",
+              "text": "Binoclul"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă grosismentul unui telescop?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Raportul dintre diametrul obiectivului şi diametrul ocularului"
+            },
+            {
+              "label": "b",
+              "text": "Raportul dintre distanţa focală a obiectivului şi distanţa focală a ocularului"
+            },
+            {
+              "label": "c",
+              "text": "Produsul dintre distanţele focale"
+            },
+            {
+              "label": "d",
+              "text": "Raportul dintre diametrul ocularului şi diametrul obiectivului"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Formula de calcul a limitei de rezoluţie (în secunde de arc) în funcţie de diametrul obiectivului D (în mm) este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$\\theta = 120 / D$"
+            },
+            {
+              "label": "b",
+              "text": "$\\theta = 140 / D$"
+            },
+            {
+              "label": "c",
+              "text": "$\\theta = 200 / D$"
+            },
+            {
+              "label": "d",
+              "text": "$\\theta = 250 / D$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Un telescop cu obiectivul de 100 mm diametru are o limită de rezoluţie teoretică de aproximativ:",
+          "options": [
+            {
+              "label": "a",
+              "text": "1,2''"
+            },
+            {
+              "label": "b",
+              "text": "2,4''"
+            },
+            {
+              "label": "c",
+              "text": "12''"
+            },
+            {
+              "label": "d",
+              "text": "24''"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce reprezintă grosismentul rezolvant?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Grosismentul maxim posibil al telescopului"
+            },
+            {
+              "label": "b",
+              "text": "Grosismentul minim pentru a atinge limita de rezoluţie a ochiului"
+            },
+            {
+              "label": "c",
+              "text": "Grosismentul la care imaginea devine neclară"
+            },
+            {
+              "label": "d",
+              "text": "Raportul dintre diametrul pupilei şi diametrul obiectivului"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Pentru un telescop cu obiectivul de 100 mm, grosismentul rezolvant (în mm) este aproximativ:",
+          "options": [
+            {
+              "label": "a",
+              "text": "50"
+            },
+            {
+              "label": "b",
+              "text": "100"
+            },
+            {
+              "label": "c",
+              "text": "120"
+            },
+            {
+              "label": "d",
+              "text": "200"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Formula puterii de pătrundere (magnitudine limită) pentru un telescop cu diametrul D (în cm) şi d = 6 mm este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "m = 7,1 + $5\\lg D$"
+            },
+            {
+              "label": "b",
+              "text": "$m = 6 + 5\\lg D$"
+            },
+            {
+              "label": "c",
+              "text": "m = $5\\lg D$"
+            },
+            {
+              "label": "d",
+              "text": "m = 7,1 - $5\\lg D$"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Un telescop cu obiectivul de 20 cm diametru are puterea de pătrundere aproximativă (magnitudinea limită) de:",
+          "options": [
+            {
+              "label": "a",
+              "text": "12,5"
+            },
+            {
+              "label": "b",
+              "text": "13,5"
+            },
+            {
+              "label": "c",
+              "text": "14,5"
+            },
+            {
+              "label": "d",
+              "text": "15,5"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Telescopul newtonian folosește:",
+          "options": [
+            {
+              "label": "a",
+              "text": "O lentilă convergente ca obiectiv"
+            },
+            {
+              "label": "b",
+              "text": "O oglindă principală şi una secundară plană"
+            },
+            {
+              "label": "c",
+              "text": "Numai oglinzi concave"
+            },
+            {
+              "label": "d",
+              "text": "O prismă"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Dacă un telescop are F=1000 mm şi se folosește un ocular cu f=25 mm, grosismentul este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "25"
+            },
+            {
+              "label": "b",
+              "text": "40"
+            },
+            {
+              "label": "c",
+              "text": "100"
+            },
+            {
+              "label": "d",
+              "text": "250"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Limita de rezoluţie a ochiului uman (neajutat) este de aproximativ:",
+          "options": [
+            {
+              "label": "a",
+              "text": "1''"
+            },
+            {
+              "label": "b",
+              "text": "1'"
+            },
+            {
+              "label": "c",
+              "text": "10'"
+            },
+            {
+              "label": "d",
+              "text": "1°"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce se întâmplă dacă grosismentul unui telescop este prea mare?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Imaginea devine mai luminoasă"
+            },
+            {
+              "label": "b",
+              "text": "Rezoluţia creşte nelimitat"
+            },
+            {
+              "label": "c",
+              "text": "Imaginea devine mai puţin luminoasă şi mai agitată"
+            },
+            {
+              "label": "d",
+              "text": "Nu există efecte negative"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Un telescop cu obiectivul de 150 mm distanţă focală şi ocular de 15 mm are grosismentul:",
+          "options": [
+            {
+              "label": "a",
+              "text": "10"
+            },
+            {
+              "label": "b",
+              "text": "100"
+            },
+            {
+              "label": "c",
+              "text": "15"
+            },
+            {
+              "label": "d",
+              "text": "150"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Pentru a creşte grosismentul unui telescop, se poate:",
+          "options": [
+            {
+              "label": "a",
+              "text": "Mări distanţa focală a ocularului"
+            },
+            {
+              "label": "b",
+              "text": "Micşora distanţa focală a ocularului"
+            },
+            {
+              "label": "c",
+              "text": "Mări diametrul obiectivului"
+            },
+            {
+              "label": "d",
+              "text": "Micşora diametrul obiectivului"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Un telescop cu obiectiv de 80 mm diametru poate separa două stele la o distanţă unghiulară de cel puţin:",
+          "options": [
+            {
+              "label": "a",
+              "text": "0,5''"
+            },
+            {
+              "label": "b",
+              "text": "1,5''"
+            },
+            {
+              "label": "c",
+              "text": "2,5''"
+            },
+            {
+              "label": "d",
+              "text": "3,5''"
+            }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Măsurarea timpului în astronomie",
+      "lessons": [
+        "**Timpul terestru: sideral şi solar**\n\nOrice unitate de măsură pentru timp este asociată duratei unui fenomen natural periodic. Măsurarea timpului în astronomie se bazează pe duratele mişcării de rotaţie a Pământului (timp terestru) şi a mişcării de revoluţie (timpul efemeridelor).\n\n**Timpul sideral (θ)** – unghiul orar al punctului vernal γ. Se măsoară de la meridianul superior al locului, în sens retrograd, până la meridianul ceresc al punctului vernal: $\\theta = H_\\gamma$. Pentru un astru cu ascensia dreaptă α şi unghi orar H: $\\theta = \\alpha + H$. La culminaţia superioară a unui astru ($H=0$), $\\theta = \\alpha$. Ziua siderală = $24^\\text{h}$ siderale = $23^\\text{h}56^\\text{m}4^\\text{s}$ (timp solar mediu).\n\n**Timpul solar adevărat (t_a)** – unghiul orar al Soarelui adevărat măsurat de la culminaţia inferioară: $t_a = 12^\\text{h} + H_\\odot$. Ziua solară adevărată este intervalul dintre două culminaţii consecutive de acelaşi fel ale Soarelui adevărat; durata ei variază pe parcursul anului.\n\n**Soarele mediu ecuatorial** – punct fictiv pe ecuator, în mişcare uniformă, care trece prin punctul vernal simultan cu Soarele adevărat. Timpul solar mediu ($t_m$) = unghiul orar al Soarelui mediu măsurat de la culminaţia inferioară: $t_m = 12^\\text{h} + H_{\\text{med}}$. Ziua solară medie = 24^h (constantă).\n\n**Ecuaţia timpului** – diferenţa dintre timpul solar mediu şi timpul solar adevărat: $E = t_m - t_a$. Valoarea absolută nu depăşeşte 17 minute.\n\n**Relaţia dintre ziua solară medie şi ziua siderală:**\n1 zi solară medie = 24^h = $24^\\text{h}03^\\text{m}56,555^\\text{s}$ (timp sideral)\n1 zi siderală = $23^\\text{h}56^\\text{m}04,091^\\text{s}$ (timp solar mediu)\n1 an tropic = 365,2422 zile solare medii = 366,2422 zile siderale.",
+        "**Sisteme de măsurare a timpului: local, universal, legal, decretat**\n\n**Timp local** – depinde de longitudine ($\\theta$, $t_m$, $t_a$). Două localităţi au diferenţa de timp egală cu diferenţa longitudinilor: $\\theta_A - \\theta_B = t_{mA} - t_{mB} = L_A - L_B$.\n\n**Timp universal (TU)** – timpul solar mediu al meridianului Greenwich (GMT). Se obţine din observaţii locale: $TU = H_\\odot + 12^\\text{h} + E - L$, unde $L$ este longitudinea locului. Pentru un punct de longitudine $L$, timpul solar mediu local este $t_m = TU + L$.\n\n**Timpul legal (timpul fusului orar)** – timpul solar mediu al meridianului central al fusului orar în care se află localitatea. Suprafaţa Pământului este împărţită în 24 de fuse orare de câte $15^\\circ$ lăţime. Pentru România (fusul $2^\\circ$ E): $T_{\\text{leg}} = TU + 2^\\text{h}$.\n\n**Timpul decretat (ora oficială de vară/iarnă)** – se adaugă 1 oră la timpul legal în perioada de vară. În România, ora de vară = $TU + 3^\\text{h}$ (din ultima duminică a lunii martie până în ultima duminică a lunii octombrie).\n\n**Linia schimbării datei** – meridianul $180^\\circ$. Traversând-o spre est, data se repetă; spre vest, se sare peste o zi.",
+        "**Calendarul**\n\nCalendarul are rolul de a găsi un număr întreg de zile într-un an, astfel încât succesiunea să reproducă anii tropici şi lunile sinodice.\n\n**Calendare solare:**\n- Egiptean: 12 luni a câte 30 de zile + 5 zile suplimentare (365 zile).\n- Iulian (46 î.e.n.): anul mediu = 365,25 zile (3 ani de 365, 1 an bisect de 366).\n- Gregorian (1582): anul mediu = 365,2425 zile; nu sunt bisecţi anii seculari al căror număr nu se divide cu 4 (1700, 1800, 1900, 2100). Decalaj de 1 zi la 3300 ani.\n\n**Calendare lunare** – bazate pe fazele Lunii (luna sinodică ≈ 29,5 zile). Folosit de musulmani.\n\n**Calendare lunisolare** – bazate pe ciclul de 19 ani (235 luni sinodice = 19 ani tropici). Actualul calendar evreiesc.\n\n**Data Iuliană (DJ)** – numărarea continuă a zilelor începând cu 1 ianuarie 4713 î.e.n., ora $12^\\text{h}$ TU. Utilizată în astronomie."
+      ],
+      "lesson_exercises": [
+        {
+          "after_lesson": 2,
+          "quiz": [
+            {
+              "type": "open",
+              "question": "Un satelit este observat la meridianul locului la ora legală $t$. Să se afle momentul sideral al observaţiei, ştiind longitudinea observatorului $L$ şi momentul sideral la Greenwich al miezului nopţii observaţiei, $\\theta_{0G}$.",
+              "answer_fields": [
+                {
+                  "label": "$TU$",
+                  "unit": "h",
+                  "correct_value": "t - n_f",
+                  "tolerance": 0
+                },
+                {
+                  "label": "$\\theta_G$",
+                  "unit": "h",
+                  "correct_value": "θ_0G + (365,2422/366,2422)·TU",
+                  "tolerance": 0
+                },
+                {
+                  "label": "$\\theta$",
+                  "unit": "h",
+                  "correct_value": "θ_G + L",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Mai întâi se determină Timpul Universal (TU) = t - n_f, unde n_f este numărul fusului orar. Timpul sideral la Greenwich: $\\theta_G = \\theta_{0G} + (365,2422/366,2422)\\cdot TU$. Timpul sideral local: $\\theta = \\theta_G + L$."
+            },
+            {
+              "type": "open",
+              "question": "Un ceas solar indică momentul de timp solar adevărat $t_a$. Cunoscând longitudinea observatorului $L$ şi ecuaţia timpului $E$ pentru data observaţiei, să se determine momentul de timp legal al observaţiei.",
+              "answer_fields": [
+                {
+                  "label": "$t_m$",
+                  "unit": "h",
+                  "correct_value": "t_a + E",
+                  "tolerance": 0
+                },
+                {
+                  "label": "$TU$",
+                  "unit": "h",
+                  "correct_value": "t_m - L",
+                  "tolerance": 0
+                },
+                {
+                  "label": "$t_{legal}$",
+                  "unit": "h",
+                  "correct_value": "TU + n_f",
+                  "tolerance": 0
+                }
+              ],
+              "explanation": "Se calculează timpul solar mediu local $t_m = t_a + E$. Se obţine Timpul Universal $TU = t_m - L$. Ora legală = $TU + n_f$ ($n_f$ – numărul fusului orar)."
+            },
+            {
+              "type": "open",
+              "question": "Steaua Dubhe ($\\alpha$ UMa) este observată pe data de 22 iunie la un unghi orar $H = 90^\\circ = 6^\\text{h}$. Locul de observaţie are longitudinea $L = 1^\\text{h}50^\\text{min}$, iar ascensia dreaptă a stelei este $\\alpha = 11^\\text{h}02^\\text{min}$. Să se determine momentul de timp legal al observaţiei pentru un observator aflat în fusul orar $+2^\\text{h}$.",
+              "answer_fields": [
+                {
+                  "label": "$\\theta$ (timp sideral local)",
+                  "unit": "h",
+                  "correct_value": "17h 02min",
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "$\\theta_G$ (timp sideral Greenwich)",
+                  "unit": "h",
+                  "correct_value": "15h 12min",
+                  "tolerance": 0.02
+                },
+                {
+                  "label": "$TU$",
+                  "unit": "h",
+                  "correct_value": "20h 56min 33,5s",
+                  "tolerance": 1
+                },
+                {
+                  "label": "$t_{legal}$",
+                  "unit": "h",
+                  "correct_value": "22h 56min 33,5s",
+                  "tolerance": 1
+                }
+              ],
+              "explanation": "$\\theta = \\alpha + H = 11^\\text{h}02^\\text{m} + 6^\\text{h} = 17^\\text{h}02^\\text{m}$. $\\theta_G = \\theta - L = 17^\\text{h}02^\\text{m} - 1^\\text{h}50^\\text{m} = 15^\\text{h}12^\\text{m}$. La 22 iunie, numărul de zile de la echinocţiul de toamnă (23 septembrie) este 273, iar corecţia zilnică 4 min/zi dă $\\theta_{0G} = 18^\\text{h}12^\\text{m}$. Apoi $TU = (366,2422/365,2422)\\cdot(\\theta_G - \\theta_{0G}) = 20^\\text{h}56^\\text{m}33,5^\\text{s}$. Ora legală (fus +2) = $TU + 2^\\text{h} = 22^\\text{h}56^\\text{m}33,5^\\text{s}$."
+            }
+          ]
+        }
+      ],
+      "quiz": [
+        {
+          "question": "Ce reprezintă timpul sideral într-un loc de observație?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Unghiul orar al Soarelui"
+            },
+            {
+              "label": "b",
+              "text": "Unghiul orar al punctului vernal"
+            },
+            {
+              "label": "c",
+              "text": "Ascensia dreaptă a stelei polare"
+            },
+            {
+              "label": "d",
+              "text": "Longitudinea observatorului"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Dacă o stea are ascensia dreaptă α şi unghiul orar H, relaţia corectă pentru timpul sideral θ este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$\\theta = \\alpha - H$"
+            },
+            {
+              "label": "b",
+              "text": "$\\theta = \\alpha + H$"
+            },
+            {
+              "label": "c",
+              "text": "$\\theta = H - \\alpha$"
+            },
+            {
+              "label": "d",
+              "text": "$\\theta = 12^\\text{h} + \\alpha$"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Durata unei zile siderale, exprimată în unităţi de timp solar mediu, este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "24h 00m 00s"
+            },
+            {
+              "label": "b",
+              "text": "23h 56m 04s"
+            },
+            {
+              "label": "c",
+              "text": "24h 04m 00s"
+            },
+            {
+              "label": "d",
+              "text": "23h 50m 00s"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce defineşte ecuaţia timpului?",
+          "options": [
+            {
+              "label": "a",
+              "text": "Diferenţa dintre timpul sideral şi timpul solar mediu"
+            },
+            {
+              "label": "b",
+              "text": "Diferenţa dintre timpul solar mediu şi timpul solar adevărat"
+            },
+            {
+              "label": "c",
+              "text": "Diferenţa dintre longitudinea geografică şi unghiul orar"
+            },
+            {
+              "label": "d",
+              "text": "Diferenţa dintre timpul universal şi timpul legal"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Timpul universal (TU) este definit ca:",
+          "options": [
+            {
+              "label": "a",
+              "text": "Timpul solar mediu la meridianul Greenwich"
+            },
+            {
+              "label": "b",
+              "text": "Timpul sideral la meridianul Greenwich"
+            },
+            {
+              "label": "c",
+              "text": "Timpul solar mediu la meridianul 180°"
+            },
+            {
+              "label": "d",
+              "text": "Timpul legal al fusului orar 0"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Dacă la o localitate cu longitudinea $L=30^\\circ E = 2^\\text{h}$ timpul local solar mediu este 10h, atunci TU este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "8h"
+            },
+            {
+              "label": "b",
+              "text": "10h"
+            },
+            {
+              "label": "c",
+              "text": "12h"
+            },
+            {
+              "label": "d",
+              "text": "14h"
+            }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "În România, timpul legal (iarna) corespunde:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$TU + 1^\\text{h}$"
+            },
+            {
+              "label": "b",
+              "text": "$TU + 2^\\text{h}$"
+            },
+            {
+              "label": "c",
+              "text": "$TU + 3^\\text{h}$"
+            },
+            {
+              "label": "d",
+              "text": "TU"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ora oficială de vară în România este:",
+          "options": [
+            {
+              "label": "a",
+              "text": "$TU + 1^\\text{h}$"
+            },
+            {
+              "label": "b",
+              "text": "$TU + 2^\\text{h}$"
+            },
+            {
+              "label": "c",
+              "text": "$TU + 3^\\text{h}$"
+            },
+            {
+              "label": "d",
+              "text": "$TU + 4^\\text{h}$"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Linia schimbării datei coincide aproximativ cu meridianul:",
+          "options": [
+            {
+              "label": "a",
+              "text": "0°"
+            },
+            {
+              "label": "b",
+              "text": "90° E"
+            },
+            {
+              "label": "c",
+              "text": "180°"
+            },
+            {
+              "label": "d",
+              "text": "90° W"
+            }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "În calendarul iulian, anul are în medie:",
+          "options": [
+            {
+              "label": "a",
+              "text": "365,0000 zile"
+            },
+            {
+              "label": "b",
+              "text": "365,2422 zile"
+            },
+            {
+              "label": "c",
+              "text": "365,2425 zile"
+            },
+            {
+              "label": "d",
+              "text": "365,2500 zile"
+            }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Calendarul gregorian a fost introdus de papa Grigore al XIII-lea în anul:",
+          "options": [
+            {
+              "label": "a",
+              "text": "46 î.e.n."
+            },
+            {
+              "label": "b",
+              "text": "1582"
+            },
+            {
+              "label": "c",
+              "text": "1700"
+            },
+            {
+              "label": "d",
+              "text": "1918"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Un an bisect în calendarul gregorian are:",
+          "options": [
+            {
+              "label": "a",
+              "text": "365 de zile"
+            },
+            {
+              "label": "b",
+              "text": "366 de zile"
+            },
+            {
+              "label": "c",
+              "text": "364 de zile"
+            },
+            {
+              "label": "d",
+              "text": "367 de zile"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următorii ani nu este bisect în calendarul gregorian?",
+          "options": [
+            {
+              "label": "a",
+              "text": "2000"
+            },
+            {
+              "label": "b",
+              "text": "1900"
+            },
+            {
+              "label": "c",
+              "text": "2024"
+            },
+            {
+              "label": "d",
+              "text": "2016"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Durata anului tropic este de aproximativ:",
+          "options": [
+            {
+              "label": "a",
+              "text": "365,2500 zile"
+            },
+            {
+              "label": "b",
+              "text": "365,2422 zile"
+            },
+            {
+              "label": "c",
+              "text": "366,2422 zile"
+            },
+            {
+              "label": "d",
+              "text": "365,2425 zile"
+            }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Data Iuliană (DJ) începe numărarea de la:",
+          "options": [
+            {
+              "label": "a",
+              "text": "1 ianuarie 1 e.n."
+            },
+            {
+              "label": "b",
+              "text": "1 ianuarie 4713 î.e.n."
+            },
+            {
+              "label": "c",
+              "text": "1 ianuarie 1582"
+            },
+            {
+              "label": "d",
+              "text": "1 ianuarie 1900"
+            }
+          ],
+          "correct_index": 1
+        }
+      ]
+    }
+  ]
+}

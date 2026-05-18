@@ -1,12 +1,7 @@
-import 'dart:math';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import 'package:astrolab/theme/app_theme.dart';
 
-/// Fundal cosmic animat full-screen:
-/// - gradient de fond
-/// - 3 nebule care pulsează
-/// - 200 stele care sclipesc
-/// - 5 stele căzătoare
+/// Fundal imersiv global: gradient radial (indigo → obsidian) + stele statice și clipitoare.
 class CosmicBackground extends StatefulWidget {
   const CosmicBackground({super.key});
 
@@ -15,197 +10,133 @@ class CosmicBackground extends StatefulWidget {
 }
 
 class _CosmicBackgroundState extends State<CosmicBackground>
-    with TickerProviderStateMixin {
-  late final AnimationController _masterCtrl;
-  final _rnd = Random(13);
-  late final List<_Star> _stars;
-  late final List<_ShootingStar> _shooters;
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _twinkle;
+  final _rnd = math.Random(42);
+  late final List<_StarDot> _stars;
 
   @override
   void initState() {
     super.initState();
-    _stars    = List.generate(220, (_) => _Star.random(_rnd));
-    _shooters = List.generate(5,   (_) => _ShootingStar.random(_rnd));
-
-    _masterCtrl = AnimationController(
+    _stars = List.generate(260, (_) => _StarDot.random(_rnd));
+    _twinkle = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 8),
+      duration: const Duration(seconds: 5),
     )..repeat();
-
-    _masterCtrl.addListener(() => setState(() {}));
   }
 
   @override
   void dispose() {
-    _masterCtrl.dispose();
+    _twinkle.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Positioned.fill(
-      child: CustomPaint(
-        painter: _CosmicPainter(
-          t: _masterCtrl.value,
-          stars: _stars,
-          shooters: _shooters,
-        ),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+              gradient: RadialGradient(
+                center: Alignment(0, -0.85),
+                radius: 1.35,
+                colors: [
+                  Color(0xFF1e1b4b),
+                  Color(0xFF0f0a1a),
+                  Color(0xFF020208),
+                ],
+                stops: [0.0, 0.42, 1.0],
+              ),
+            ),
+          ),
+          AnimatedBuilder(
+            animation: _twinkle,
+            builder: (context, _) {
+              return CustomPaint(
+                painter: _StarfieldPainter(
+                  t: _twinkle.value,
+                  stars: _stars,
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+class _StarDot {
+  final double x;
+  final double y;
+  final double radius;
+  final double baseOpacity;
+  final double twinklePhase;
+  final double twinkleSpeed;
+  final bool twinkles;
 
-class _Star {
-  final double x, y, r, phase;
-  final Color color;
-  _Star({required this.x, required this.y, required this.r,
-    required this.phase, required this.color});
-  factory _Star.random(Random rnd) {
-    const colors = [Colors.white, AppColors.secondary, AppColors.light];
-    return _Star(
+  _StarDot({
+    required this.x,
+    required this.y,
+    required this.radius,
+    required this.baseOpacity,
+    required this.twinklePhase,
+    required this.twinkleSpeed,
+    required this.twinkles,
+  });
+
+  factory _StarDot.random(math.Random rnd) {
+    final tw = rnd.nextDouble() < 0.42;
+    return _StarDot(
       x: rnd.nextDouble(),
       y: rnd.nextDouble(),
-      r: rnd.nextDouble() * 1.5 + 0.3,
-      phase: rnd.nextDouble() * 2 * pi,
-      color: colors[rnd.nextInt(colors.length)],
+      radius: rnd.nextDouble() * 1.35 + 0.25,
+      baseOpacity: 0.22 + rnd.nextDouble() * 0.55,
+      twinklePhase: rnd.nextDouble() * 2 * math.pi,
+      twinkleSpeed: 1.2 + rnd.nextDouble() * 2.8,
+      twinkles: tw,
     );
+  }
+
+  double opacityAt(double t) {
+    if (!twinkles) return baseOpacity;
+    final pulse = 0.45 +
+        0.55 *
+            (0.5 +
+                0.5 *
+                    math.sin(t * 2 * math.pi * twinkleSpeed + twinklePhase));
+    return (baseOpacity * pulse).clamp(0.08, 1.0);
   }
 }
 
-class _ShootingStar {
-  final double sx, sy, angle, speed, len, delay;
-  _ShootingStar({required this.sx, required this.sy, required this.angle,
-    required this.speed, required this.len, required this.delay});
-  factory _ShootingStar.random(Random rnd) => _ShootingStar(
-    sx:    rnd.nextDouble(),
-    sy:    rnd.nextDouble() * 0.55,
-    angle: pi / 5 + rnd.nextDouble() * pi / 7,
-    speed: 0.20 + rnd.nextDouble() * 0.14,
-    len:   0.07 + rnd.nextDouble() * 0.06,
-    delay: rnd.nextDouble(),
-  );
-}
-
-class _CosmicPainter extends CustomPainter {
+class _StarfieldPainter extends CustomPainter {
   final double t;
-  final List<_Star> stars;
-  final List<_ShootingStar> shooters;
+  final List<_StarDot> stars;
 
-  _CosmicPainter({required this.t, required this.stars, required this.shooters});
+  _StarfieldPainter({required this.t, required this.stars});
 
   @override
   void paint(Canvas canvas, Size size) {
-    _bg(canvas, size);
-    _nebulae(canvas, size);
-    _drawStars(canvas, size);
-    _drawShooters(canvas, size);
-  }
-
-  void _bg(Canvas canvas, Size size) {
-    final p = Paint()
-      ..shader = const LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [Color(0xFF010810), Color(0xFF020A12), Color(0xFF010D18)],
-      ).createShader(Offset.zero & size);
-    canvas.drawRect(Offset.zero & size, p);
-  }
-
-  void _nebulae(Canvas canvas, Size size) {
-    final pulse = sin(t * 2 * pi);
-
-    // nebula cyan — top right
-    _drawNebula(canvas, size,
-        cx: 0.82, cy: 0.12,
-        r: size.width * 0.32,
-        base: AppColors.primary,
-        opacity: 0.065 + pulse * 0.03);
-
-    // nebula blue — mid left
-    _drawNebula(canvas, size,
-        cx: 0.10, cy: 0.48,
-        r: size.width * 0.26,
-        base: const Color(0xFF0077B6),
-        opacity: 0.055 + pulse * 0.025);
-
-    // nebula teal — bottom center
-    _drawNebula(canvas, size,
-        cx: 0.52, cy: 0.88,
-        r: size.width * 0.28,
-        base: AppColors.secondary,
-        opacity: 0.045 + pulse * 0.02);
-
-    // nebula deep — top left
-    _drawNebula(canvas, size,
-        cx: 0.18, cy: 0.14,
-        r: size.width * 0.20,
-        base: const Color(0xFF023E58),
-        opacity: 0.04 + pulse * 0.015);
-  }
-
-  void _drawNebula(Canvas canvas, Size size,
-      {required double cx, required double cy,
-        required double r, required Color base, required double opacity}) {
-    final center = Offset(cx * size.width, cy * size.height);
-    final p = Paint()
-      ..shader = RadialGradient(colors: [
-        base.withOpacity(opacity),
-        base.withOpacity(opacity * 0.4),
-        Colors.transparent,
-      ], stops: const [0.0, 0.5, 1.0]).createShader(
-          Rect.fromCircle(center: center, radius: r));
-    canvas.drawCircle(center, r, p);
-  }
-
-  void _drawStars(Canvas canvas, Size size) {
-    final p = Paint()..style = PaintingStyle.fill;
+    final paint = Paint()..style = PaintingStyle.fill;
     for (final s in stars) {
-      final twinkle = 0.3 + 0.7 * (0.5 + 0.5 * sin(t * 2 * pi * 2 + s.phase));
-      p.color = s.color.withOpacity(twinkle * 0.75);
-      canvas.drawCircle(Offset(s.x * size.width, s.y * size.height), s.r, p);
-    }
-  }
-
-  void _drawShooters(Canvas canvas, Size size) {
-    for (final s in shooters) {
-      final raw = (t + s.delay) % 1.0;
-      // active window: 0..0.55 of the cycle
-      if (raw > 0.55) continue;
-      final prog = raw / 0.55;
-
-      final hx = (s.sx + cos(s.angle) * s.speed * prog) * size.width;
-      final hy = (s.sy + sin(s.angle) * s.speed * prog) * size.height;
-      final tailFactor = min(prog * 2, 1.0);
-      final tx = hx - cos(s.angle) * s.len * size.width  * tailFactor;
-      final ty = hy - sin(s.angle) * s.len * size.height * tailFactor;
-
-      final fade = prog < 0.15 ? prog / 0.15 : prog > 0.82 ? (1 - prog) / 0.18 : 1.0;
-
-      final paint = Paint()
-        ..shader = LinearGradient(colors: [
-          Colors.white.withOpacity(0.92 * fade),
-          AppColors.secondary.withOpacity(0.35 * fade),
-          Colors.transparent,
-        ]).createShader(Rect.fromPoints(Offset(hx, hy), Offset(tx, ty)))
-        ..strokeWidth = 1.4
-        ..style = PaintingStyle.stroke
-        ..strokeCap = StrokeCap.round;
-
-      canvas.drawLine(Offset(hx, hy), Offset(tx, ty), paint);
-
-      // cap glow
+      final o = s.opacityAt(t);
+      paint.color = Color.lerp(
+        const Color(0xFFE0E7FF),
+        Colors.white,
+        (s.radius / 1.6).clamp(0.0, 1.0),
+      )!.withValues(alpha: o);
       canvas.drawCircle(
-        Offset(hx, hy),
-        1.8,
-        Paint()
-          ..color = Colors.white.withOpacity(0.8 * fade)
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.5),
+        Offset(s.x * size.width, s.y * size.height),
+        s.radius,
+        paint,
       );
     }
   }
 
   @override
-  bool shouldRepaint(covariant _CosmicPainter old) => old.t != t;
+  bool shouldRepaint(covariant _StarfieldPainter oldDelegate) {
+    return oldDelegate.t != t;
+  }
 }

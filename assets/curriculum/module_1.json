@@ -1,0 +1,1149 @@
+{
+  "schemaVersion": 1,
+  "number": 1,
+  "title": "Astronomia pentru toți",
+  "chapters": [
+    {
+      "number": 1,
+      "title": "Introducere în studiul astronomiei",
+      "lessons": [
+        "**Ce este astronomia?**\n\n• Știința care studiază mișcarea, structura, originea și evoluția corpurilor cerești, precum și interacțiunile acestora cu câmpurile fizice în care se găsesc\n\n• Denumirea acestei științe este de origine greacă, fiind compusă din substantivele: *astron* = astru și *nomos* = lege",
+        "**Ce este astrofizica?**\n\n• Este o ramură modernă a Astronomiei care studiază structura, proprietățile fizice și compoziția chimică a corpurilor cerești\n\n• În ultimii cincizeci de ani în acest domeniu s-au făcut progrese uimitoare, prin dezvoltarea tehnologiei, perfecționarea instrumentelor optice, desfășurarea numeroaselor misiuni spațiale și prin folosirea unor sisteme informatice tot mai performante",
+        "**Aplicații practice ale astronomiei și astrofizicii**\n\n• Determinarea exactă a timpului, ora exactă și calendarul\n\n• Alcătuirea hărților geografice, realizarea prognozelor meteo, cercetarea fenomenelor globale\n\n• Prevederea unor fenomene naturale precum fazele Lunii, eclipsele, mareele, furtunile solare\n\n• Navigația maritimă, spațială, folosirea sateliților în telecomunicații\n\n• Dezvoltarea tuturor ramurilor științei și tehnologiei\n\n• Toate domeniile științifice (fizica, chimia, biologia, tehnica de calcul, ingineria, etc.) beneficiază de rezultatele descoperirilor astronomice",
+        "**De ce omenirea trebuie să investească în explorarea spațiului cosmic?**\n\n• Pentru a înțelege și pentru a reuși să ne salvăm de pericole care vin din spațiul cosmic, precum asteroizii sau cometele, care ar putea să se ciocnească cu Pământul\n\n• Pentru a căuta resurse pe alte planete, pe alte corpuri cerești, pentru ca omenirea să se dezvolte și să-și controleze propriul destin\n\n• Pentru a descoperi dacă există viață pe alte planete, sau dacă există planete extrasolare care să ofere oamenilor condiții de viață, de colonizare\n\nNumeroasele misiuni spațiale din ultimele decenii, spectaculoasele imagini și informații obținute de telescoapele spațiale au revoluționat domeniul astronomiei, au deschis drumul către un Univers mult mai interesant decât ne-am imaginat vreodată."
+      ],
+      "quiz": [
+        {
+          "question": "Ce studiază astronomia?",
+          "options": [
+            { "label": "a", "text": "Structura internă a Pământului" },
+            { "label": "b", "text": "Mișcarea, structura, originea și evoluția corpurilor cerești" },
+            { "label": "c", "text": "Compoziția chimică a atmosferei" },
+            { "label": "d", "text": "Fenomenele meteorologice" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Din ce limbă provine denumirea „astronomie\"?",
+          "options": [
+            { "label": "a", "text": "Latină" },
+            { "label": "b", "text": "Arabă" },
+            { "label": "c", "text": "Greacă" },
+            { "label": "d", "text": "Sanscrită" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce înseamnă cuvântul grecesc „nomos\" din care provine cuvântul astronomie?",
+          "options": [
+            { "label": "a", "text": "Astru" },
+            { "label": "b", "text": "Cer" },
+            { "label": "c", "text": "Lege" },
+            { "label": "d", "text": "Știință" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este astrofizica?",
+          "options": [
+            { "label": "a", "text": "Știința care studiază mișcarea corpurilor cerești" },
+            { "label": "b", "text": "Ramură a astronomiei care studiază structura, proprietățile fizice și compoziția chimică a corpurilor cerești" },
+            { "label": "c", "text": "Știința care se ocupă cu fabricarea telescoapelor" },
+            { "label": "d", "text": "Ramură a fizicii care studiază atomii" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următoarele este o aplicație practică a astronomiei?",
+          "options": [
+            { "label": "a", "text": "Producerea energiei electrice" },
+            { "label": "b", "text": "Fabricarea medicamentelor" },
+            { "label": "c", "text": "Determinarea exactă a timpului și alcătuirea calendarului" },
+            { "label": "d", "text": "Construirea podurilor și drumurilor" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce fenomene naturale pot fi prezise cu ajutorul astronomiei?",
+          "options": [
+            { "label": "a", "text": "Cutremurele și erupțiile vulcanice" },
+            { "label": "b", "text": "Fazele Lunii, eclipsele, mareele și furtunile solare" },
+            { "label": "c", "text": "Ploile torențiale și tornadele" },
+            { "label": "d", "text": "Alunecările de teren și tsunamiurile" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "De ce trebuie omenirea să investească în explorarea spațiului cosmic?",
+          "options": [
+            { "label": "a", "text": "Pentru a construi stații de combustibil în spațiu" },
+            { "label": "b", "text": "Pentru a trimite deșeuri în afara Pământului" },
+            { "label": "c", "text": "Pentru a ne proteja de pericole cosmice, a căuta resurse și a descoperi viață extraterestră" },
+            { "label": "d", "text": "Pentru a demonstra superioritatea tehnologică față de alte națiuni" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce domenii beneficiază de rezultatele descoperirilor astronomice?",
+          "options": [
+            { "label": "a", "text": "Doar fizica și chimia" },
+            { "label": "b", "text": "Doar ingineria și tehnica de calcul" },
+            { "label": "c", "text": "Toate domeniile științifice: fizica, chimia, biologia, ingineria etc." },
+            { "label": "d", "text": "Doar biologia și medicina" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce a revoluționat domeniul astronomiei în ultimele decenii?",
+          "options": [
+            { "label": "a", "text": "Inventarea lunetei și a telescopului terestru" },
+            { "label": "b", "text": "Descoperirea planetei Pluto" },
+            { "label": "c", "text": "Misiunile spațiale și imaginile obținute de telescoapele spațiale" },
+            { "label": "d", "text": "Construirea unor observatoare astronomice pe munți înalți" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este unul dintre motivele pentru care omenirea caută planete extrasolare?",
+          "options": [
+            { "label": "a", "text": "Pentru a exporta produse terestre pe alte planete" },
+            { "label": "b", "text": "Pentru a studia compoziția chimică a stelelor îndepărtate" },
+            { "label": "c", "text": "Pentru a descoperi planete care ar putea oferi condiții de viață și colonizare" },
+            { "label": "d", "text": "Pentru a calcula mai exact distanța dintre stele" }
+          ],
+          "correct_index": 2
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Locul nostru în Univers",
+      "lessons": [
+        "**Pământul**\n\n• Pământul, căminul omenirii, numit și Terra, este singura planetă din Sistemul Solar care poate întreține viața, având apă lichidă la suprafață și o atmosferă bogată în oxigen\n\n• Planeta noastră este în permanentă mișcare de rotație în jurul axei sale și în mișcare de revoluție în jurul Soarelui\n\n• Cel mai apropiat corp ceresc față de Pământ este Luna, satelitul natural al Pământului",
+        "**Sistemul Solar**\n\n• Pământul face parte din Sistemul Solar, care este format din Soare și toate corpurile care, sub influența atracției gravitaționale Soarelui, se rotesc în jurul său\n\n• În \"familia\" Soarelui se află 8 planete mari, 5 planete pitice, sute de sateliți naturali ai planetelor, aproape un miliard de asteroizi, miliarde de comete și corpuri meteorice de diverse mărimi. Între acestea, spațiul este ocupat, în mare parte, de gaz și praf interplanetar\n\n• Soarele este una stea galbenă, de 750 de ori mai mare decât toate planetele la un loc. Situat la 150 milioane km de planeta noastră, Soarele ne apare pe cer ca un disc orbitor, lumina lui ajungând la noi în 8 minute și 20 secunde",
+        "**Planetele Sistemului Solar**\n\n• Planetele se rotesc în jurul Soarelui într-o zonă în formă de disc, cu o rază de aproximativ 6 miliarde de kilometri\n\n• Planetele mari sunt: Mercur, Venus, Terra, Marte, Jupiter, Saturn, Uranus, Neptun\n\n• Planetele pitice sunt: Ceres, Pluto, Eris, Makemake și Haumea\n\n• O planetă este un corp fără lumină proprie, ce orbitează Soarele, are suficientă masă și gravitație pentru a avea formă sferică și nu are vecini în jurul orbitei sale\n\n• O planetă pitică este un corp mai mic decât o planetă, are formă sferică, se rotește în jurul Soarelui, dar are vecini în zona orbitei sale",
+        "**Unități de măsură utilizate în astronomie și astrofizică**\n\n• Distanța medie dintre Soare și Pământ se numește Unitate Astronomică (UA). Este utilizată pentru măsurarea distanțelor în sistemul solar. Valoarea sa oficială este de exact 149.597.870.700 de metri (aproximativ 150 de milioane de km sau 8,3 minute-lumină)\n\n• Un an-lumină este distanța parcursă de lumină în timp de un an, cu viteza de 300 000 km/s. Un an-lumină este echivalent cu aproximativ 9,46 trilioane de kilometri (9,46 × 10¹² km)",
+        "**Asteroizi și comete**\n\n• Un asteroid este un corp din rocă sau metale, mai mic decât o planetă, care orbitează tot în jurul Soarelui\n\n• Majoritatea asteroizilor se află într-o zonă numită Centura Principală de asteroizi, între orbitele planetelor Marte și Jupiter. Există încă o zonă a Sistemului solar populată cu mii de asteroizi, numiți și corpuri transneptuniene, dincolo de orbita ultimei planete mari, Neptun. Ea se numește Centura lui Kuiper\n\n• O cometă este un corp mic, format din gheață \"murdară\" care, atunci când ajunge aproape de Soare, începe să se topească, formând o coadă din praf și gaze. Cometele mai sunt numite și \"stele cu coadă\"\n\n• Nucleele de comete se rotesc în jurul Soarelui într-o zonă foarte îndepărtată, la marginea Sistemului solar, numită Norul lui Oort\n\n• Dincolo de Norul lui Oort, cea mai apropiată stea față de Soare se află la 4,3 ani-lumină de noi, adică aproape 40 de mii de miliarde de km. Ea se numește Proxima Centauri",
+        "**Galaxia noastră – Calea Lactee, și alte galaxii din univers**\n\n• Proxima Centauri și Soarele fac parte dintr-un sistem stelar enorm, care conține peste 200 miliarde de stele, ținute de forțele gravitaționale, numit Galaxia noastră. Privind cerul într-o noapte senină, distingem o bandă luminoasă care traversează bolta cerească și care este numită Calea Lactee. Ea este proiecția pe cer a Galaxiei noastre\n\n• Galileo Galilei a fost primul astronom care, privind printr-un telescop în 1609, a remarcat că această bandă luminoasă este alcătuită din miliarde de stele asemănătoare Soarelui\n\n• Galaxia noastră este un sistem de stele în formă de spirală, cu un nucleu luminos și 7 \"brațe\" formate din multe stele luminoase. Soarele și întregul Sistem Solar se află în brațul Orion și se rotesc în jurul nucleului galaxiei la o distanță de 27 000 de ani-lumină. Diametrul Galaxiei noastre este de 100 000 ani-lumină\n\n• În Univers au fost descoperite miliarde de galaxii asemănătoare galaxiei noastre. Galaxiile sunt grupate în roiuri și super-roiuri de galaxii. Galaxia noastră face parte dintr-un grup de aproximativ 40 de galaxii, numit Grupul Local. Cele mai mari galaxii din grupul local sunt Galaxia noastră, galaxia Andromeda și galaxia Triangulum. Distanța până la galaxia Andromeda este de 2 600 000 ani-lumină. Grupul Local de galaxii face parte din super-roiul de galaxii Virgo. Acest super-roi se întinde până la 60 000 000 de ani-lumină depărtare. Universul observabil cuprinde mii de astfel de super-roiuri, cu miliarde de galaxii și are graniţele mult mai departe. Cele mai avansate telescoape spațiale ne prezintă imagini ale celor mai îndepărtate galaxii, aflate la 13 miliarde de ani-lumină\n\n• Universul cuprinde întreaga lume, nemărginită în timp și spațiu, caracterizată printr-o multitudine de forme de existență ale materiei, aflate în permanentă mișcare și transformare"
+      ],
+      "quiz": [
+        {
+          "question": "Ce este o stea?",
+          "options": [
+            { "label": "a", "text": "Corp ceresc solid care orbitează o planetă" },
+            { "label": "b", "text": "Corp ceresc gazos, sferic, sursă de lumină și căldură" },
+            { "label": "c", "text": "Satelit natural al unei planete" },
+            { "label": "d", "text": "Corp de rocă din centura de asteroizi" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este cea mai apropiată planetă față de Soare?",
+          "options": [
+            { "label": "a", "text": "Venus" },
+            { "label": "b", "text": "Mercur" },
+            { "label": "c", "text": "Marte" },
+            { "label": "d", "text": "Terra" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este cea mai apropiată stea față de Pământ?",
+          "options": [
+            { "label": "a", "text": "Sirius" },
+            { "label": "b", "text": "Alpha Centauri" },
+            { "label": "c", "text": "Soarele" },
+            { "label": "d", "text": "Vega" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este cea mai mare planetă din Sistemul Solar?",
+          "options": [
+            { "label": "a", "text": "Saturn" },
+            { "label": "b", "text": "Jupiter" },
+            { "label": "c", "text": "Uranus" },
+            { "label": "d", "text": "Neptun" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este un asteroid?",
+          "options": [
+            { "label": "a", "text": "Corp din rocă sau metale, mai mic decât o planetă, care orbitează Soarele" },
+            { "label": "b", "text": "Satelit natural al lui Jupiter" },
+            { "label": "c", "text": "Corp ceresc gazos mai mare decât o planetă" },
+            { "label": "d", "text": "Cometă fără coadă" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Cum mai este numită o cometă?",
+          "options": [
+            { "label": "a", "text": "Stea cu coadă" },
+            { "label": "b", "text": "Stea căzătoare" },
+            { "label": "c", "text": "Planetă pitică" },
+            { "label": "d", "text": "Asteroid luminos" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care este viteza luminii?",
+          "options": [
+            { "label": "a", "text": "150 000 km/s" },
+            { "label": "b", "text": "300 000 km/s" },
+            { "label": "c", "text": "500 000 km/s" },
+            { "label": "d", "text": "1 000 000 km/s" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "La ce este egală o unitate astronomică (UA)?",
+          "options": [
+            { "label": "a", "text": "Distanța de la Pământ la Lună" },
+            { "label": "b", "text": "Distanța medie Pământ–Soare" },
+            { "label": "c", "text": "Distanța de la Soare la Jupiter" },
+            { "label": "d", "text": "Un an-lumină" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este „Calea Lactee\"?",
+          "options": [
+            { "label": "a", "text": "Un sistem solar vecin" },
+            { "label": "b", "text": "Bandă luminoasă formată din multe stele, vizibilă pe cer în nopțile senine" },
+            { "label": "c", "text": "O nebuloasă" },
+            { "label": "d", "text": "Un grup de planete" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Unde se află centura principală de asteroizi?",
+          "options": [
+            { "label": "a", "text": "La limita Sistemului Solar" },
+            { "label": "b", "text": "Între Marte și Jupiter" },
+            { "label": "c", "text": "Între Pământ și Soare" },
+            { "label": "d", "text": "Între Jupiter și Saturn" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este Pluto?",
+          "options": [
+            { "label": "a", "text": "Planetă telurică" },
+            { "label": "b", "text": "Planetă pitică" },
+            { "label": "c", "text": "Asteroid" },
+            { "label": "d", "text": "Satelit natural al lui Neptun" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce tip de planetă este Jupiter?",
+          "options": [
+            { "label": "a", "text": "Telurică" },
+            { "label": "b", "text": "Interioară" },
+            { "label": "c", "text": "Exterioară (gigantă gazoasă)" },
+            { "label": "d", "text": "Pitică" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "De unde provin majoritatea cometelor din Sistemul Solar?",
+          "options": [
+            { "label": "a", "text": "Din centura de asteroizi" },
+            { "label": "b", "text": "Din centura lui Kuiper" },
+            { "label": "c", "text": "Din Norul lui Oort" },
+            { "label": "d", "text": "Din spațiul interstelar" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Unde se află planeta pitică Eris?",
+          "options": [
+            { "label": "a", "text": "În centura de asteroizi" },
+            { "label": "b", "text": "În centura lui Kuiper" },
+            { "label": "c", "text": "În Norul lui Oort" },
+            { "label": "d", "text": "Între Marte și Jupiter" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este un satelit natural?",
+          "options": [
+            { "label": "a", "text": "Corp care se rotește în jurul Soarelui" },
+            { "label": "b", "text": "Corp care se rotește în jurul Pământului" },
+            { "label": "c", "text": "Corp care se rotește în jurul unei planete" },
+            { "label": "d", "text": "Corp care se rotește în jurul unui asteroid" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce tip de stea este Soarele?",
+          "options": [
+            { "label": "a", "text": "Cea mai mare stea din galaxie" },
+            { "label": "b", "text": "Cea mai mică stea din galaxie" },
+            { "label": "c", "text": "O stea medie" },
+            { "label": "d", "text": "O stea gigantă roșie" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este Ceres?",
+          "options": [
+            { "label": "a", "text": "Planetă telurică" },
+            { "label": "b", "text": "Planetă pitică" },
+            { "label": "c", "text": "Asteroid obișnuit" },
+            { "label": "d", "text": "Cometă" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce ierarhie a stabilit UAI în august 2006?",
+          "options": [
+            { "label": "a", "text": "Planete interioare, exterioare, exoplanete" },
+            { "label": "b", "text": "Planete telurice, gazoase, comete și asteroizi" },
+            { "label": "c", "text": "Planete, planete pitice, corpuri mici din Sistemul Solar" },
+            { "label": "d", "text": "Planete clasice, planete duble, corpuri trans-neptuniene" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Cine a observat primul galaxia noastră cu luneta?",
+          "options": [
+            { "label": "a", "text": "Isaac Newton" },
+            { "label": "b", "text": "Galileo Galilei" },
+            { "label": "c", "text": "Nicolaus Copernic" },
+            { "label": "d", "text": "Johannes Kepler" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Un an-lumină este o unitate de măsură pentru:",
+          "options": [
+            { "label": "a", "text": "Timp" },
+            { "label": "b", "text": "Distanță" },
+            { "label": "c", "text": "Viteză" },
+            { "label": "d", "text": "Masă" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Distanța de la Pământ la Soare este:",
+          "options": [
+            { "label": "a", "text": "Un an-lumină" },
+            { "label": "b", "text": "4,3 ani-lumină" },
+            { "label": "c", "text": "O unitate astronomică" },
+            { "label": "d", "text": "150 ani-lumină" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Cel mai apropiat corp ceresc față de Pământ este:",
+          "options": [
+            { "label": "a", "text": "Marte" },
+            { "label": "b", "text": "Venus" },
+            { "label": "c", "text": "Soarele" },
+            { "label": "d", "text": "Luna" }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Norul lui Oort este:",
+          "options": [
+            { "label": "a", "text": "O nebuloasă din afara galaxiei" },
+            { "label": "b", "text": "O regiune sferică la marginea Sistemului Solar din care vin multe comete" },
+            { "label": "c", "text": "Centura de asteroizi de lângă Marte" },
+            { "label": "d", "text": "Un grup de stele din Calea Lactee" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Din ce grup de galaxii face parte galaxia noastră?",
+          "options": [
+            { "label": "a", "text": "Grupul Local, format din aproximativ 40 de galaxii" },
+            { "label": "b", "text": "Grupul Virgo" },
+            { "label": "c", "text": "Grupul Andromeda" },
+            { "label": "d", "text": "Grupul Magellanic" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Câte planete recunoaște UAI în Sistemul Solar după 2006?",
+          "options": [
+            { "label": "a", "text": "7" },
+            { "label": "b", "text": "8" },
+            { "label": "c", "text": "9" },
+            { "label": "d", "text": "12" }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Planeta noastră, Pământul",
+      "lessons": [
+        "**Introducere în studiul Terrei**\n\n• Planeta noastră, numită şi Terra, este singura planetă din Sistemul solar care poate întreţine viaţa, este bogată în apă şi activă din punct de vedere geologic.\n\n• Deseori perturbată de cutremure şi erupţii vulcanice, suprafaţa planetei noastre este un mozaic de plăci tectonice, continentale şi oceanice, aflate într-o lentă alunecare unele faţă de altele.\n\n• Este a treia planetă faţă de Soare şi a cincea ca mărime din Sistemul solar.\n\n**Date fizice generale:**\n• Raza medie: 6370 km ; Distanţa medie faţă de Soare: 149 600 000 km\n• Masa: $5,97 \\times 10^{24}$ kg ; Densitatea: $\\rho$ = 5,5 g/cm³ ; Temperatura medie: 15°C\n• Acceleraţia gravitaţională medie la suprafaţă: 9,8 m/s²\n\n• Planeta Terra găzduieşte forme de viaţă datorită distanţei optime faţă de Soare, compoziţiei atmosferei, dimensiunilor şi gravitaţiei sale, elementelor chimice ale solului, existenţei satelitului său natural, Luna şi a altor factori.\n\n• Atmosfera, în lipsa norilor, permite observarea culorilor naturale ale solului din spaţiu.\n\n• 2/3 din suprafaţa Pământului este acoperită de apă (oceanul planetar).\n\n• Terra este considerată şi planetă « dublă » datorită Lunii, unul dintre cei mai mari sateliţi naturali din Sistemul solar, cu o rază doar de 4 ori mai mică decât a Pământului.",
+        "**Elemente generale de geografie fizică a Pământului**\n\n**Interiorul Pământului:**\n1. **Nucleul**: Centrul planetei conţine un nucleu interior din fier şi nichel solid, cu temperatura de 4700°C. Învelişul acestuia (nucleul exterior) este din fier şi nichel fluid, gros cât aproape jumătate din raza planetei. Aceasta este zona care produce câmpul magnetic al Terrei.\n2. **Mantaua**: Stratul care ajunge până la scoarţa planetei are o grosime de 2900 km. Creşterea temperaturii în unele zone din partea superioară a mantalei topeşte rocile, formând “pungi” de lavă. Acestea generează vulcanii.\n\n3. **Scoarţa**: este stratul solid de la suprafaţă, cu o grosime medie de 40 km în zonele de uscat şi mai subţire sub oceane. Conţine în cea mai mare parte silicaţi, carbonaţi, aluminiu, fier. Învelişul planetei este împărţit în plăci tectonice gigantice care plutesc pe un strat de material fluid numit astenosferă.\n\n• În locul în care plăcile se separă, la suprafaţă pătrunde material nou, care umple spaţiile goale. Mişcarea plăcilor tectonice produce cutremure, valuri tsunami, ridicarea munţilor prin încreţirea scoarţei.\n\n• Relieful planetei noastre este mereu în schimbare. Încă de la începuturile existenţei sale, vulcanii şi-au făcut simţită prezenţa, generând atmosfera.\n\n• Uriaşa cantitate de apă a fost generată tot de vulcani, dar şi de miile de comete care s-au ciocnit cu Pământul.\n\n• Erupţiile vulcanice au întreţinut o atmosferă suficient de densă, care a permis menţinerea unei temperaturi medii relativ constante pe perioade foarte mari de timp (prin efect de seră).\n\n• Atmosfera Terrei are diferite funcţii, fiind un înveliş care ne protejează de radiaţiile solare (ultraviolete), radiaţiile cosmice şi împotriva asteroizilor mici, care ard în aer. Cel mai important element de protecţie faţă de radiaţiile solare este « stratul de ozon » ($\\mathrm{O}_3$), format în stratosferă.\n\n• Presiunea medie a atmosferei la suprafaţă: 1 atmosferă = 760 mm coloană de mercur.\n\n• Compoziţia atmosferei : 78% azot, 21% oxigen, 1% alte gaze. Compoziţia solului : 49% oxigen, 23% siliciu, aluminiu, fer, alte elemente.\n\n**Straturi atmosferice:**\n1) Troposfera (0-10 km)\n2) Stratosfera (10-50 km)\n3) Mezosfera (50-80 km)\n4) Ionosfera (80-120 km)\n5) Termosfera (Exosfera) (peste 120 km)",
+        "**Mișcările și Coordonatele Geografice ale Pământului**\n\n**Mişcările Pământului:**\n• Rotaţia în jurul axei proprii, cu o perioadă de o zi (24 ore).\n• Revoluţia în jurul Soarelui, cu o perioadă de un an (365,25 zile).\n\n• Traiectoria Pământului în jurul Soarelui poate fi considerată într-o bună aproximaţie, un cerc. În realitate, Pământul descrie o elipsă cu Soarele aflat în unul din focare.\n\n• Punctul cel mai apropiat de Soare se numeşte periheliu şi este atins de planeta noastră în jurul datei de 3 ianuarie, iar cel mai îndepărtat, afeliu, punct în care Pământul ajunge în data de 3 iulie. Toate corpurile cereşti care se rotesc în jurul Soarelui descriu traiectorii în formă de elipsă.\n\n**Coordonate geografice:**\n• Orice punct de pe Pământ are poziţia lui exprimată în longitudine şi latitudine geografică. Longitudinea se măsoară pe cercul ecuatorului (360°). Cercurile mari care trec prin polii tereştrii se numesc cercuri meridiane. Meridianul de origine (Greenwich) este notat cu 0°.\n\n• Datorită rotaţiei în 24 de ore, s-a optat pentru exprimarea longitudinii în ore (fuse orare). Distanţa pe ecuator de 15° este egală cu o oră (1h).\n\n• Spre est de meridianul zero (până la 180°) longitudinea are valoare pozitivă, iar spre vest valoare negativă. Ţara noastră se află pe fusul orar nr. 2.\n\n• Cercurile paralele cu ecuatorul se numesc cercuri de latitudine. Latitudinea este pozitivă în emisfera nordică (0° la +90°) şi negativă la sud de ecuator (0° la -90°)."
+      ],
+      "quiz": [
+        {
+          "question": "Care este poziția Pământului în Sistemul solar față de Soare?",
+          "options": [
+            { "label": "a", "text": "A doua planetă" },
+            { "label": "b", "text": "A treia planetă" },
+            { "label": "c", "text": "A patra planetă" },
+            { "label": "d", "text": "A cincea planetă" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce procent din suprafața Pământului este acoperit de apă?",
+          "options": [
+            { "label": "a", "text": "1/2" },
+            { "label": "b", "text": "2/3" },
+            { "label": "c", "text": "3/4" },
+            { "label": "d", "text": "4/5" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care componentă a interiorului Pământului produce câmpul magnetic terestru?",
+          "options": [
+            { "label": "a", "text": "Mantaua" },
+            { "label": "b", "text": "Scoarța" },
+            { "label": "c", "text": "Nucleul exterior (fier și nichel fluid)" },
+            { "label": "d", "text": "Astenosfera" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este grosimea medie a scoarței terestre în zonele de uscat?",
+          "options": [
+            { "label": "a", "text": "10 km" },
+            { "label": "b", "text": "40 km" },
+            { "label": "c", "text": "70 km" },
+            { "label": "d", "text": "100 km" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este compoziția procentuală a atmosferei Pământului?",
+          "options": [
+            { "label": "a", "text": "78% azot, 21% oxigen, 1% alte gaze" },
+            { "label": "b", "text": "21% azot, 78% oxigen, 1% argon" },
+            { "label": "c", "text": "95% dioxid de carbon, 5% azot" },
+            { "label": "d", "text": "50% oxigen, 50% hidrogen" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care strat atmosferic conține stratul de ozon (O₃) care ne protejează de radiațiile UV?",
+          "options": [
+            { "label": "a", "text": "Troposfera" },
+            { "label": "b", "text": "Stratosfera" },
+            { "label": "c", "text": "Mezosfera" },
+            { "label": "d", "text": "Ionosfera" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numește punctul de pe orbita Pământului cel mai apropiat de Soare?",
+          "options": [
+            { "label": "a", "text": "Afeliu" },
+            { "label": "b", "text": "Periheliu" },
+            { "label": "c", "text": "Apogeu" },
+            { "label": "d", "text": "Perigeu" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă unghiul de 15° pe ecuatorul terestru în ceea ce privește fusurile orare?",
+          "options": [
+            { "label": "a", "text": "O zi" },
+            { "label": "b", "text": "O oră" },
+            { "label": "c", "text": "O lună" },
+            { "label": "d", "text": "Un minut" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este meridianul de origine (0°) pentru longitudine?",
+          "options": [
+            { "label": "a", "text": "Meridianul Paris" },
+            { "label": "b", "text": "Meridianul Greenwich" },
+            { "label": "c", "text": "Meridianul Washington" },
+            { "label": "d", "text": "Meridianul Moscova" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce tip de traiectorie descrie Pământul în jurul Soarelui?",
+          "options": [
+            { "label": "a", "text": "Un cerc perfect" },
+            { "label": "b", "text": "O elipsă cu Soarele într-un focar" },
+            { "label": "c", "text": "O parabolă" },
+            { "label": "d", "text": "O spirală" }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Vecina noastră, Luna",
+      "lessons": [
+        "**Introducere în studiul Lunii**\n\n• Luna (Selena) este singurul satelit natural al Pământului şi cel mai apropiat vecin din spaţiu.\n\n• Majoritatea astronomilor cred că Luna s-a format după ce un corp uriaş a lovit Pământul. Materie din scoarţa terestră şi din acel corp a fost aruncată în spaţiu, formând Luna sub influența forţelor gravitaţionale.\n\n• Această ipoteză este sprijinită de constatarea că rocile de pe Lună au aceeaşi compoziţie cu materia din care este făcută mantaua şi scoarţa Pământului.\n\n**Date fizice generale:**\n• Raza : 1738 km = 27% × RP;\n• Distanţa medie faţă de Pământ : 384 400km = 60 × RP;\n• Viteza medie pe orbită : 1 km/s;\n• Temperatura între -170°C şi +123°C;\n• Perioada de rotaţie axială: 27,3 zile;\n• Gravitație: $g_L = \\frac{1}{6} \\times g_P$",
+        "**Fazele Lunii**\n\n• Luna nu are lumină proprie, ea reflectă lumina Soarelui. De aceea noi nu putem vedea decât porţiunea luminată orientată către Pământ. Aceasta este cauza principală a fazelor lunare.\n\n• **Luna Nouă:** spre Pământ este orientată faţa neluminată de Soare.\n\n• **Primul Pătrar:** spre observatorul terestru va fi orientată o jumătate luminată din faţa vizibilă a Lunii.\n\n• **Luna Plină:** la 180 de grade de faza Lună Nouă, lumina Soarelui va lumina întreaga suprafaţă pe care Luna o arată Pământului.\n\n• **Ultimul Pătrar:** Luna prezintă observatorului terestru jumătate din discul său luminat. Fazele Lunii se repetă după 29,5 zile (perioada sinodică).",
+        "**Orbita Lunii**\n\n• Luna parcurge în jurul Pământului o orbită eliptică. Punctul de pe traiectorie la distanţă minimă faţă de Pământ se numeşte perigeu, punctul aflat la distanţă maximă se numeşte apogeu.\n\n• Perioada de rotaţie proprie coincide cu perioada de revoluţie în jurul Pământului, de aceea Luna îndreaptă spre Pământ aceeaşi « faţă ».\n\n• **Mareele:** oscilaţii ritmice ale Oceanului Planetar, produse de atracţia exercitată de Lună, în combinaţie cu cea a Soarelui. Explicaţia lor a fost formulată prima dată de către Newton.",
+        "**Eclipsele**\n\n• **Eclipsa:** fenomenul prin care un astru fără lumină proprie intră în conul de umbră al altui astru.\n\n• **Eclipsa de Lună:** fenomenul de trecere a Lunii prin conul de umbră al Pământului (la faza de Lună Plină). Poate fi totală, parţială sau penumbrală. Este vizibilă de pe toată emisfera aflată în întuneric.\n\n• **Ocultaţia:** fenomenul prin care discul aparent al unui astru este ascuns în spatele altui astru.\n\n• **Eclipsa de Soare:** ocultaţia Soarelui de către Lună (la faza de Lună Nouă). Poate fi totală, parţială sau inelară. Eclipsa totală este vizibilă doar din banda de totalitate (120-300 km).\n\n• **Perioada Saros:** perioada în care se repetă eclipsele (18 ani 11 zile). Corespunde rotaţiei liniei nodurilor în planul eclipticii.",
+        "**Relieful Lunii**\n\n• Suprafaţa Lunii prezintă forme de relief ca cele de pe Pământ. Solul lunar este plin de roci scufundate într-un strat gros de pulberi cenuşii, fără atmosferă.\n\n• **Mările lunare:** depresiuni netede, mai întunecate; nu conţin apă lichidă, ci nisip şi pietriş.\n\n• **Munţii:** lanţuri muntoase cu înălţimi de până la 6 000 m (Apenini, Alpi, Carpaţi).\n\n• **Craterele:** create de căderea meteoriţilor, cu forme şi dimensiuni diferite. Unele sunt vizibile cu ochiul liber (Tycho, Copernic)."
+      ],
+      "quiz": [
+        {
+          "question": "Care este originea probabilă a Lunii, conform ipotezei principale menționate în text?",
+          "options": [
+            { "label": "a", "text": "S-a format independent în același timp cu Pământul" },
+            { "label": "b", "text": "A fost capturată de câmpul gravitațional al Pământului" },
+            { "label": "c", "text": "S-a format în urma ciocnirii unui corp uriaș cu Pământul" },
+            { "label": "d", "text": "Este un fragment desprins de pe Marte" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este raza Lunii în comparație cu raza Pământului (RP)?",
+          "options": [
+            { "label": "a", "text": "50% × RP" },
+            { "label": "b", "text": "38% × RP" },
+            { "label": "c", "text": "27% × RP" },
+            { "label": "d", "text": "15% × RP" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce cauzează fazele Lunii?",
+          "options": [
+            { "label": "a", "text": "Umbra Pământului pe Lună" },
+            { "label": "b", "text": "Rotația Lunii în jurul axei sale" },
+            { "label": "c", "text": "Luna nu are lumină proprie, reflectă lumina Soarelui și vedem doar porțiunea luminată orientată către Pământ" },
+            { "label": "d", "text": "Variația distanței Pământ-Lună" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este perioada sinodică a Lunii (repetarea fazelor)?",
+          "options": [
+            { "label": "a", "text": "27,3 zile" },
+            { "label": "b", "text": "29,5 zile" },
+            { "label": "c", "text": "24 de ore" },
+            { "label": "d", "text": "365,25 zile" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numește punctul de pe orbita Lunii cel mai apropiat de Pământ?",
+          "options": [
+            { "label": "a", "text": "Apogeu" },
+            { "label": "b", "text": "Perigeu" },
+            { "label": "c", "text": "Afeliu" },
+            { "label": "d", "text": "Periheliu" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "De ce Luna îndreaptă întotdeauna aceeași față către Pământ?",
+          "options": [
+            { "label": "a", "text": "Pentru că nu se rotește în jurul axei sale" },
+            { "label": "b", "text": "Pentru că perioada sa de rotație coincide cu perioada de revoluție în jurul Pământului" },
+            { "label": "c", "text": "Pentru că Pământul o atrage mai puternic pe o parte" },
+            { "label": "d", "text": "Pentru că nu are atmosferă" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce sunt mareele, conform textului?",
+          "options": [
+            { "label": "a", "text": "Valuri generate de cutremure submarine" },
+            { "label": "b", "text": "Oscilații ritmice ale oceanului planetar produse de atracția Lunii și a Soarelui" },
+            { "label": "c", "text": "Curenți marini adânci" },
+            { "label": "d", "text": "Erupții vulcanice subacvatice" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "În ce fază a Lunii poate avea loc o eclipsă de Lună?",
+          "options": [
+            { "label": "a", "text": "Luna Nouă" },
+            { "label": "b", "text": "Primul Pătrar" },
+            { "label": "c", "text": "Luna Plină" },
+            { "label": "d", "text": "Ultimul Pătrar" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este o eclipsă de Soare?",
+          "options": [
+            { "label": "a", "text": "Trecerea Lunii prin conul de umbră al Pământului" },
+            { "label": "b", "text": "Ocultația Soarelui de către Lună" },
+            { "label": "c", "text": "Ascunderea Lunii în spatele Pământului" },
+            { "label": "d", "text": "Trecerea Pământului între Soare și Lună" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este perioada Saros, în care se repetă eclipsele?",
+          "options": [
+            { "label": "a", "text": "18 ani și 11 zile" },
+            { "label": "b", "text": "11 ani" },
+            { "label": "c", "text": "29,5 zile" },
+            { "label": "d", "text": "365 de zile" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Conform calculelor din text, care este lungimea conului de umbră al Pământului?",
+          "options": [
+            { "label": "a", "text": "375 850 km" },
+            { "label": "b", "text": "1 389 893 km" },
+            { "label": "c", "text": "384 400 km" },
+            { "label": "d", "text": "9 216,5 km" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cât este lățimea benzii de totalitate la ecuator în cazul unei eclipse de Soare, când Luna se află la perigeu?",
+          "options": [
+            { "label": "a", "text": "88 km" },
+            { "label": "b", "text": "120 km" },
+            { "label": "c", "text": "300 km" },
+            { "label": "d", "text": "9216 km" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care dintre următoarele formațiuni de pe Lună nu conține apă lichidă, ci nisip și pietriș?",
+          "options": [
+            { "label": "a", "text": "Mările lunare" },
+            { "label": "b", "text": "Munții" },
+            { "label": "c", "text": "Craterele" },
+            { "label": "d", "text": "Rifturile" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce înălțime pot atinge munții de pe Lună, conform textului?",
+          "options": [
+            { "label": "a", "text": "până la 2 000 m" },
+            { "label": "b", "text": "până la 6 000 m" },
+            { "label": "c", "text": "până la 12 000 m" },
+            { "label": "d", "text": "până la 25 000 m" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce este ocultația?",
+          "options": [
+            { "label": "a", "text": "Trecerea unui astru prin conul de umbră al altuia" },
+            { "label": "b", "text": "Fenomenul prin care discul aparent al unui astru este ascuns în spatele altui astru" },
+            { "label": "c", "text": "Alinierea a trei corpuri cerești" },
+            { "label": "d", "text": "Reflexia luminii solare pe Lună" }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Constelațiile",
+      "lessons": [
+        "**Introducere în studiul constelațiilor**\n\n• Stelele nu sunt răspândite uniform pe sfera cerească, ci se pot distinge anumite grupuri sau constelații, cărora li s-au dat încă din antichitate denumiri de animale (Ursa Mare, Leul, Taurul), de eroi ai mitologiei grecești (Hercule, Andromeda, Perseu) sau de obiecte și figuri geometrice (Balanța, Triunghiul, Săgeata).\n\n• **Constelația** este o grupare arbitrară de stele din aceeași regiune a cerului, cu o configurație specifică, stabilită pe o perioadă îndelungată. Toate au denumiri latine și reprezentări mitologice.\n\n• **Asterismul** este o configurație formată din stele strălucitoare, ușor de recunoscut. Exemple: Triunghiul de Vară, Triunghiul de Iarnă, Pătratul din Pegas.\n\n• În 1603, Bayer introduce în atlasul *Uranometria* notația stelelor cu litere grecești (α, β, γ, δ...) în funcție de strălucire, urmată de prescurtarea constelației. Exemple: Sirius = α Canis Majoris = α CMa; Vega = α Lyrae = α Lyr.\n\n• În **1928**, Uniunea Astronomică Internațională stabilește actuala schemă de delimitare: **88 de constelații**, cu denumiri oficiale și prescurtări admise (UMa, UMi, CMa, Lyr, Ori, Cas etc.).\n\n• Flamsteed propune catalogarea stelelor vizibile cu ochiul liber prin numere în ordine crescătoare a longitudinii cerești. Astfel, o stea poate avea mai multe \"nume\". Exemplu: cea mai strălucitoare stea din Orion este Betelgeuse = α Orionis = 58 Orionis.",
+        "**Clasificarea constelațiilor după poziția față de ecuatorul ceresc**\n\n• În funcție de poziția față de ecuatorul ceresc, constelațiile se clasifică în trei tipuri:\n\n• **Constelații boreale (nordice):** situate în emisfera nordică. Exemple: Ursa Mică, Ursa Mare, Cassiopeia, Perseu, Andromeda, Taurul, Gemenii.\n\n• **Constelații australe (sudice):** situate în emisfera sudică. Exemple: Scorpionul, Săgetătorul, Capricornul, Coroana Australă, Crucea Sudului.\n\n• **Constelații ecuatoriale:** constelații care prin întinderea lor traversează ecuatorul ceresc. Exemple: Fecioara, Câinele Mic, Ophiucus, Vulturul, Leul, Peștii, Hidra.",
+        "**Clasificarea constelațiilor după poziția față de ecliptică**\n\n• **Ecliptica** este cercul mare pe sfera cerească ce reprezintă traiectoria aparentă a Soarelui printre stele în decurs de un an. Planul eclipticii este înclinat față de planul ecuatorului ceresc cu un unghi de $23°27'$.\n\n• **Constelațiile zodiacale** sunt constelațiile aflate pe ecliptică, traversate de Soare în drumul său anual aparent. Ele ocupă o zonă în jurul eclipticii numită **zodiac**.\n\n• Constelațiile care acoperă ecliptica sunt în număr de **13**, deși doar **12** sunt considerate zodiacale conform împărțirii tradiționale. Cea de-a 13-a, **Ophiucus**, conține 15° din ecliptică, Soarele ajungând în această zonă la începutul lunii decembrie.\n\n• **Cele 12 constelații zodiacale** sunt: Peștii, Berbecul, Taurul, Gemenii, Cancerul, Leul, Fecioara, Balanța, Scorpionul, Săgetătorul, Capricornul și Vărsătorul.\n\n• Soarele se află în dreptul unei constelații zodiacale timp de aproximativ **o lună**, parcurgând pe ecliptică un grad în fiecare zi.",
+        "**Clasificarea constelațiilor în raport cu succesiunea anotimpurilor**\n\n• Clasificarea sezonieră este cea mai utilizată în practica astronomică. Distingem următoarele tipuri:\n\n• **Constelații circumpolare** (nordice și sudice): vizibile pe tot parcursul anului, nu apun niciodată sub orizont pentru un observator dintr-o anumită latitudine.\n\n• **Constelații de primăvară, vară, toamnă și iarnă:** vizibile cel mai bine la miezul nopții în sezonul respectiv.\n\n• Într-o seară de pe teritoriul României, pe boltă nu se văd exclusiv constelațiile sezonului curent, ci parțial și constelațiile sezonului precedent și ale celui următor.\n\n• **Exemplu:** la miezul unei nopți de primăvară, în zona nordică se văd constelațiile circumpolare, spre sud — constelațiile primăverii, spre est — o parte din constelațiile verii, iar spre vest — o parte din constelațiile iernii."
+      ],
+      "quiz": [
+        {
+          "question": "Ce este o constelație?",
+          "options": [
+            { "label": "a", "text": "O grupare arbitrară de stele din aceeași regiune a cerului, cu o configurație specifică" },
+            { "label": "b", "text": "O configurație formată din stele strălucitoare, ușor de recunoscut, de tipul Triunghiului de Vară" },
+            { "label": "c", "text": "Un grup de galaxii aflate aproape una de alta pe sfera cerească" },
+            { "label": "d", "text": "O stea variabilă a cărei strălucire se modifică periodic" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Ce este un asterism?",
+          "options": [
+            { "label": "a", "text": "O constelație recunoscută oficial de Uniunea Astronomică Internațională" },
+            { "label": "b", "text": "O configurație formată din stele strălucitoare, ușor de recunoscut (ex: Triunghiul de Vară)" },
+            { "label": "c", "text": "Un satelit artificial folosit pentru cartografierea cerului" },
+            { "label": "d", "text": "O stea dublă vizibilă cu ochiul liber" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Câte constelații sunt recunoscute oficial de Uniunea Astronomică Internațională (UAI) începând cu anul 1928?",
+          "options": [
+            { "label": "a", "text": "48" },
+            { "label": "b", "text": "88" },
+            { "label": "c", "text": "110" },
+            { "label": "d", "text": "12" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următoarele constelații este o constelație boreală (nordică)?",
+          "options": [
+            { "label": "a", "text": "Scorpionul" },
+            { "label": "b", "text": "Coroana Australă" },
+            { "label": "c", "text": "Ursa Mare" },
+            { "label": "d", "text": "Crucea Sudului" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Câte constelații zodiacale sunt în împărțirea tradițională (ignorând constelația Ophiucus)?",
+          "options": [
+            { "label": "a", "text": "12" },
+            { "label": "b", "text": "13" },
+            { "label": "c", "text": "10" },
+            { "label": "d", "text": "15" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care dintre următoarele constelații traversează ecliptica, dar nu face parte din cele 12 zodiacale tradiționale?",
+          "options": [
+            { "label": "a", "text": "Vărsătorul" },
+            { "label": "b", "text": "Ophiucus" },
+            { "label": "c", "text": "Taurul" },
+            { "label": "d", "text": "Leul" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă notația „α Orionis” (Alpha Orionis)?",
+          "options": [
+            { "label": "a", "text": "Cea mai puțin strălucitoare stea din constelația Orion" },
+            { "label": "b", "text": "Cea mai strălucitoare stea din constelația Orion, conform notației Bayer" },
+            { "label": "c", "text": "O stea variabilă din constelația Orion" },
+            { "label": "d", "text": "Numărul Flamsteed al stelei Betelgeuse" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce sunt constelațiile circumpolare?",
+          "options": [
+            { "label": "a", "text": "Constelații care sunt vizibile doar la ecuator" },
+            { "label": "b", "text": "Constelații care nu apun niciodată sub orizont pentru un observator de la o anumită latitudine" },
+            { "label": "c", "text": "Constelații care traversează ecliptica" },
+            { "label": "d", "text": "Constelații care conțin exclusiv stele de magnitudinea 1" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Conform textului, cât timp stă Soarele în dreptul unei constelații zodiacale?",
+          "options": [
+            { "label": "a", "text": "O săptămână" },
+            { "label": "b", "text": "O zi" },
+            { "label": "c", "text": "Aproximativ o lună" },
+            { "label": "d", "text": "Un an" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care dintre următoarele exemple este un asterism, nu o constelație?",
+          "options": [
+            { "label": "a", "text": "Ursa Mare" },
+            { "label": "b", "text": "Triunghiul de Vară" },
+            { "label": "c", "text": "Scorpionul" },
+            { "label": "d", "text": "Cassiopeia" }
+          ],
+          "correct_index": 1
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Sistemul Solar",
+      "lessons": [
+        "**Soarele, steaua de lângă noi**\n\n• Soarele este o imensă sferă de gaz incandescent (plasmă fierbinte), care emite lumină și căldură în întregul Sistem solar. Este sursa de viață pe planeta noastră și steaua cea mai bine cunoscută datorită apropierii față de Pământ.\n\n• **Date fizice generale:** $R = 696\\,200 \\text{ km} = 109 \\times R_P$; Volumul: $1\\,300\\,000 \\times V_P$; Masa: $333\\,400 \\times M_P$ ($M_{\\text{Soare}} = 2 \\times 10^{30} \\text{ kg}$); Compoziție: 71% hidrogen, 27% heliu, 2% alte elemente.\n\n• Soarele este o stea medie, galbenă, cu vârsta de aproximativ 4,6 miliarde de ani. Se rotește ca un corp fluid: mai repede la ecuator (25 zile) și mai încet la poli (35 zile). **Mișcarea directă** înseamnă rotația în sens invers acelor de ceas, văzută dinspre Polaris; mișcarea opusă se numește **retrogradă**.\n\n• **Energia solară** se produce prin reacții de fuziune nucleară. În fiecare secundă, 564 milioane tone de hidrogen se transformă în 560 milioane tone de heliu, diferența de masă transformându-se în energie conform formulei $E = \\Delta m \\times c^2$.\n\n• **Influența asupra Pământului:** radiație directă (lumină și căldură), deformarea câmpului magnetic terestru, ionizarea atmosferei superioare și **aurore polare** în zona polilor.\n\n**Interiorul Soarelui**\n  - **Nucleul** (raza $130\\,000 \\text{ km}$, temperatura $> 15\\,000\\,000 \\, ^\\circ\\text{C}$): reactorul nuclear unde hidrogenul fuzionează în heliu; conține jumătate din masa Soarelui.\n  - **Zona radiativă** (70% din raza solară): energia este transportată spre exterior prin radiații electromagnetice.\n  - **Zona convectivă** (grosime $80\\,000 \\text{ km}$): energia este condusă la suprafață prin convecție — plasma fierbinte urcă, se răcește și coboară.\n\n**Atmosfera Soarelui**\n  - **Fotosfera** ($300 \\text{ km}$ grosime, $6000 \\, ^\\circ\\text{C}$): prezintă granulație (bule de gaz cu diametrul de $1000 \\text{ km}$, care dispar după 7-8 minute), **pete solare** (zone mai reci, cu câmp magnetic concentrat, temperatura $4500 \\, ^\\circ\\text{C}$) și **spicule** (jeturi de plasmă cu înălțimi de până la $9000 \\text{ km}$).\n  - **Cromosfera** (până la $9000 \\text{ km}$, $4000-15\\,000 \\, ^\\circ\\text{C}$): vizibilă ca o bordură roșie în timpul eclipselor totale.\n  - **Coroana solară** ($1-2$ milioane km, până la $2\\,000\\,000 \\, ^\\circ\\text{C}$): extrem de rarefiată și fierbinte, fără limită exterioară bine definită; sursa **vântului solar**.\n\n• **Protuberanțele** sunt structuri în buclă din cromosferă și coroană, care unesc două regiuni active. Văzute pe discul solar apar ca filamente întunecate.\n\n• **Activitatea solară** urmează un ciclu de aproximativ **11 ani**. Maximul se manifestă prin pete, protuberanțe, furtuni magnetice și **Ejecții Coronale de Masă (CME)** — bule imense de plasmă expulzate din coroană, care pot afecta Pământul, sateliții artificiali și rețelele electrice.",
+        "**Planetele – clasificare generală**\n\n**Planetele teluricem(Mercur, Venus, Pământ, Marte)**\n\n  - suprafață solidă și turtiri mici față de forma sferică;\n  - dimensiuni și mase relativ mici (fracțiuni din dimensiunile terestre);\n  - densități mari ($3,4-6 \\text{ g/cm}^3$);\n  - rotații lente (o zi sau mai multe zile).\n\n**Planetele gazoase** (Jupiter, Saturn, Uranus, Neptun)**\n\n  - dimensiuni și mase mari ($15-318$ mase terestre);\n  - densități mici ($0,7-1,6 \\text{ g/cm}^3$);\n  - rotații rapide ($10-16$ ore);\n  - câmpuri magnetice puternice, inele și zeci de sateliți naturali;\n  - conținut bogat în hidrogen și heliu.\n\n**Sistemul solar interior**\n  - cuprinde cele patru planete terestre și **centura de asteroizi**, formate în principal din roci și metal, situate mai aproape de Soare.\n\n**Sistemul solar exterior**\n  - dominat de cei patru giganți gazoși și de gheață: Jupiter, Saturn, Uranus și Neptun, la care se adaugă **centura Kuiper** și **norul Oort**, caracterizate prin temperaturi scăzute și numeroși sateliți.",
+        "**Mercur**\n\n• Mercur este planeta care aleargă cel mai repede pe cer, purtând numele zeului roman al comerțului și călătoriilor.\n\n• **Date fizice generale:** $R = 2439 \\text{ km} = 0,38 \\times R_P$; Distanța față de Soare: $0,39 \\text{ U.A.}$; Masa: $5,5\\% \\times M_P$; Densitatea: $5,43 \\text{ g/cm}^3$; Accelerația gravitațională: $0,38 \\, g_P$; Perioada de rotație axială: $59$ zile; Perioada de revoluție: $88$ zile.\n\n**Particularități**\n  - Vizibil doar la crepuscul, cel mult jumătate de oră înainte de răsărit sau după apus.\n  - Diametrul este cu $\\sim40\\%$ mai mic decât al Pământului și cu $\\sim40\\%$ mai mare decât al Lunii. Este mai mic decât Ganymede.\n  - Temperaturi extreme: $+430 \\, ^\\circ\\text{C}$ pe fața luminată și $-170 \\, ^\\circ\\text{C}$ pe cea neluminată. Un punct de pe suprafață primește lumina Soarelui 3 luni neîncetat — **ziua pe Mercur durează 6 luni terestre**.\n  - Orbita este ovală ($46-70$ milioane km față de Soare), spre deosebire de orbitele aproape circulare ale celorlalte planete.\n  - Nu are sateliți naturali și nu are atmosferă — cerul este întotdeauna negru.\n  - Suprafața seamănă cu cea a Lunii: cratere, munți, bazine, câmpii, faleze. Cel mai mare crater este **Mare Caloris** ($1300 \\text{ km}$ diametru); cei mai înalți munți sunt **Caloris Montes** (peste $2000 \\text{ m}$).\n  - Interior: nucleu de fier cu raza $= 70\\%$ din raza planetei, acoperit de o manta subțire de silicați ($500-600 \\text{ km}$ grosime).",
+        "**Venus**\n\n• Venus, cel mai luminos corp ceresc după Soare și Lună, este numită planeta soră a Pământului datorită masei, densității și volumului asemănătoare. Poartă numele zeiței romane a iubirii și frumuseții.\n\n• **Date fizice generale:** $R = 6052 \\text{ km} = 95\\% \\times R_P$; Distanța față de Soare: $107\\,712\\,000 \\text{ km} = 0,72 \\text{ U.A.}$; Masa: $82\\% \\times M_P$; Accelerația gravitațională: $0,9 \\, g_P$; Densitatea: $5,24 \\text{ g/cm}^3$; Temperatura la suprafață: $+480 \\, ^\\circ\\text{C}$; Perioada de rotație: $-243,5$ zile; Perioada de revoluție: $0,6$ ani.\n\n**Particularități**\n  - Rotația axială este **retrogradă** — Soarele răsare de la Vest.\n  - Prezintă **faze** pentru observatorul terestru, ca și Luna.\n  - Nu are anotimpuri (axa perpendiculară pe planul orbitei) și nu are sateliți naturali.\n  - Structura: nucleu metalic parțial topit, manta de rocă, scoarță, atmosferă.\n  - Suprafața este predominant vulcanică: $65-70\\%$ câmpii, $30\\%$ regiuni muntoase. Cel mai înalt lanț muntos este **Maxwell Montes** ($12 \\text{ km}$). Cel mai mare crater este **Mead** ($280 \\text{ km}$ diametru). Craterele mici (sub $3 \\text{ km}$) sunt absente — atmosfera groasă arde meteoriții mici.\n  - Atmosfera este densă, bogată în $\\text{CO}_2$, cu nori de acid sulfuric, clorhidric și fluorhidric. Vânturi de peste $400 \\text{ km/h}$ produc eroziune intensă.\n  - **Efectul de seră** extrem: $\\text{CO}_2$ abundent menține temperatura la $+480 \\, ^\\circ\\text{C}$. Pe Pământ, același efect (la scară redusă) menține temperatura medie la $+15 \\, ^\\circ\\text{C}$, făcând posibilă viața.\n  - Presiunea la sol: de **92 de ori** mai mare decât pe Pământ ($10$ tone pe fiecare $\\text{dm}^2$).",
+        "**Marte**\n\n• Marte, planeta roșie, poartă numele zeului roman al războiului. Culoarea roșiatică provine din oxizii de fier de pe suprafață. Deși aridă în prezent, numeroase dovezi indică existența apei curgătoare în trecut.\n\n• **Date fizice generale:** $R = 3397 \\text{ km} = 0,53 \\, R_P$; Distanța față de Soare: $1,52 \\text{ U.A.}$; Masa: $0,108 \\, M_P$; Densitatea: $3,93 \\text{ g/cm}^3$; Accelerația gravitațională: $0,38 \\, g_P$; Temperatura medie: $-63 \\, ^\\circ\\text{C}$; Perioada de rotație axială: $24,6$ ore; Perioada de revoluție: $686,9$ zile $= 1,88$ ani; Atmosfera: $95,32\\% \\text{ CO}_2$, $2,7\\%$ azot, $1,6\\%$ argon.\n\n**Particularități**\n  - **Olympus Mons**: vulcan stins, $25 \\text{ km}$ înălțime — cel mai înalt vulcan din Sistemul solar.\n  - **Valles Marineris**: canion de $\\sim5000 \\text{ km}$ lungime și până la $7 \\text{ km}$ adâncime — cel mai mare rift din Sistemul solar.\n  - **Regiunea Tharsis Montes**: 3 vulcani înalți — Arsia Mons ($17 \\text{ km}$), Pavonis Mons ($14 \\text{ km}$), Ascraeus Mons ($18 \\text{ km}$).\n  - Atmosfera rarefiată ($1/100$ din presiunea terestră); axa înclinată cu $24^\\circ 56'$ generează **anotimpuri** cu durata aproape dublă față de cele terestre.\n  - **Calotele polare** ($\\text{CO}_2$ înghețat și apă) se retrag prin **sublimare**, nu prin topire. Calota sudică conține $80\\%$ apă.\n  - Cel mai mare crater: **Hellas Planitia** ($2000 \\text{ km}$ diametru, $8 \\text{ km}$ adâncime).\n  - Nu are câmp magnetic global, dar unele regiuni din emisfera sudică sunt puternic magnetizate — dovadă a unui câmp magnetic în trecut.\n  - **Sateliți naturali:** **Phobos** ($27/22/19 \\text{ km}$, perioadă de revoluție $7$h$39$min, orbită instabilă — se va prăbuși pe planetă peste $\\sim50$ milioane ani) și **Deimos** ($15/12/11 \\text{ km}$, perioadă de revoluție $1,26$ zile, orbită instabilă — va ieși din câmpul gravitațional în viitor).",
+        "**Jupiter**\n\n• Jupiter, numit după zeul suprem roman, este cea mai mare planetă din Sistemul solar. Cu diametrul de 11 ori mai mare decât al Terrei și masa de două ori mai mare decât suma maselor tuturor celorlalte planete, pare un sistem solar în miniatură.\n\n• **Date fizice generale:** $R = 71\\,492 \\text{ km} = 11,2 \\times R_P$; Distanța față de Soare: $5,2 \\text{ U.A.}$; Masa: $318 \\times M_P$; Densitatea: $1,3 \\text{ g/cm}^3$; Accelerația gravitațională: $2,54 \\times g_P$; Temperatura medie: $-121 \\, ^\\circ\\text{C}$; Perioada de rotație: $10$ ore; Perioada de revoluție: $11,8$ ani; Atmosfera: $90\\%$ hidrogen, $9\\%$ heliu, $1\\%$ alte gaze.\n\n**Particularități**\n  - Structura: nucleu solid (rocă și gheață) → manta internă (hidrogen metalic fluid, $2/3$ din raza totală) → manta externă (hidrogen și heliu lichid) → atmosferă (nori de apă, hidrogen, amoniac).\n  - Norii sunt dispuși în benzi paralele cu ecuatorul. La granița benzilor au loc furtuni gigantice.\n  - **Marea Pată Roșie**: furtună gigantică ovală ($\\sim40\\,000 \\text{ km}$ diametru), vizibilă de pe Pământ de cel puțin 350 de ani.\n  - Câmp magnetic de **20 000 de ori** mai intens decât cel terestru — aurore spectaculoase la poli.\n  - **64 de sateliți naturali**; cei patru galileeni, descoperiți de Galileo Galilei în 1610:\n    - **Io**: cel mai activ vulcanic din Sistemul solar; munți vulcanici $>10 \\text{ km}$; vulcanul Pele aruncă lavă la $>300 \\text{ km}$ înălțime.\n    - **Europa**: suprafață de gheață (zeci de km grosime); probabil un ocean de apă lichidă dedesubt, adânc de $100 \\text{ km}$.\n    - **Ganymede**: cel mai mare satelit din Sistemul solar (diametru $5262 \\text{ km}$); $60\\%$ rocă, $40\\%$ gheață.\n    - **Callisto**: al treilea satelit ca mărime din Sistemul solar (diametru $4800 \\text{ km}$); cel mai mare crater din Sistemul solar — Vaalhalla ($600 \\text{ km}$).\n  - Inelele, descoperite de **Voyager 1** în 1979, sunt invizibile de pe Pământ chiar și prin cele mai puternice telescoape.\n  - În 1994, **cometa Shoemaker-Levy 9**, sfărâmată în 21 de fragmente, s-a ciocnit cu Jupiter — prima coliziune cometă-planetă observată direct.",
+        "**Saturn**\n\n• Saturn, stăpânul inelelor, este a doua planetă ca mărime, cea mai turtită și singura mai ușoară decât apa din Sistemul solar. Poartă numele zeului roman al secerișului și este cea mai îndepărtată planetă vizibilă cu ochiul liber.\n\n• **Date fizice generale:** $R = 60\\,268 \\text{ km} = 9,45 \\times R_P$; Distanța față de Soare: $9,5 \\text{ U.A.}$; Masa: $95 \\times M_P$; Densitatea: $0,7 \\text{ g/cm}^3$; Accelerația gravitațională: $1,06 \\times g_P$; Perioada de rotație: $10,6$ ore; Perioada de revoluție: $29,45$ ani; Temperatura medie: $-125 \\, ^\\circ\\text{C}$; Atmosfera: $96\\%$ hidrogen, $4\\%$ heliu.\n\n**Particularități**\n  - Axa înclinată cu $26,7^\\circ$ față de verticala orbitei → **anotimpuri**. Parcurge o constelație zodiacală în $\\sim2,5$ ani.\n  - Structura: nucleu (rocă și gheață) → manta interioară (hidrogen metalic lichid, $1/3$ din raza planetei) → manta exterioară (hidrogen lichid spre gazos, $50\\%$ din raza planetei) → atmosferă asemănătoare cu a lui Jupiter.\n  - Radiază de **două ori** mai multă energie decât primește de la Soare. Furtuni cu vânturi de peste $400 \\text{ km/h}$; intensificarea furtunilor la fiecare 30 de ani.\n  - **Sistemul de inele**: cel mai extins și complex din Sistemul solar — 7 inele principale, împărțite în mii de inele secundare, extinse până la $> 270\\,000 \\text{ km}$. Fragmentele de gheață și minerale se ciocnesc frecvent, menținând suprafețele strălucitoare.\n  - **Cel puțin 48 de sateliți**, dintre care 5 depășesc $1000 \\text{ km}$ diametru:\n    - **Titan**: al doilea satelit ca mărime din Sistemul solar (raza $2500 \\text{ km}$); atmosferă densă de metan și azot; lacuri de metan la suprafață; ploaie și ninsoare de etan.\n    - **Enceladus**: celebru prin strălucire și gheizere de gheață.\n    - **Mimas**: supranumit satelitul cu motor datorită craterului de $130 \\text{ km}$ cu vârf central de $6 \\text{ km}$.\n    - **Hyperion**: formă neregulată, rotație haotică — probabil fragment dintr-un corp cosmic mai mare.\n  - Misiunea **Cassini-Huygens** (NASA-ESA, 2004-2008) a studiat planeta și sateliții; sonda **Huygens** a coborât prin atmosfera lui Titan.",
+        "**Uranus**\n\n• Planeta răsturnată — axa de rotație este aproape în planul orbitei, astfel că Uranus pare că se rostogolește pe traiectoria sa. Poartă numele zeului grec al cerului și orbitează de două ori mai departe față de Soare decât Saturn. Metanul din atmosferă îi conferă culoarea **albastru-verzuie**.\n\n• **Date fizice generale:** $R = 25\\,559 \\text{ km} = 4 \\times R_P$; Distanța față de Soare: $19,2 \\text{ U.A.}$; Masa: $14,5 \\times M_P$; Densitatea: $1,3 \\text{ g/cm}^3$; Accelerația gravitațională: $0,79 \\times g_P$; Perioada de rotație: $-17,24$ ore (retrogradă); Perioada de revoluție: $84$ ani; Temperatura medie: $-200 \\, ^\\circ\\text{C}$; Atmosfera: $83\\%$ hidrogen, $15\\%$ heliu, $2\\%$ metan.\n\n**Particularități**\n  - Descoperit în **1781** de astronomul englez **William Herschel**; la limita vizibilității cu ochiul liber.\n  - Structura: nucleu (silicați, fier, gheață) → manta interioară (compuși înghețați vâscoși: amoniac, apă, metan) → manta exterioară (hidrogen lichid) → atmosferă.\n  - Câmp magnetic de **48 de ori** mai puternic decât cel terestru, înclinat la $60^\\circ$ față de axa planetei.\n  - Atmosfera prezintă benzi de nori ce se deplasează la latitudine constantă; furtunile sunt frecvente. Norii se mișcă cu viteze de $100-400 \\text{ km/h}$ (observați de **Voyager 2** în 1986).\n  - **11 inele principale** descoperite în 1977, formate din bucăți de rocă (diametru până la $1 \\text{ m}$); cel mai lat inel are $100 \\text{ km}$.\n  - **27 de sateliți** cunoscuți, toți cu nume din operele lui Shakespeare și Alexander Pope. Cei mai importanți: **Titania** (diametru $1577 \\text{ km}$, cel mai mare) și **Miranda** ($500 \\text{ km}$, peisaj variat cu văi adânci — probabil rezultatul unei coliziuni și reunificări).",
+        "**Neptun**\n\n• Neptun este cea mai îndepărtată planetă față de Soare. De pe Neptun, Soarele apare de **900 de ori** mai puțin strălucitor decât de pe Pământ. Poartă numele zeului roman al oceanelor.\n\n• **Date fizice generale:** $R = 24\\,746 \\text{ km} = 4 \\times R_P$; Distanța față de Soare: $30 \\text{ U.A.}$; Masa: $17 \\times M_P$; Densitatea: $1,6 \\text{ g/cm}^3$; Accelerația gravitațională: $1,2 \\, g_P$; Perioada de rotație: $16$ ore; Perioada de revoluție: $164$ ani; Temperatura medie: $-200 \\, ^\\circ\\text{C}$; Atmosfera: $85\\%$ hidrogen, $13\\%$ heliu, $2\\%$ metan.\n\n**Particularități**\n  - Culoare **albastru intensă** datorită concentrației mari de metan în atmosfera superioară. Invizibil cu ochiul liber.\n  - Structura: nucleu din roci și gheață → manta interioară (apă, amoniac, metan vâscos) → manta exterioară (hidrogen și compuși înghețați) → atmosferă.\n  - Furtunile sunt cele **mai rapide din Sistemul solar**: până la $2100 \\text{ km/h}$. Unii nori sunt situați deasupra atmosferei, lăsând umbră.\n  - Axa înclinată cu $28^\\circ$ → **anotimpuri de 41 de ani** fiecare.\n  - **Marea Pată Întunecată** — cea mai mare furtună, descoperită de **Voyager 2** (1989), cu suprafața egală cu Europa și Asia la un loc; a dispărut după 8 ani.\n  - **13 sateliți naturali** și **5 inele** înguste, puțin strălucitoare.\n  - **Triton** (diametrul $2700 \\text{ km}$, cel mai mare satelit): orbită **retrogradă** față de rotația planetei — argument că a fost un asteroid capturat gravitațional. Activ geologic (gheizere de gheață, fisuri). Temperatura la suprafață: **$-240 \\, ^\\circ\\text{C}$** (unul dintre cele mai reci corpuri din Sistemul solar). Se apropie anual de Neptun — peste câteva milioane de ani va fi sfărâmat și va forma probabil un inel spectaculos."
+      ],
+      "quiz": [
+        {
+          "question": "Care este cea mai mare planetă din Sistemul solar?",
+          "options": [
+            { "label": "a", "text": "Saturn" },
+            { "label": "b", "text": "Jupiter" },
+            { "label": "c", "text": "Neptun" },
+            { "label": "d", "text": "Uranus" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care planetă are rotație retrogradă, astfel încât Soarele răsare de la Vest?",
+          "options": [
+            { "label": "a", "text": "Marte" },
+            { "label": "b", "text": "Mercur" },
+            { "label": "c", "text": "Venus" },
+            { "label": "d", "text": "Uranus" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Cum se numește cel mai înalt vulcan din Sistemul solar, aflat pe Marte?",
+          "options": [
+            { "label": "a", "text": "Arsia Mons" },
+            { "label": "b", "text": "Pavonis Mons" },
+            { "label": "c", "text": "Ascraeus Mons" },
+            { "label": "d", "text": "Olympus Mons" }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Ce sunt petele solare?",
+          "options": [
+            { "label": "a", "text": "Zone de pe suprafața Soarelui mai reci, cu temperatură de aproximativ 4500 °C" },
+            { "label": "b", "text": "Cratere produse de impactul asteroizilor cu Soarele" },
+            { "label": "c", "text": "Jeturi de plasmă care izbucnesc din coroană" },
+            { "label": "d", "text": "Regiuni unde câmpul magnetic este foarte slab" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care dintre următorii sateliți ai lui Jupiter are un ocean de apă lichidă sub un strat gros de gheață?",
+          "options": [
+            { "label": "a", "text": "Io" },
+            { "label": "b", "text": "Ganymede" },
+            { "label": "c", "text": "Europa" },
+            { "label": "d", "text": "Callisto" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce planetă este denumită „planeta răsturnată” deoarece axa sa de rotație este aproape în planul orbitei?",
+          "options": [
+            { "label": "a", "text": "Neptun" },
+            { "label": "b", "text": "Uranus" },
+            { "label": "c", "text": "Saturn" },
+            { "label": "d", "text": "Pluto" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care este componenta principală a atmosferei planetei Venus?",
+          "options": [
+            { "label": "a", "text": "Azot" },
+            { "label": "b", "text": "Oxigen" },
+            { "label": "c", "text": "Dioxid de carbon (CO₂)" },
+            { "label": "d", "text": "Metan" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este vântul solar?",
+          "options": [
+            { "label": "a", "text": "Un flux constant de particule care „curg” din coroana solară" },
+            { "label": "b", "text": "O furtună magnetică care înclină axa Pământului" },
+            { "label": "c", "text": "O ejecție de materie numai din zona ecuatorială a Soarelui" },
+            { "label": "d", "text": "Curenți de gaz fierbinte din zona convectivă a Soarelui" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Câți sateliți naturali are planeta Jupiter?",
+          "options": [
+            { "label": "a", "text": "48" },
+            { "label": "b", "text": "64" },
+            { "label": "c", "text": "27" },
+            { "label": "d", "text": "13" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre planetele telurice (terestre) are cea mai mare densitate?",
+          "options": [
+            { "label": "a", "text": "Marte" },
+            { "label": "b", "text": "Venus" },
+            { "label": "c", "text": "Pământ" },
+            { "label": "d", "text": "Mercur" }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Cum se numește cel mai mare crater de pe Marte?",
+          "options": [
+            { "label": "a", "text": "Mare Caloris" },
+            { "label": "b", "text": "Mead" },
+            { "label": "c", "text": "Hellas Planitia" },
+            { "label": "d", "text": "Vaalhalla" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este perioada de rotație a planetei Saturn (în ore)?",
+          "options": [
+            { "label": "a", "text": "10 ore" },
+            { "label": "b", "text": "10,6 ore" },
+            { "label": "c", "text": "16 ore" },
+            { "label": "d", "text": "17,24 ore" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce satelit al lui Saturn posedă o atmosferă densă de metan și azot, precum și lacuri de metan la suprafață?",
+          "options": [
+            { "label": "a", "text": "Enceladus" },
+            { "label": "b", "text": "Mimas" },
+            { "label": "c", "text": "Hyperion" },
+            { "label": "d", "text": "Titan" }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Cine a descoperit planeta Uranus?",
+          "options": [
+            { "label": "a", "text": "Galileo Galilei" },
+            { "label": "b", "text": "Giovanni Cassini" },
+            { "label": "c", "text": "William Herschel" },
+            { "label": "d", "text": "Johannes Kepler" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este temperatura medie la suprafața planetei Venus?",
+          "options": [
+            { "label": "a", "text": "-63 °C" },
+            { "label": "b", "text": "-121 °C" },
+            { "label": "c", "text": "+480 °C" },
+            { "label": "d", "text": "+430 °C" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce reprezintă „Marea Pată Roșie” de pe Jupiter?",
+          "options": [
+            { "label": "a", "text": "O zonă vulcanică activă" },
+            { "label": "b", "text": "O furtună gigantică, vizibilă de pe Pământ de cel puțin 350 de ani" },
+            { "label": "c", "text": "O regiune unde câmpul magnetic este extrem de intens" },
+            { "label": "d", "text": "Un impact recent al unei comete" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următoarele planete are un sistem de inele vizibile cu ochiul liber (sau cu un telescop mic) de pe Pământ?",
+          "options": [
+            { "label": "a", "text": "Jupiter" },
+            { "label": "b", "text": "Uranus" },
+            { "label": "c", "text": "Saturn" },
+            { "label": "d", "text": "Neptun" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este cea mai îndepărtată planetă de Soare din Sistemul solar?",
+          "options": [
+            { "label": "a", "text": "Neptun" },
+            { "label": "b", "text": "Uranus" },
+            { "label": "c", "text": "Saturn" },
+            { "label": "d", "text": "Pluto" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care este cel mai mare satelit planetar din întregul Sistemul solar (ca diametru)?",
+          "options": [
+            { "label": "a", "text": "Titan" },
+            { "label": "b", "text": "Ganymede" },
+            { "label": "c", "text": "Callisto" },
+            { "label": "d", "text": "Luna" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce provoacă anotimpurile pe Marte?",
+          "options": [
+            { "label": "a", "text": "Distanța variabilă față de Soare" },
+            { "label": "b", "text": "Prezența calotelor polare" },
+            { "label": "c", "text": "Înclinarea axei de rotație a planetei față de planul orbitei" },
+            { "label": "d", "text": "Activitatea vulcanică intensă" }
+          ],
+          "correct_index": 2
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Corpuri mici în Sistemul Solar",
+      "lessons": [
+        "**Centura principală de asteroizi**\n\nAsteroizii sunt bucăţi de rocă şi gheaţă cu dimensiuni de la câţiva zeci de metri până la sute de km. Majoritatea dintre ei se găsesc într-o zonă sub formă de inel, aflată între orbitele planetelor Marte şi Jupiter. Astronomii numesc această zonă centura principală de asteroizi.\n\nAsteroizii, numiți și planetoizi, sunt obiecte rămase de la formarea Sistemului Solar. Majoritatea acestor fragmente se găsesc între 2,3 și 3,3 Unităţi Astronomice depărtare de Soare.\n\nDoar un singur asteroid este sferic: 1 Ceres (având un diametru de 800 km). El a intrat în 2006 în categoria planetelor pitice. Următorii ca mărime sunt: 4 Vesta, 2 Pallas și 3 Juno.\n\nÎn centura principală s-au descoperit şi au fost catalogaţi 577.906 asteroizi (2011) dintre care 8200 care se pot apropia de planeta noastră (asteroizi NEA - Near Earth Asteroid).\n\n**Cum s-au format:** La începuturile Sistemului solar, o cantitate mare de materie orbita în jurul Soarelui la o distanță între viitoarele planete Marte și Jupiter. Prin ciocniri repetate și acreție gravitaţională s-ar fi format o planetă de mărimea Terrei, dar atracția planetei Jupiter a întrerupt procesul și a modificat orbitele milardelor de planetoizi, astfel încât mulţi dintre ei şi-au părăsit orbitele, împrăştiindu-se în Sistemul solar.\n\nCâţiva dintre asteroizi au orbite neobişnuite, acestea pot intersecta uneori orbita Pământului: Icar, Apollo, Adonis, Hidalgo.\n\n**Tipuri de asteroizi după compoziţie:**\n- **Tip C (carbon)** – compoziţie bogată în carbon (carbonaţi, argilă, aluminiu, fier). Aspect întunecat, cele mai vechi obiecte. 75% din asteroizii centurii principale, spre exterior. Exemple: 2 Pallas, 253 Matilde, 10 Hygeia.\n- **Tip S (silicaţi)** – silicați (piatră) și metale (nichel-fier). Regiunile interne ale centurii, aproape de Marte. 15% din total, nuanţă roșiatică. Exemple: 15 Eunomia, 3 Juno, 951 Gaspra.\n- **Tip M (metalici)** – 80% fier, 20% nichel, iridiu, paladiu, platină, aur și alte metale prețioase. Zona de mijloc a centurii. Exemple: 16 Psyche, 21 Lutetia, 22 Kaliope, 216 Cleopatra.\n\nSuprafața tuturor asteroizilor este acoperită de regolit, material ce conține fragmente mici de roci produse în urma ciocnirilor cu alţi asteroizi.\n\n**Troienii:** Un grup de asteroizi se află la aceeași depărtare de Soare ca Jupiter, dispuși în doi “nori” de obiecte care se mișcă în jurul Soarelui cu aceeași viteză ca și marea planetă: se numesc Grecii şi Troienii. Cele două roiuri de asteroizi se află la 60° pe traiectoria lui Jupiter, înainte și după acesta.\n\n**Cercetări:** La 1 ianuarie 1801, astronomul italian Giuseppe Piazzi a descoperit primul şi cel mai mare asteroid, Ceres, acum planetă pitică. Sonda spaţială americană GALILEO a fost prima care a fotografiat de aproape asteroizi: 951 Gaspra şi 243 Ida. Ambii au suprafeţe acoperite de cratere. În apropierea asteroidului Ida a fost descoperit un satelit de numai 1,5 km (Dactyl). În 2000, sonda NEAR–Shoemaker a orbitat şi fotografiat de aproape asteroidul 433 Eros.",
+        "**Centura lui Kuiper**\n\nGerard Kuiper (astronom de origine olandeză) a observat că numeroase comete ce au perioade de revoluţie în jurul Soarelui de aproximativ 200 de ani vin dintr-o regiune situată dincolo de planeta Neptun. Acolo ar exista nuclee cometare, dar şi asteroizi acoperiţi cu gheaţă. Obiectele sunt mici şi greu de observat.\n\nCentura lui Kuiper are o formă de disc, la o distanţă între 30 şi 100 UA faţă de Soare. Se estimează că există peste 10 milioane de obiecte numite KBO (Kuiper Belt Object). În 2011 erau catalogate 1164 de KBO, dintre care 291 asteroizi numiţi “centauri”.\n\n**Planetele pitice din Centura Kuiper:**\n- **Pluto** – numele zeului infernului. Raza 1160 km, distanţa medie 39,5 UA. Satelitul Charon (cât jumătate din Pluto), plus Nix şi Hydra. Sistem Pluto-Charon este o planetă pitică dublă.\n- **Eris** – zeiţa greacă a discordiei, cea mai mare planetă pitică cunoscută. Diametrul 2500 km, perioadă orbitală 560 ani, distanţa medie 68 UA. Satelit Dysnomia. Suprafaţă acoperită cu gheaţă de apă şi metan.\n- **Makemake** – zeul fertilităţii din Insula Paştelui. Distanţa medie 45 UA, perioadă 306 ani, raza 800 km. Suprafaţa acoperită cu zăpadă şi gheaţă de azot şi metan; metanul şi etanul îngheţate formează cristale de ~1 cm, dând culoarea roşcată.\n- **Haumea** – zeiţa fertilităţii din Hawai. Distanţa 50 UA, formă de elipsoid (1690 × 1500 km). Suprafaţa aproape complet acoperită de cristale de gheaţă. Are doi sateliţi: Hiiaka şi Namaka.",
+        "**Norul lui Oort şi Cometele**\n\nSistemul solar este înconjurat, la distanţe de peste 100 UA până la 50 000 UA, de un halo sferic format din câteva miliarde de nuclee de cometă. Această regiune se numeşte **Norul lui Oort**. A fost descris pentru prima dată de Ernst Opik şi Jan Oort. După formarea planetelor exterioare, au rămas obiecte îngheţate împrăştiate de planetele gigante. Cele care au rămas pe orbite închise în jurul Soarelui formează Norul lui Oort. Perturbaţiile gravitaţionale le aruncă spre Soare. Orbitele lor sunt foarte alungite.\n\n**Cometele:** Un nucleu cometar e un corp neuniform de câţiva km în diametru, format dintr-un amestec de gheaţă, rocă şi pulberi. Pe măsură ce se apropie de Soare, lumina străpunge cristalele de gheaţă care sublimează. Se constituie o aureolă luminoasă – **coama** cometei – apoi o **coadă de gaz** albăstruie, subţire şi rectilinie, şi o **coadă de pulberi** galbenă, mai mare şi curbată. Lungimea cozilor poate fi de sute de milioane de km.\n\nCometele îşi pierd gazele, dar îşi păstrează nucleul de rocă, devenind asteroizi. Alteori se dezintegrează sau cad pe o planetă/Soare.\n\n**Cometele periodice** – urmează orbite alungite care le aduc sistematic în apropierea Soarelui. Clasificare după perioada orbitală:\n- **Scurt-periodice**: tip Jupiter (Encke – 3,3 ani; Wild 2 – 6,4 ani; Borelly – 6,9 ani) sau tip Halley (Halley – 76 ani, Tempel – 33 ani).\n- **Lung-periodice**: perioade peste 200 de ani (Hale-Bopp – 2320 ani, Hyakutake – 72 000 ani). Acestea provin din Norul lui Oort.",
+        "**Meteori şi meteoriţi. Curenţi meteorici**\n\nCând meteoroizii intră în atmosferă cu viteze de peste 30 000 km/h, ei se aprind şi ard din cauza frecării cu aerul. Aerul se încălzeşte la câteva mii de grade. Dâra luminoasă pe cer se numeşte **meteor**. Meteoroizii mai mari se sfărâmă sau explodează, producând un **bolid**.\n\nDacă meteoroidul nu arde complet, restul care cade pe Pământ se numeşte **meteorit**. Un exemplu celebru este meteoritul „Chicxulub” (acum 65 milioane de ani, dispariţia dinozaurilor, crater de 180 km diametru).\n\nÎn anumite perioade, Pământul traversează orbitele unor comete, unde s-au acumulat fragmente. Acestea formează **curenţi meteorici** sau ploi de stele căzătoare. Meteori din acelaşi curent par că vin dintr-o regiune numită **radiant** (efect de perspectivă).\n\n**Tabel cu principalii curenţi meteorici:**\n\n| Denumire curent | Perioada de maxim | Radiant | ZHR (meteori/oră) | Cometa asociată |\n|----------------|-------------------|---------|-------------------|------------------|\n| Quadrantide | 3-4 ianuarie | Bootes, lângă UMA | 100-140 | ? |\n| Lyride | 20-22 aprilie | Lyra, lângă Vega | 20-100 | Thatcher |\n| eta-Aquaride | 5-6 mai | Aquarius | 40-85 | Halley |\n| delta-Aquaride | 28 iulie | Capricornus | 30 | ? |\n| Perseide | 11-13 august | Perseus | 50-80 | Swift-Tuttle |\n| Orionidele | 21-22 octombrie | Orion | 30 | Halley |\n| Tauride | 4-5 noiembrie | Taurus | 10-20 | Encke |\n| Leonidele | 16-18 noiembrie | Leo | 10-15 | Tempel-Tuttle |\n| Geminidele | 13-14 decembrie | Gemini | 60-80 | Phaeton |\n| Urside | 22-23 decembrie | Ursa Major | 10-100 | Tuttle |",
+        "**Configurațiile planetelor**\n\nPentru a localiza poziţia unei planete pe orbita sa în raport cu Pământul şi Soarele, au fost definite poziţii speciale numite **configuraţii**. **Elongaţia** planetei este unghiul format între direcţia spre centrul Soarelui şi direcţia către planetă.\n\n**Pentru planete inferioare (Mercur, Venus):**\n\n- Conjuncţie inferioară\n- Conjuncţie superioară\n- Elongaţie maximă estică\n- Elongaţie maximă vestică\n\n**Pentru planete superioare** (Marte, Jupiter, Saturn, Uranus, Neptun):**\n\n- Conjuncţie\n- Opoziţie\n- Cuadratură estică\n- Cuadratură vestică"
+      ],
+      "quiz": [
+        {
+          "question": "Unde se află centura principală de asteroizi?",
+          "options": [
+            { "label": "a", "text": "Între orbitele lui Marte şi Jupiter" },
+            { "label": "b", "text": "Între orbitele lui Saturn şi Uranus" },
+            { "label": "c", "text": "Dincolo de Neptun" },
+            { "label": "d", "text": "Între Pământ şi Marte" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Care asteroid a fost reclasificat drept planetă pitică în 2006?",
+          "options": [
+            { "label": "a", "text": "4 Vesta" },
+            { "label": "b", "text": "2 Pallas" },
+            { "label": "c", "text": "1 Ceres" },
+            { "label": "d", "text": "3 Juno" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce procent din asteroizii centurii principale sunt de tip C (bogați în carbon)?",
+          "options": [
+            { "label": "a", "text": "15%" },
+            { "label": "b", "text": "75%" },
+            { "label": "c", "text": "50%" },
+            { "label": "d", "text": "90%" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cum se numesc asteroizii care se află la aceeași distanță de Soare ca Jupiter, în două roiuri la 60° în fața și în spatele planetei?",
+          "options": [
+            { "label": "a", "text": "Centauri" },
+            { "label": "b", "text": "NEA" },
+            { "label": "c", "text": "Troienii (Grecii şi Troienii)" },
+            { "label": "d", "text": "KBO" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care dintre următoarele planete pitice se află în Centura lui Kuiper şi este cea mai mare cunoscută?",
+          "options": [
+            { "label": "a", "text": "Pluto" },
+            { "label": "b", "text": "Makemake" },
+            { "label": "c", "text": "Haumea" },
+            { "label": "d", "text": "Eris" }
+          ],
+          "correct_index": 3
+        },
+        {
+          "question": "Ce este Norul lui Oort?",
+          "options": [
+            { "label": "a", "text": "O centură de asteroizi între Marte şi Jupiter" },
+            { "label": "b", "text": "Un halo sferic format din miliarde de nuclee de cometă la 100-50 000 UA de Soare" },
+            { "label": "c", "text": "Un disc de gheaţă şi praf în jurul lui Saturn" },
+            { "label": "d", "text": "Un grup de planete pitice" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce fenomen produce coada unei comete?",
+          "options": [
+            { "label": "a", "text": "Topirea gheţii din nucleu" },
+            { "label": "b", "text": "Sublimarea gheţii sub acţiunea luminii solare, eliberând gaz şi praf" },
+            { "label": "c", "text": "Ciocnirea cu asteroizi" },
+            { "label": "d", "text": "Rotația rapidă a cometei" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Cometa Halley are o perioadă orbitală de aproximativ:",
+          "options": [
+            { "label": "a", "text": "3,3 ani" },
+            { "label": "b", "text": "33 de ani" },
+            { "label": "c", "text": "76 de ani" },
+            { "label": "d", "text": "2320 de ani" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Care este diferența dintre un meteor și un meteorit?",
+          "options": [
+            { "label": "a", "text": "Meteorul este mai mare decât meteoritul" },
+            { "label": "b", "text": "Meteorul este dâra luminoasă din atmosferă, meteoritul este fragmentul care ajunge pe Pământ" },
+            { "label": "c", "text": "Meteoritul este un asteroid, meteorul este o cometă" },
+            { "label": "d", "text": "Nu există diferență" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Ce reprezintă ZHR într-un curent meteoric?",
+          "options": [
+            { "label": "a", "text": "Numărul maxim de meteori pe oră în perioada de maxim" },
+            { "label": "b", "text": "Viteza meteoroizilor" },
+            { "label": "c", "text": "Diametrul radiantului" },
+            { "label": "d", "text": "Distanţa până la cometa mamă" }
+          ],
+          "correct_index": 0
+        },
+        {
+          "question": "Curentul meteoric Perseide atinge maximul în jurul datei de:",
+          "options": [
+            { "label": "a", "text": "20-22 aprilie" },
+            { "label": "b", "text": "11-13 august" },
+            { "label": "c", "text": "21-22 octombrie" },
+            { "label": "d", "text": "13-14 decembrie" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care cometă este asociată curentului meteoric Leonidele?",
+          "options": [
+            { "label": "a", "text": "Halley" },
+            { "label": "b", "text": "Swift-Tuttle" },
+            { "label": "c", "text": "Tempel-Tuttle" },
+            { "label": "d", "text": "Encke" }
+          ],
+          "correct_index": 2
+        },
+        {
+          "question": "Ce este elongația unei planete?",
+          "options": [
+            { "label": "a", "text": "Unghiul dintre direcția Soare-Pământ și direcția Pământ-planetă" },
+            { "label": "b", "text": "Unghiul dintre direcția spre centrul Soarelui și direcția către planetă, cu vârful la Pământ" },
+            { "label": "c", "text": "Distanța dintre planetă și Pământ" },
+            { "label": "d", "text": "Perioada de rotație a planetei" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Pentru planetele superioare, configurația în care planeta se află în direcția opusă Soarelui (răsare la apus, apune la răsărit) se numește:",
+          "options": [
+            { "label": "a", "text": "Conjuncție" },
+            { "label": "b", "text": "Opoziție" },
+            { "label": "c", "text": "Cuadratura estică" },
+            { "label": "d", "text": "Elongație maximă" }
+          ],
+          "correct_index": 1
+        },
+        {
+          "question": "Care dintre următorii asteroizi este de tip M (metalic, bogat în fier şi metale preţioase)?",
+          "options": [
+            { "label": "a", "text": "2 Pallas" },
+            { "label": "b", "text": "3 Juno" },
+            { "label": "c", "text": "16 Psyche" },
+            { "label": "d", "text": "951 Gaspra" }
+          ],
+          "correct_index": 2
+        }
+      ]
+    }
+  ]
+}

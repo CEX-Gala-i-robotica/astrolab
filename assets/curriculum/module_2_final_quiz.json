@@ -1,0 +1,1107 @@
+{
+  "schemaVersion": 1,
+  "number": 2,
+  "title": "Ne pregătim pentru olimpiadă! - Test final",
+  "quiz": [
+    {
+      "question": "Care este valoarea unei unități astronomice (UA)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "$149,6 \\times 10^6\\text{ km}$"
+        },
+        {
+          "label": "b",
+          "text": "$9,46 \\times 10^{12}\\text{ km}$"
+        },
+        {
+          "label": "c",
+          "text": "$30,8 \\times 10^{12}\\text{ km}$"
+        },
+        {
+          "label": "d",
+          "text": "206.265 km"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Câți kilometri are un an-lumină?",
+      "options": [
+        {
+          "label": "a",
+          "text": "$149,6 \\times 10^6\\text{ km}$"
+        },
+        {
+          "label": "b",
+          "text": "$9,46 \\times 10^{12}\\text{ km}$"
+        },
+        {
+          "label": "c",
+          "text": "$30,8 \\times 10^{12}\\text{ km}$"
+        },
+        {
+          "label": "d",
+          "text": "$206.265 \\times 10^6\\text{ km}$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Câte unități astronomice are un parsec?",
+      "options": [
+        {
+          "label": "a",
+          "text": "63.271 UA"
+        },
+        {
+          "label": "b",
+          "text": "206.265 UA"
+        },
+        {
+          "label": "c",
+          "text": "$30,8 \\times 10^{12}\\text{ UA}$"
+        },
+        {
+          "label": "d",
+          "text": "$149,6 \\times 10^6\\text{ UA}$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Câți ani-lumină are un parsec?",
+      "options": [
+        {
+          "label": "a",
+          "text": "1,34"
+        },
+        {
+          "label": "b",
+          "text": "3,26"
+        },
+        {
+          "label": "c",
+          "text": "4,3"
+        },
+        {
+          "label": "d",
+          "text": "206.265"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce este paralaxa diurnă a unui astru?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Unghiul sub care se vede raza terestră din centrul astrului"
+        },
+        {
+          "label": "b",
+          "text": "Unghiul sub care se vede raza orbitei terestre de la o stea"
+        },
+        {
+          "label": "c",
+          "text": "Mișcarea aparentă a Soarelui pe ecliptică"
+        },
+        {
+          "label": "d",
+          "text": "Variația strălucirii unei stele"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care este paralaxa Lunii (valoarea)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "8,8″"
+        },
+        {
+          "label": "b",
+          "text": "57′02″ (3422″)"
+        },
+        {
+          "label": "c",
+          "text": "0,742″"
+        },
+        {
+          "label": "d",
+          "text": "0,001″"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Formula distanței în Sistemul solar folosind paralaxa (p în radiani) este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$D = R_P \\times p$"
+        },
+        {
+          "label": "b",
+          "text": "$D = R_P / p$"
+        },
+        {
+          "label": "c",
+          "text": "$D = p / R_P$"
+        },
+        {
+          "label": "d",
+          "text": "$D = R_P \\times p^2$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Câte secunde de arc are un radian?",
+      "options": [
+        {
+          "label": "a",
+          "text": "3600"
+        },
+        {
+          "label": "b",
+          "text": "57,3"
+        },
+        {
+          "label": "c",
+          "text": "206.265"
+        },
+        {
+          "label": "d",
+          "text": "63.241"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce este paralaxa stelară anuală?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Unghiul sub care se vede raza orbitei terestre de la o stea"
+        },
+        {
+          "label": "b",
+          "text": "Unghiul sub care se vede raza Pământului de la o stea"
+        },
+        {
+          "label": "c",
+          "text": "Mișcarea proprie a stelei"
+        },
+        {
+          "label": "d",
+          "text": "Variația radială a vitezei"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Care este paralaxa stelei Proxima Centauri?",
+      "options": [
+        {
+          "label": "a",
+          "text": "0,001″"
+        },
+        {
+          "label": "b",
+          "text": "0,742″"
+        },
+        {
+          "label": "c",
+          "text": "8,8″"
+        },
+        {
+          "label": "d",
+          "text": "57′02″"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "La ce distanță în parseci se află Proxima Centauri?",
+      "options": [
+        {
+          "label": "a",
+          "text": "0,742 pc"
+        },
+        {
+          "label": "b",
+          "text": "1,347 pc"
+        },
+        {
+          "label": "c",
+          "text": "4,3 pc"
+        },
+        {
+          "label": "d",
+          "text": "3,26 pc"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Formula distanței în parseci în funcție de paralaxă (p în secunde de arc) este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$r = p$"
+        },
+        {
+          "label": "b",
+          "text": "$r = 1/p$"
+        },
+        {
+          "label": "c",
+          "text": "$r = p^2$"
+        },
+        {
+          "label": "d",
+          "text": "$r = \\sqrt{p}$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este cea mai îndepărtată planetă mare din Sistemul Solar?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Uranus"
+        },
+        {
+          "label": "b",
+          "text": "Neptun"
+        },
+        {
+          "label": "c",
+          "text": "Saturn"
+        },
+        {
+          "label": "d",
+          "text": "Pluto"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce mișcare efectuează cerul înstelat în raport cu un observator terestru?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Mișcare directă (de la Vest la Est)"
+        },
+        {
+          "label": "b",
+          "text": "Mișcare retrogradă (de la Est la Vest)"
+        },
+        {
+          "label": "c",
+          "text": "Stă fix"
+        },
+        {
+          "label": "d",
+          "text": "Se mișcă haotic"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Cum se numește punctul de pe sfera cerească aflat deasupra capului observatorului?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Nadir"
+        },
+        {
+          "label": "b",
+          "text": "Zenit"
+        },
+        {
+          "label": "c",
+          "text": "Polul Nord Ceresc"
+        },
+        {
+          "label": "d",
+          "text": "Ecuatorul ceresc"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care stea marchează Polul Nord Ceresc?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Vega"
+        },
+        {
+          "label": "b",
+          "text": "Sirius"
+        },
+        {
+          "label": "c",
+          "text": "Steaua Polară"
+        },
+        {
+          "label": "d",
+          "text": "Betelgeuse"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce reprezintă axa lumii?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Prelungirea axei de rotație a Pământului"
+        },
+        {
+          "label": "b",
+          "text": "Verticala locului"
+        },
+        {
+          "label": "c",
+          "text": "Direcția către Soare"
+        },
+        {
+          "label": "d",
+          "text": "Intersecția dintre ecuator și ecliptică"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "În sistemul de coordonate orizontale, ce măsoară azimutul?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Înălțimea deasupra orizontului"
+        },
+        {
+          "label": "b",
+          "text": "Unghiul de la Sud spre Vest până la verticalul astrului"
+        },
+        {
+          "label": "c",
+          "text": "Distanța zenitală"
+        },
+        {
+          "label": "d",
+          "text": "Ascensia dreaptă"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Relația dintre înălțimea (h) și distanța zenitală (z) este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "h + z = 90°"
+        },
+        {
+          "label": "b",
+          "text": "h + z = 180°"
+        },
+        {
+          "label": "c",
+          "text": "h = z"
+        },
+        {
+          "label": "d",
+          "text": "h - z = 90°"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Ce măsoară declinația ($\\delta$) în coordonatele orare?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Unghiul de la ecuatorul ceresc spre astru"
+        },
+        {
+          "label": "b",
+          "text": "Unghiul de la meridian spre vest"
+        },
+        {
+          "label": "c",
+          "text": "Distanța de la zenit"
+        },
+        {
+          "label": "d",
+          "text": "Distanța de la Polul Nord Ceresc"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Ce reprezintă punctul vernal (γ)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Punctul în care Soarele ajunge la echinocțiul de primăvară"
+        },
+        {
+          "label": "b",
+          "text": "Polul Nord Ceresc"
+        },
+        {
+          "label": "c",
+          "text": "Zenitul"
+        },
+        {
+          "label": "d",
+          "text": "Intersecția dintre ecliptică și ecuatorul ceresc la toamnă"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Formula înălțimii maxime la culminația superioară este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$h_M = 90^\\circ - \\theta - \\delta$"
+        },
+        {
+          "label": "b",
+          "text": "$h_M = 90^\\circ - \\theta + \\delta$"
+        },
+        {
+          "label": "c",
+          "text": "$h_M = \\theta + \\delta$"
+        },
+        {
+          "label": "d",
+          "text": "$h_M = 90^\\circ + \\theta - \\delta$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Condiția ca un astru să fie circumpolar pentru un observator la latitudinea $\\theta$ este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$\\delta > 90^\\circ - \\theta$"
+        },
+        {
+          "label": "b",
+          "text": "$\\delta < 90^\\circ - \\theta$"
+        },
+        {
+          "label": "c",
+          "text": "$\\delta = 0^\\circ$"
+        },
+        {
+          "label": "d",
+          "text": "$\\delta = 90^\\circ$"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Cât timp durează o rotație completă a Soarelui în mișcarea aparentă diurnă?",
+      "options": [
+        {
+          "label": "a",
+          "text": "365 de zile"
+        },
+        {
+          "label": "b",
+          "text": "24 de ore"
+        },
+        {
+          "label": "c",
+          "text": "27,3 zile"
+        },
+        {
+          "label": "d",
+          "text": "12 ore"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este unghiul dintre planul eclipticii și planul ecuatorului ceresc?",
+      "options": [
+        {
+          "label": "a",
+          "text": "23°27'"
+        },
+        {
+          "label": "b",
+          "text": "45°"
+        },
+        {
+          "label": "c",
+          "text": "66°33'"
+        },
+        {
+          "label": "d",
+          "text": "90°"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "În ce zi a anului Soarele are declinația +23°27' și ascensia dreaptă 6h?",
+      "options": [
+        {
+          "label": "a",
+          "text": "21 martie"
+        },
+        {
+          "label": "b",
+          "text": "22 iunie"
+        },
+        {
+          "label": "c",
+          "text": "23 septembrie"
+        },
+        {
+          "label": "d",
+          "text": "22 decembrie"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce consecință directă are înclinarea axei de rotație a Pământului față de planul eclipticii?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Succesiunea anotimpurilor"
+        },
+        {
+          "label": "b",
+          "text": "Fazele Lunii"
+        },
+        {
+          "label": "c",
+          "text": "Eclipsele"
+        },
+        {
+          "label": "d",
+          "text": "Mișcarea diurnă aparentă"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Câte constelații zodiacale traversează Soarele de-a lungul unui an (inclusiv Ophiucus)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "12"
+        },
+        {
+          "label": "b",
+          "text": "13"
+        },
+        {
+          "label": "c",
+          "text": "10"
+        },
+        {
+          "label": "d",
+          "text": "15"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Cine a descoperit legile mișcării planetelor?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Galileo Galilei"
+        },
+        {
+          "label": "b",
+          "text": "Johannes Kepler"
+        },
+        {
+          "label": "c",
+          "text": "Isaac Newton"
+        },
+        {
+          "label": "d",
+          "text": "Tycho Brahe"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Conform Legii I a lui Kepler, traiectoriile planetelor sunt:",
+      "options": [
+        {
+          "label": "a",
+          "text": "Cercuri perfecte"
+        },
+        {
+          "label": "b",
+          "text": "Elipse cu Soarele într-un focar"
+        },
+        {
+          "label": "c",
+          "text": "Parabole"
+        },
+        {
+          "label": "d",
+          "text": "Hiperbole"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Cum se calculează distanța la periheliu ($r_P$) în funcție de semiaxa mare ($a$) și excentricitatea ($\\varepsilon$)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "$r_P = a(1+\\varepsilon)$"
+        },
+        {
+          "label": "b",
+          "text": "$r_P = a(1-\\varepsilon)$"
+        },
+        {
+          "label": "c",
+          "text": "$r_P = a\\varepsilon$"
+        },
+        {
+          "label": "d",
+          "text": "$r_P = a/\\varepsilon$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce afirmă Legea a II-a a lui Kepler (legea ariilor)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Planetele se mișcă pe orbite eliptice"
+        },
+        {
+          "label": "b",
+          "text": "Raza vectoare descrie arii egale în intervale de timp egale"
+        },
+        {
+          "label": "c",
+          "text": "$T^2 \\propto a^3$"
+        },
+        {
+          "label": "d",
+          "text": "Forța gravitațională este invers proporțională cu pătratul distanței"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este expresia Legii a III-a a lui Kepler (pentru planetele din Sistemul Solar, cu T în ani și a în UA)?",
+      "options": [
+        {
+          "label": "a",
+          "text": "T = a"
+        },
+        {
+          "label": "b",
+          "text": "$T^2 = a^3$"
+        },
+        {
+          "label": "c",
+          "text": "$T^3 = a^2$"
+        },
+        {
+          "label": "d",
+          "text": "$T = a^2$"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "În ce sens se mișcă planetele în jurul Soarelui?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sens retrograd (de la Est la Vest)"
+        },
+        {
+          "label": "b",
+          "text": "Sens astronomic direct (de la Vest la Est)"
+        },
+        {
+          "label": "c",
+          "text": "Unele în sens direct, altele în sens retrograd"
+        },
+        {
+          "label": "d",
+          "text": "Mișcarea este haotică"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care dintre următorii astronomi ai antichității a alcătuit primul catalog de stele, împărțind stelele vizibile cu ochiul liber în 6 clase de magnitudine?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Claudius Ptolemeu"
+        },
+        {
+          "label": "b",
+          "text": "Hipparh din Niceea"
+        },
+        {
+          "label": "c",
+          "text": "Tycho Brahe"
+        },
+        {
+          "label": "d",
+          "text": "Nicolaus Copernic"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce sistem a descris Claudius Ptolemeu în lucrarea sa „Almagesta”?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Sistemul heliocentric"
+        },
+        {
+          "label": "b",
+          "text": "Sistemul geocentric"
+        },
+        {
+          "label": "c",
+          "text": "Sistemul geodezic"
+        },
+        {
+          "label": "d",
+          "text": "Sistemul fractal"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care este numele celor patru sateliți mari ai lui Jupiter descoperiți de Galileo Galilei?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Io, Europa, Ganymede, Callisto"
+        },
+        {
+          "label": "b",
+          "text": "Titan, Rhea, Iapetus, Dione"
+        },
+        {
+          "label": "c",
+          "text": "Phobos, Deimos, Triton, Charon"
+        },
+        {
+          "label": "d",
+          "text": "Miranda, Ariel, Umbriel, Titania"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Cine a enunțat legea atracției universale?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Johannes Kepler"
+        },
+        {
+          "label": "b",
+          "text": "Galileo Galilei"
+        },
+        {
+          "label": "c",
+          "text": "Isaac Newton"
+        },
+        {
+          "label": "d",
+          "text": "Edmund Halley"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce a descoperit Edwin Hubble în 1924?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Expansiunea Universului"
+        },
+        {
+          "label": "b",
+          "text": "Calea Lactee"
+        },
+        {
+          "label": "c",
+          "text": "Că Andromeda este o galaxie separată"
+        },
+        {
+          "label": "d",
+          "text": "Radiația cosmică de fond"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Ce a introdus Hipparh în clasificarea stelelor?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Clasele de luminozitate (I, II, III, etc.)"
+        },
+        {
+          "label": "b",
+          "text": "Magnitudinile stelare aparente (1 … 6)"
+        },
+        {
+          "label": "c",
+          "text": "Clasele spectrale (O, B, A, F, G, K, M)"
+        },
+        {
+          "label": "d",
+          "text": "Stelele variabile"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "O stea cu magnitudinea aparentă m = 1 este de câte ori mai strălucitoare decât o stea cu m = 6?",
+      "options": [
+        {
+          "label": "a",
+          "text": "5 ori"
+        },
+        {
+          "label": "b",
+          "text": "50 de ori"
+        },
+        {
+          "label": "c",
+          "text": "100 de ori"
+        },
+        {
+          "label": "d",
+          "text": "1000 de ori"
+        }
+      ],
+      "correct_index": 2
+    },
+    {
+      "question": "Magnitudinea aparentă a Soarelui este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "-26,7"
+        },
+        {
+          "label": "b",
+          "text": "-12,6"
+        },
+        {
+          "label": "c",
+          "text": "+4,87"
+        },
+        {
+          "label": "d",
+          "text": "+2,1"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Relația dintre luminozitate, rază și temperatură a unei stele este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$L = 4\\pi R^2\\sigma T^4$"
+        },
+        {
+          "label": "b",
+          "text": "$L = 4\\pi R^2\\sigma T^2$"
+        },
+        {
+          "label": "c",
+          "text": "$L = 4\\pi R\\sigma T^4$"
+        },
+        {
+          "label": "d",
+          "text": "$L = \\pi R^2\\sigma T^4$"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Ce sunt cefeidele?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Stele duble cu eclipsă"
+        },
+        {
+          "label": "b",
+          "text": "Stele variabile intrinseci, cu relație perioadă-luminozitate"
+        },
+        {
+          "label": "c",
+          "text": "Stele neutronice"
+        },
+        {
+          "label": "d",
+          "text": "Găuri negre"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Care dintre următoarele instrumente are obiectivul format dintr-o oglindă?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Luneta astronomică"
+        },
+        {
+          "label": "b",
+          "text": "Telescopul reflector"
+        },
+        {
+          "label": "c",
+          "text": "Microscopul"
+        },
+        {
+          "label": "d",
+          "text": "Binoclul"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce reprezintă grosismentul unui telescop?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Raportul dintre diametrul obiectivului şi diametrul ocularului"
+        },
+        {
+          "label": "b",
+          "text": "Raportul dintre distanţa focală a obiectivului şi distanţa focală a ocularului"
+        },
+        {
+          "label": "c",
+          "text": "Produsul dintre distanţele focale"
+        },
+        {
+          "label": "d",
+          "text": "Raportul dintre diametrul ocularului şi diametrul obiectivului"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Formula de calcul a limitei de rezoluţie (în secunde de arc) în funcţie de diametrul obiectivului D (în mm) este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "$\\theta = 120 / D$"
+        },
+        {
+          "label": "b",
+          "text": "$\\theta = 140 / D$"
+        },
+        {
+          "label": "c",
+          "text": "$\\theta = 200 / D$"
+        },
+        {
+          "label": "d",
+          "text": "$\\theta = 250 / D$"
+        }
+      ],
+      "correct_index": 0
+    },
+    {
+      "question": "Ce reprezintă timpul sideral într-un loc de observație?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Unghiul orar al Soarelui"
+        },
+        {
+          "label": "b",
+          "text": "Unghiul orar al punctului vernal"
+        },
+        {
+          "label": "c",
+          "text": "Ascensia dreaptă a stelei polare"
+        },
+        {
+          "label": "d",
+          "text": "Longitudinea observatorului"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Durata unei zile siderale, exprimată în unităţi de timp solar mediu, este:",
+      "options": [
+        {
+          "label": "a",
+          "text": "24h 00m 00s"
+        },
+        {
+          "label": "b",
+          "text": "23h 56m 04s"
+        },
+        {
+          "label": "c",
+          "text": "24h 04m 00s"
+        },
+        {
+          "label": "d",
+          "text": "23h 50m 00s"
+        }
+      ],
+      "correct_index": 1
+    },
+    {
+      "question": "Ce defineşte ecuaţia timpului?",
+      "options": [
+        {
+          "label": "a",
+          "text": "Diferenţa dintre timpul sideral şi timpul solar mediu"
+        },
+        {
+          "label": "b",
+          "text": "Diferenţa dintre timpul solar mediu şi timpul solar adevărat"
+        },
+        {
+          "label": "c",
+          "text": "Diferenţa dintre longitudinea geografică şi unghiul orar"
+        },
+        {
+          "label": "d",
+          "text": "Diferenţa dintre timpul universal şi timpul legal"
+        }
+      ],
+      "correct_index": 1
+    }
+  ]
+}

@@ -73,7 +73,7 @@ class FooterSection extends StatelessWidget {
     // Exact aceleași linkuri ca în navbar, cu aceleași acțiuni
     final links  = _navLinks();
     final copy   = const Text(
-      '© 2025 AstroLab. Toate drepturile rezervate.',
+      '© 2026 AstroLab. Toate drepturile rezervate.',
       style: TextStyle(fontSize: 11, color: AppColors.textMuted),
       textAlign: TextAlign.center,
     );
