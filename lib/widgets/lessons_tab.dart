@@ -475,21 +475,40 @@ class _ChapterUnlockTile extends StatelessWidget {
     required this.onProgressChanged,
   });
 
+  Future<_ChapterTileStatus> _loadStatus() async {
+    final unlocked = await ProgressService.isChapterUnlocked(
+      module.number,
+      chapter.number,
+    );
+    final complete = await ProgressService.isChapterComplete(
+      module.number,
+      chapter,
+    );
+    return _ChapterTileStatus(unlocked: unlocked, complete: complete);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<bool>(
-      future: ProgressService.isChapterUnlocked(module.number, chapter.number),
+    return FutureBuilder<_ChapterTileStatus>(
+      future: _loadStatus(),
       builder: (context, snap) {
+        final status = snap.data;
         final unlocked = snap.connectionState != ConnectionState.done
             ? chapter.number == 1
-            : (snap.data ?? (chapter.number == 1));
+            : (status?.unlocked ?? (chapter.number == 1));
+        final complete = status?.complete ?? false;
+
         return Container(
           margin: const EdgeInsets.only(bottom: 12),
           decoration: BoxDecoration(
-            color: AppColors.primary.withOpacity(0.05),
+            color: complete
+                ? const Color(0xFF34D399).withOpacity(0.08)
+                : AppColors.primary.withOpacity(0.05),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: unlocked
+              color: complete
+                  ? const Color(0xFF34D399).withOpacity(0.35)
+                  : unlocked
                   ? AppColors.primary.withOpacity(0.2)
                   : AppColors.textMuted.withOpacity(0.12),
             ),
@@ -520,17 +539,27 @@ class _ChapterUnlockTile extends StatelessWidget {
                     height: isMobile ? 48 : 56,
                     decoration: BoxDecoration(
                       color: unlocked
-                          ? AppColors.primary.withOpacity(0.15)
+                          ? complete
+                                ? const Color(0xFF34D399).withOpacity(0.15)
+                                : AppColors.primary.withOpacity(0.15)
                           : AppColors.textMuted.withOpacity(0.06),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: unlocked
-                            ? AppColors.primary.withOpacity(0.3)
+                            ? complete
+                                  ? const Color(0xFF34D399).withOpacity(0.55)
+                                  : AppColors.primary.withOpacity(0.3)
                             : AppColors.textMuted.withOpacity(0.15),
                       ),
                     ),
                     child: Center(
-                      child: unlocked
+                      child: complete
+                          ? const Icon(
+                              Icons.check_rounded,
+                              color: Color(0xFF34D399),
+                              size: 24,
+                            )
+                          : unlocked
                           ? Text(
                               '${chapter.number}',
                               style: TextStyle(
@@ -563,12 +592,16 @@ class _ChapterUnlockTile extends StatelessWidget {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          unlocked
+                          complete
+                              ? 'Capitol finalizat'
+                              : unlocked
                               ? _chapterStatsLabel(module, chapter)
-                              : 'Finalizează capitolul anterior pentru deblocare',
+                              : 'Finalizeaz\u0103 capitolul anterior pentru deblocare',
                           style: TextStyle(
                             fontSize: isMobile ? 12 : 13,
-                            color: unlocked
+                            color: complete
+                                ? const Color(0xFF34D399)
+                                : unlocked
                                 ? AppColors.textMuted
                                 : AppColors.textMuted.withOpacity(0.40),
                           ),
@@ -579,7 +612,9 @@ class _ChapterUnlockTile extends StatelessWidget {
                   if (unlocked)
                     Icon(
                       Icons.arrow_forward_ios_rounded,
-                      color: AppColors.primary,
+                      color: complete
+                          ? const Color(0xFF34D399)
+                          : AppColors.primary,
                       size: isMobile ? 16 : 18,
                     ),
                 ],
@@ -590,4 +625,11 @@ class _ChapterUnlockTile extends StatelessWidget {
       },
     );
   }
+}
+
+class _ChapterTileStatus {
+  final bool unlocked;
+  final bool complete;
+
+  const _ChapterTileStatus({required this.unlocked, required this.complete});
 }

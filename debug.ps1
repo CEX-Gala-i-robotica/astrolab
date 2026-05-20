@@ -25,6 +25,8 @@ $dartDefines = @(
   "--dart-define=FIREBASE_IOS_BUNDLE_ID=$($env:FIREBASE_IOS_BUNDLE_ID)",
   "--dart-define=FIREBASE_DB_URL=$($env:FIREBASE_DB_URL)",
   "--dart-define=GOOGLE_WEB_CLIENT_ID=$($env:GOOGLE_WEB_CLIENT_ID)",
+  "--dart-define=ASTRONOMY_API_APP_ID=$($env:ASTRONOMY_API_APP_ID)",
+  "--dart-define=ASTRONOMY_API_APP_SECRET=$($env:ASTRONOMY_API_APP_SECRET)",
   "--dart-define=OAUTH_CALLBACK_SCHEME=$($env:OAUTH_CALLBACK_SCHEME)",
   "--dart-define=GOOGLE_DESKTOP_CLIENT_ID=$($env:GOOGLE_DESKTOP_CLIENT_ID)",
   "--dart-define=GOOGLE_DESKTOP_CLIENT_SECRET=$($env:GOOGLE_DESKTOP_CLIENT_SECRET)"

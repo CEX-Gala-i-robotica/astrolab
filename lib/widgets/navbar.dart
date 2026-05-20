@@ -20,7 +20,7 @@ class Navbar extends StatefulWidget {
 
 class _NavbarState extends State<Navbar> {
   bool _isScrolled = false;
-  bool _menuOpen   = false;
+  bool _menuOpen = false;
 
   @override
   void initState() {
@@ -46,16 +46,18 @@ class _NavbarState extends State<Navbar> {
 
   @override
   Widget build(BuildContext context) {
-    final w        = MediaQuery.sizeOf(context).width;
-    final isMobile = w < 768;
-    final blur     = _isScrolled ? 26.0 : 18.0;
-    final bgAlpha  = _isScrolled ? 0.13 : 0.07;
-    final bdAlpha  = _isScrolled ? 0.26 : 0.14;
-    final bottomR  = (isMobile && _menuOpen) ? 18.0 : 34.0;
+    final w = MediaQuery.sizeOf(context).width;
+    final isMobile = w < 900;
+    final blur = _isScrolled ? 26.0 : 18.0;
+    final bgAlpha = _isScrolled ? 0.13 : 0.07;
+    final bdAlpha = _isScrolled ? 0.26 : 0.14;
+    final bottomR = (isMobile && _menuOpen) ? 18.0 : 34.0;
 
     return ClipRRect(
       borderRadius: BorderRadius.vertical(
-          top: const Radius.circular(34), bottom: Radius.circular(bottomR)),
+        top: const Radius.circular(34),
+        bottom: Radius.circular(bottomR),
+      ),
       child: BackdropFilter(
         filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
         child: AnimatedContainer(
@@ -64,14 +66,16 @@ class _NavbarState extends State<Navbar> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(bgAlpha),
             borderRadius: BorderRadius.vertical(
-                top: const Radius.circular(34),
-                bottom: Radius.circular(bottomR)),
+              top: const Radius.circular(34),
+              bottom: Radius.circular(bottomR),
+            ),
             border: Border.all(
-                color: Colors.white.withOpacity(bdAlpha), width: 1),
+              color: Colors.white.withOpacity(bdAlpha),
+              width: 1,
+            ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black
-                    .withOpacity(_isScrolled ? 0.42 : 0.20),
+                color: Colors.black.withOpacity(_isScrolled ? 0.42 : 0.20),
                 blurRadius: _isScrolled ? 32 : 18,
                 offset: const Offset(0, 12),
                 spreadRadius: -8,
@@ -84,8 +88,7 @@ class _NavbarState extends State<Navbar> {
               SizedBox(
                 height: isMobile ? 56 : 62,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: isMobile ? 14 : 22),
+                  padding: EdgeInsets.symmetric(horizontal: isMobile ? 14 : 22),
                   child: Row(
                     children: [
                       _logo(isMobile),
@@ -97,14 +100,13 @@ class _NavbarState extends State<Navbar> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
-                              _link('Acasă',   'hero'),
+                              _link('Acasă', 'hero'),
                               _link('Funcții', 'features'),
-                              _link('Despre',  'about'),
+                              _link('Despre', 'about'),
                               const SizedBox(width: 14),
                               GlowingButton(
                                 label: 'Intră în platformă',
-                                onPressed: () =>
-                                    widget.onNavigate('login'),
+                                onPressed: () => widget.onNavigate('login'),
                                 icon: Icons.rocket_launch_rounded,
                                 compact: true,
                               ),
@@ -135,22 +137,28 @@ class _NavbarState extends State<Navbar> {
           ClipOval(child: AppPlanetLogo(size: sz)),
           const SizedBox(width: 10),
           RichText(
-            text: const TextSpan(children: [
-              TextSpan(
+            text: const TextSpan(
+              children: [
+                TextSpan(
                   text: 'ASTRO',
                   style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.textPrimary,
-                      letterSpacing: 0.8)),
-              TextSpan(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.textPrimary,
+                    letterSpacing: 0.8,
+                  ),
+                ),
+                TextSpan(
                   text: 'LAB',
                   style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.primary,
-                      letterSpacing: 0.8)),
-            ]),
+                    fontSize: 17,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.primary,
+                    letterSpacing: 0.8,
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -181,9 +189,7 @@ class _NavbarState extends State<Navbar> {
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 200),
             child: Icon(
-              _menuOpen
-                  ? Icons.close_rounded
-                  : Icons.menu_rounded,
+              _menuOpen ? Icons.close_rounded : Icons.menu_rounded,
               key: ValueKey(_menuOpen),
               color: AppColors.textPrimary,
               size: 26,
@@ -199,13 +205,11 @@ class _NavbarState extends State<Navbar> {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Divider(
-            height: 1,
-            color: AppColors.primary.withOpacity(0.15)),
+        Divider(height: 1, color: AppColors.primary.withOpacity(0.15)),
         const SizedBox(height: 4),
-        _mobileLink('Acasă',   'hero'),
+        _mobileLink('Acasă', 'hero'),
         _mobileLink('Funcții', 'features'),
-        _mobileLink('Despre',  'about'),
+        _mobileLink('Despre', 'about'),
         const SizedBox(height: 10),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8),

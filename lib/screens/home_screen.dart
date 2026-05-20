@@ -7,7 +7,11 @@ import '../widgets/how_it_works_section.dart';
 import '../widgets/about_section.dart';
 import '../widgets/footer_section.dart';
 import '../widgets/cosmic_background.dart';
+import '../services/auth_service.dart';
+import '../services/progress_service.dart';
+import '../services/session_service.dart';
 import 'auth_screen.dart';
+import 'dashboard_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,9 +22,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final ScrollController _scroll = ScrollController();
-  final _heroKey     = GlobalKey<HeroSectionState>();
+  final _heroKey = GlobalKey<HeroSectionState>();
   final _featuresKey = GlobalKey();
-  final _aboutKey    = GlobalKey();
+  final _aboutKey = GlobalKey();
+  bool _openingPlatform = false;
 
   @override
   void initState() {
@@ -43,12 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void _handleNavigate(String section) {
     switch (section) {
       case 'login':
-        Navigator.of(context).push(PageRouteBuilder(
-          pageBuilder: (_, __, ___) => const AuthScreen(),
-          transitionsBuilder: (_, anim, __, child) =>
-              FadeTransition(opacity: anim, child: child),
-          transitionDuration: const Duration(milliseconds: 300),
-        ));
+        _enterPlatform();
         break;
       case 'hero':
         _scrollTo(_heroKey);
@@ -62,12 +62,72 @@ class _HomeScreenState extends State<HomeScreen> {
     }
   }
 
+  Future<void> _enterPlatform() async {
+    if (_openingPlatform) return;
+    setState(() => _openingPlatform = true);
+
+    final session = await SessionService.load();
+    if (!mounted) return;
+
+    if (session != null && session.rememberMe && session.loggedIn && session.uid.isNotEmpty) {
+      var token = session.idToken;
+      var refreshToken = session.refreshToken;
+      if (refreshToken.isNotEmpty) {
+        final refreshed = await AuthService.refreshSession(refreshToken);
+        if (refreshed.ok) {
+          token = refreshed.idToken ?? token;
+          refreshToken = refreshed.refreshToken ?? refreshToken;
+          await SessionService.save(
+            email: session.email,
+            idToken: token,
+            uid: session.uid,
+            rememberMe: true,
+            refreshToken: refreshToken,
+          );
+        }
+      }
+
+      if (token.isNotEmpty) {
+        await ProgressService.configureRemote(uid: session.uid, token: token);
+        final needsSetup = await AuthService.needsProfileSetup(token, session.uid);
+        if (!mounted) return;
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            pageBuilder: (_, animation, __) => DashboardScreen(
+              email: session.email,
+              uid: session.uid,
+              idToken: token,
+              needsProfileSetup: needsSetup,
+            ),
+            transitionsBuilder: (_, animation, __, child) =>
+                FadeTransition(opacity: animation, child: child),
+            transitionDuration: const Duration(milliseconds: 300),
+          ),
+        );
+        setState(() => _openingPlatform = false);
+        return;
+      }
+    }
+
+    Navigator.of(context).push(
+      PageRouteBuilder(
+        pageBuilder: (_, __, ___) => const AuthScreen(),
+        transitionsBuilder: (_, anim, __, child) =>
+            FadeTransition(opacity: anim, child: child),
+        transitionDuration: const Duration(milliseconds: 300),
+      ),
+    );
+    if (mounted) setState(() => _openingPlatform = false);
+  }
+
   void _scrollTo(GlobalKey key) {
     final ctx = key.currentContext;
     if (ctx == null) return;
-    Scrollable.ensureVisible(ctx,
-        duration: const Duration(milliseconds: 700),
-        curve: Curves.easeInOutCubic);
+    Scrollable.ensureVisible(
+      ctx,
+      duration: const Duration(milliseconds: 700),
+      curve: Curves.easeInOutCubic,
+    );
   }
 
   double _navPad(double w) {
@@ -78,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final w    = MediaQuery.sizeOf(context).width;
+    final w = MediaQuery.sizeOf(context).width;
     final hPad = _navPad(w);
 
     return Scaffold(
@@ -95,7 +155,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Column(
                   children: [
                     HeroSection(key: _heroKey, onNavigate: _handleNavigate),
-                    FeaturesSection(key: _featuresKey, onNavigate: _handleNavigate),
+                    FeaturesSection(
+                      key: _featuresKey,
+                      onNavigate: _handleNavigate,
+                    ),
                     HowItWorksSection(onNavigate: _handleNavigate),
                     AboutSection(key: _aboutKey, onNavigate: _handleNavigate),
                     FooterSection(onNavigate: _handleNavigate),
@@ -106,7 +169,9 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           // Navbar floating
           Positioned(
-            top: 0, left: 0, right: 0,
+            top: 0,
+            left: 0,
+            right: 0,
             child: SafeArea(
               bottom: false,
               child: Padding(

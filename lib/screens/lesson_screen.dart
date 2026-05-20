@@ -60,6 +60,12 @@ class _LessonScreenState extends State<LessonScreen> {
     final raw = _rawLesson;
     _steps = lessonStepsFromContent(raw);
     _lessonTitle = lessonTitleFromContent(raw);
+    ProgressService.saveCurrentStudy(
+      moduleNumber: widget.moduleNumber,
+      chapterNumber: widget.chapter.number,
+      lessonIndex: widget.lessonIndex,
+      type: 'lesson',
+    );
     _loadCompletion();
   }
 
@@ -95,13 +101,11 @@ class _LessonScreenState extends State<LessonScreen> {
 
   bool get _isDone => _wasAlreadyComplete || _completedHere;
 
-  bool get _allStepsSeen =>
-      _steps.isEmpty || _highestStep >= _steps.length - 1;
+  bool get _allStepsSeen => _steps.isEmpty || _highestStep >= _steps.length - 1;
 
   bool get _onFirstStep => _stepIndex <= 0;
 
-  bool get _onLastStep =>
-      _steps.isEmpty || _stepIndex >= _steps.length - 1;
+  bool get _onLastStep => _steps.isEmpty || _stepIndex >= _steps.length - 1;
 
   bool get _canFinish => _allStepsSeen && _onLastStep && !_isDone;
 
@@ -205,50 +209,48 @@ class _LessonScreenState extends State<LessonScreen> {
                           ),
                         )
                       : _steps.isEmpty
-                          ? Center(
-                              child: Padding(
-                                padding: const EdgeInsets.all(20),
-                                child: Text(
-                                  'Nu există conținut pentru această lecție.',
-                                  style: GoogleFonts.exo2(
-                                    color: Colors.white.withOpacity(0.55),
-                                    fontSize: 15,
-                                    height: 1.5,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
+                      ? Center(
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Text(
+                              'Nu există conținut pentru această lecție.',
+                              style: GoogleFonts.exo2(
+                                color: Colors.white.withOpacity(0.55),
+                                fontSize: 15,
+                                height: 1.5,
                               ),
-                            )
-                          : ListView.separated(
-                              controller: _scrollController,
-                              padding: const EdgeInsets.fromLTRB(
-                                20,
-                                20,
-                                20,
-                                16,
-                              ),
-                              itemCount: _stepIndex + 1,
-                              separatorBuilder: (_, _) =>
-                                  const SizedBox(height: 14),
-                              itemBuilder: (context, i) {
-                                final exiting =
-                                    _exitingStepIndex != null && i == _exitingStepIndex;
-                                return _RevealLessonCard(
-                                  key: ValueKey('step_$i'),
-                                  slideFromLeft: i.isEven,
-                                  playExit: exiting,
-                                  onExitComplete: exiting ? _onStepExitComplete : null,
-                                  child: _ImmersiveLessonCard(
-                                    step: _steps[i],
-                                    isMobile: isMobile,
-                                    sentenceIconIndex: _steps[i].isTitle
-                                        ? null
-                                        : _sentenceIconIndexFor(i),
-                                    bodyTextStyle: bodyStyle,
-                                  ),
-                                );
-                              },
+                              textAlign: TextAlign.center,
                             ),
+                          ),
+                        )
+                      : ListView.separated(
+                          controller: _scrollController,
+                          padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+                          itemCount: _stepIndex + 1,
+                          separatorBuilder: (_, _) =>
+                              const SizedBox(height: 14),
+                          itemBuilder: (context, i) {
+                            final exiting =
+                                _exitingStepIndex != null &&
+                                i == _exitingStepIndex;
+                            return _RevealLessonCard(
+                              key: ValueKey('step_$i'),
+                              slideFromLeft: i.isEven,
+                              playExit: exiting,
+                              onExitComplete: exiting
+                                  ? _onStepExitComplete
+                                  : null,
+                              child: _ImmersiveLessonCard(
+                                step: _steps[i],
+                                isMobile: isMobile,
+                                sentenceIconIndex: _steps[i].isTitle
+                                    ? null
+                                    : _sentenceIconIndexFor(i),
+                                bodyTextStyle: bodyStyle,
+                              ),
+                            );
+                          },
+                        ),
                 ),
                 _buildGlassBottomBar(isMobile),
               ],
@@ -407,15 +409,13 @@ class _LessonScreenState extends State<LessonScreen> {
   }
 
   ButtonStyle get _navButtonStyle => OutlinedButton.styleFrom(
-        foregroundColor: Colors.white.withOpacity(0.85),
-        disabledForegroundColor: Colors.white.withOpacity(0.35),
-        side: BorderSide(color: Colors.white.withOpacity(0.28)),
-        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 12),
-        minimumSize: const Size(0, 48),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(24),
-        ),
-      );
+    foregroundColor: Colors.white.withOpacity(0.85),
+    disabledForegroundColor: Colors.white.withOpacity(0.35),
+    side: BorderSide(color: Colors.white.withOpacity(0.28)),
+    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 12),
+    minimumSize: const Size(0, 48),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+  );
 
   Widget _lessonNavButton({
     required String label,
@@ -425,10 +425,7 @@ class _LessonScreenState extends State<LessonScreen> {
     return OutlinedButton.icon(
       onPressed: onPressed,
       icon: Icon(icon, size: 18),
-      label: Text(
-        label,
-        style: GoogleFonts.exo2(fontWeight: FontWeight.w600),
-      ),
+      label: Text(label, style: GoogleFonts.exo2(fontWeight: FontWeight.w600)),
       style: _navButtonStyle,
     );
   }
@@ -574,10 +571,7 @@ class _RevealLessonCardState extends State<_RevealLessonCard>
       duration: const Duration(milliseconds: 480),
       reverseDuration: const Duration(milliseconds: 380),
     );
-    _slide = Tween<Offset>(
-      begin: Offset(_dx, 0.04),
-      end: Offset.zero,
-    ).animate(
+    _slide = Tween<Offset>(begin: Offset(_dx, 0.04), end: Offset.zero).animate(
       CurvedAnimation(
         parent: _ctrl,
         curve: Curves.easeOutCubic,
@@ -623,10 +617,7 @@ class _RevealLessonCardState extends State<_RevealLessonCard>
     return ClipRect(
       child: FadeTransition(
         opacity: _fade,
-        child: SlideTransition(
-          position: _slide,
-          child: widget.child,
-        ),
+        child: SlideTransition(position: _slide, child: widget.child),
       ),
     );
   }
@@ -660,10 +651,7 @@ class _ImmersiveLessonCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: Colors.white.withOpacity(0.1)),
         ),
-        child: LessonTableWidget(
-          table: step.table!,
-          isMobile: isMobile,
-        ),
+        child: LessonTableWidget(table: step.table!, isMobile: isMobile),
       );
     }
 
@@ -677,9 +665,7 @@ class _ImmersiveLessonCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.08),
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: const Color(0xFF67E8F9).withOpacity(0.35),
-          ),
+          border: Border.all(color: const Color(0xFF67E8F9).withOpacity(0.35)),
           boxShadow: [
             BoxShadow(
               color: const Color(0xFF22D3EE).withOpacity(0.12),

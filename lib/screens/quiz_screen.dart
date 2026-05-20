@@ -1,9 +1,11 @@
+import 'dart:async' show unawaited;
 import 'dart:ui' show ImageFilter;
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:astrolab/theme/app_theme.dart';
 import '../models/lesson_models.dart';
+import '../services/placement_service.dart';
 import '../services/progress_service.dart';
 import '../utils/lesson_content_parser.dart';
 import '../widgets/cosmic_background.dart';
@@ -17,6 +19,8 @@ class QuizScreen extends StatefulWidget {
   final int? chapterNumber;
   final int? finalQuizModuleNumber;
   final int? exerciseLessonIndex;
+  final bool isInitialPlacementQuiz;
+  final bool isSkipQuiz;
 
   const QuizScreen({
     super.key,
@@ -26,6 +30,8 @@ class QuizScreen extends StatefulWidget {
     this.chapterNumber,
     this.finalQuizModuleNumber,
     this.exerciseLessonIndex,
+    this.isInitialPlacementQuiz = false,
+    this.isSkipQuiz = false,
   });
 
   @override
@@ -86,10 +92,30 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   QuizQuestion get _currentQuestion => widget.questions[_currentIndex];
   bool get _isOpenQuestion => _currentQuestion.isOpen;
   bool get _isLessonExercise => widget.exerciseLessonIndex != null;
-  String get _screenTitle =>
-      _isLessonExercise ? 'Exerciții aplicative' : 'Quiz final';
-  String get _resultTitle =>
-      _isLessonExercise ? 'Rezultate exerciții' : 'Rezultate quiz';
+  bool get _requiresAcceleratedThreshold =>
+      widget.isInitialPlacementQuiz || widget.isSkipQuiz;
+
+  String get _screenTitle {
+    if (widget.isInitialPlacementQuiz) {
+      return 'Test ini\u021bial de evaluare a cuno\u0219tin\u021belor anterioare de astronomie \u0219i astrofizic\u0103';
+    }
+    if (widget.isSkipQuiz) return 'Evaluare accelerat\u0103';
+    if (_isLessonExercise) return 'Exerci\u021bii aplicative';
+    return 'Evaluare sumativ\u0103';
+  }
+
+  String get _resultTitle {
+    if (widget.isInitialPlacementQuiz) return 'Rezultate test ini\u021bial';
+    if (widget.isSkipQuiz) return 'Rezultate evaluare accelerat\u0103';
+    if (_isLessonExercise) return 'Rezultate exerci\u021bii aplicative';
+    return 'Rezultate evaluare sumativ\u0103';
+  }
+
+  String get _headerSubtitle {
+    if (widget.isInitialPlacementQuiz) return 'Evaluare de plasament';
+    if (widget.isSkipQuiz) return 'Evaluare pentru echivalarea capitolului';
+    return widget.chapterTitle;
+  }
 
   List<TextEditingController> _controllersForCurrentOpenQuestion() {
     return _openControllers.putIfAbsent(
@@ -136,10 +162,10 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         ? field.correctText
         : '${field.correctValue}';
     final display = value
-        .replaceAll('θ_0G', r'\theta_{0G}')
-        .replaceAll('θ_G', r'\theta_G')
-        .replaceAll('θ', r'\theta')
-        .replaceAll('·', r'\cdot ');
+        .replaceAll('\u03b8_0G', r'\theta_{0G}')
+        .replaceAll('\u03b8_G', r'\theta_G')
+        .replaceAll('\u03b8', r'\theta')
+        .replaceAll('\u00b7', r'\cdot ');
     final looksLikeFormula =
         display.contains(r'\theta') ||
         display.contains('_') ||
@@ -246,7 +272,18 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
           _correctCount,
           widget.questions.length,
           List<QuizAttempt>.from(_attempts),
+          isInitialPlacementQuiz: widget.isInitialPlacementQuiz,
         );
+        if (widget.isInitialPlacementQuiz) {
+          unawaited(
+            PlacementService.applyInitialPlacement(
+              moduleNumber: finalMod,
+              correctAnswers: _correctCount,
+              totalQuestions: widget.questions.length,
+              attempts: List<QuizAttempt>.from(_attempts),
+            ).catchError((_) {}),
+          );
+        }
       } else if (widget.moduleNumber != null &&
           widget.chapterNumber != null &&
           widget.exerciseLessonIndex != null) {
@@ -265,6 +302,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
           _correctCount,
           widget.questions.length,
           List<QuizAttempt>.from(_attempts),
+          isSkipQuiz: widget.isSkipQuiz,
         );
       }
       setState(() => _showResult = true);
@@ -279,9 +317,9 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
           children: [
             _QuizGlassHeader(
               title: _screenTitle,
-              subtitle: widget.chapterTitle,
+              subtitle: _headerSubtitle,
               progress: 0,
-              stepLabel: '—',
+              stepLabel: '\u2014',
               onClose: () => Navigator.pop(context),
             ),
             Expanded(
@@ -290,8 +328,8 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                   padding: const EdgeInsets.all(28),
                   child: Text(
                     _isLessonExercise
-                        ? 'Această lecție nu are exerciții aplicative.'
-                        : 'Acest capitol nu are întrebări de quiz.',
+                        ? 'Aceast\u0103 lec\u021bie nu are exerci\u021bii aplicative.'
+                        : 'Acest capitol nu are \u00eentreb\u0103ri de quiz.',
                     textAlign: TextAlign.center,
                     style: GoogleFonts.exo2(
                       fontSize: 15,
@@ -309,13 +347,15 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
 
     if (_showResult) {
       return _ResultScreen(
-        chapterTitle: widget.chapterTitle,
+        chapterTitle: _headerSubtitle,
         questions: widget.questions,
         attempts: _attempts,
         correctCount: _isLessonExercise ? _scorePoints.round() : _correctCount,
         totalCount: _isLessonExercise ? 100 : widget.questions.length,
         isFinalModuleQuiz: widget.finalQuizModuleNumber != null,
         isLessonExercise: _isLessonExercise,
+        isInitialPlacementQuiz: widget.isInitialPlacementQuiz,
+        requiresAcceleratedThreshold: _requiresAcceleratedThreshold,
         title: _resultTitle,
         onRetry: () {
           for (final controllers in _openControllers.values) {
@@ -353,7 +393,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
         children: [
           _QuizGlassHeader(
             title: _screenTitle,
-            subtitle: widget.chapterTitle,
+            subtitle: _headerSubtitle,
             progress: progress,
             stepLabel: '${_currentIndex + 1} / ${widget.questions.length}',
             onClose: () => Navigator.pop(context),
@@ -389,7 +429,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
                                 ),
                               ),
                               child: Text(
-                                'ÎNTREBAREA ${_currentIndex + 1}',
+                                '\u00ceNTREBAREA ${_currentIndex + 1}',
                                 style: GoogleFonts.exo2(
                                   fontSize: 11,
                                   fontWeight: FontWeight.w800,
@@ -468,7 +508,7 @@ class _QuizScreenState extends State<QuizScreen> with TickerProviderStateMixin {
   }
 }
 
-// ─── Shell & chrome ─────────────────────────────────────────────────────────
+// â”€â”€â”€ Shell & chrome â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class _QuizContentColumn extends StatelessWidget {
   final String source;
@@ -660,6 +700,9 @@ class _QuizGlassHeader extends StatelessWidget {
                         children: [
                           Text(
                             title,
+                            textAlign: TextAlign.center,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                             style: GoogleFonts.exo2(
                               fontSize: 16,
                               fontWeight: FontWeight.w800,
@@ -785,7 +828,7 @@ class _GlassCard extends StatelessWidget {
   }
 }
 
-// ─── Options ──────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Options â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class _QuizOptionTile extends StatelessWidget {
   final int index;
@@ -986,7 +1029,7 @@ class _OpenQuestionFields extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'Răspuns',
+                      hintText: 'R\u0103spuns',
                       suffixText: field.unit,
                       hintStyle: GoogleFonts.exo2(
                         color: Colors.white.withOpacity(0.35),
@@ -1021,7 +1064,9 @@ class _OpenQuestionFields extends StatelessWidget {
           }),
           const SizedBox(height: 18),
           _QuizGradientButton(
-            label: answered ? 'Răspuns verificat' : 'Verifică răspunsul',
+            label: answered
+                ? 'R\u0103spuns verificat'
+                : 'Verific\u0103 r\u0103spunsul',
             icon: answered ? Icons.check_rounded : Icons.task_alt_rounded,
             gradient: const LinearGradient(
               colors: [Color(0xFF7C3AED), Color(0xFF22D3EE)],
@@ -1034,7 +1079,7 @@ class _OpenQuestionFields extends StatelessWidget {
   }
 }
 
-// ─── Feedback ─────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Feedback â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class _FeedbackBar extends StatelessWidget {
   final bool isCorrect;
@@ -1066,8 +1111,8 @@ class _FeedbackBar extends StatelessWidget {
     final label = isCorrect
         ? 'Corect!'
         : isPartiallyCorrect
-        ? 'Răspuns parțial corect'
-        : 'Greșit';
+        ? 'R\u0103spuns par\u021bial corect'
+        : 'Gre\u0219it';
 
     return ClipRRect(
       child: BackdropFilter(
@@ -1107,8 +1152,8 @@ class _FeedbackBar extends StatelessWidget {
                 const SizedBox(height: 10),
                 Text(
                   isPartiallyCorrect
-                      ? 'Explicație și răspunsuri corecte:'
-                      : 'Răspuns corect:',
+                      ? 'Explica\u021bie \u0219i r\u0103spunsuri corecte:'
+                      : 'R\u0103spuns corect:',
                   style: GoogleFonts.exo2(
                     fontSize: 13,
                     fontWeight: FontWeight.w600,
@@ -1127,7 +1172,7 @@ class _FeedbackBar extends StatelessWidget {
               ],
               const SizedBox(height: 16),
               _QuizGradientButton(
-                label: isLast ? 'Vezi rezultatele' : 'Continuă',
+                label: isLast ? 'Vezi rezultatele' : 'Continu\u0103',
                 icon: Icons.arrow_forward_rounded,
                 gradient: LinearGradient(
                   colors: isCorrect
@@ -1229,7 +1274,7 @@ class _QuizOutlinedButton extends StatelessWidget {
   }
 }
 
-// ─── Results ──────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 class _ResultScreen extends StatefulWidget {
   final String chapterTitle;
@@ -1239,6 +1284,8 @@ class _ResultScreen extends StatefulWidget {
   final int totalCount;
   final bool isFinalModuleQuiz;
   final bool isLessonExercise;
+  final bool isInitialPlacementQuiz;
+  final bool requiresAcceleratedThreshold;
   final String title;
   final VoidCallback onRetry;
   final VoidCallback onFinish;
@@ -1251,6 +1298,8 @@ class _ResultScreen extends StatefulWidget {
     required this.totalCount,
     required this.isFinalModuleQuiz,
     required this.isLessonExercise,
+    required this.isInitialPlacementQuiz,
+    required this.requiresAcceleratedThreshold,
     required this.title,
     required this.onRetry,
     required this.onFinish,
@@ -1269,8 +1318,10 @@ class _ResultScreenState extends State<_ResultScreen> {
         ? 0.0
         : widget.correctCount / widget.totalCount;
     final pctInt = (pct * 100).round();
+    final requiredPct = widget.requiresAcceleratedThreshold ? 0.90 : 0.75;
+    final requiredPctInt = (requiredPct * 100).round();
     final isPerfect = widget.correctCount == widget.totalCount;
-    final isPassed = pct >= 0.75;
+    final isPassed = pct >= requiredPct;
 
     final accentColor = isPerfect
         ? const Color(0xFFFFD700)
@@ -1279,15 +1330,15 @@ class _ResultScreenState extends State<_ResultScreen> {
         : const Color(0xFFEF4444);
 
     final passedTarget = widget.isFinalModuleQuiz
-        ? 'următorul modul'
+        ? 'urm\u0103torul modul'
         : widget.isLessonExercise
-        ? 'lecția următoare'
-        : 'următorul capitol';
+        ? 'lec\u021bia urm\u0103toare'
+        : 'urm\u0103torul capitol';
     final message = isPerfect
-        ? 'Perfect! Ai răspuns corect la toate!'
+        ? 'Perfect! Ai r\u0103spuns corect la toate!'
         : isPassed
-        ? 'Felicitări! Ai obținut cel puțin 75% și $passedTarget este deblocat.'
-        : 'Ai nevoie de cel puțin 75% pentru a debloca $passedTarget. Încearcă din nou!';
+        ? 'Felicit\u0103ri! Ai ob\u021binut cel pu\u021bin $requiredPctInt% \u0219i $passedTarget este deblocat.'
+        : 'Ai nevoie de cel pu\u021bin $requiredPctInt% pentru a debloca $passedTarget. \u00cencearc\u0103 din nou!';
 
     return _QuizCosmicShell(
       child: Column(
@@ -1406,7 +1457,7 @@ class _ResultScreenState extends State<_ResultScreen> {
                                 ),
                                 const SizedBox(width: 10),
                                 Text(
-                                  'Analiză pe întrebări',
+                                  'Analiz\u0103 pe \u00eentreb\u0103ri',
                                   style: GoogleFonts.exo2(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w700,
@@ -1461,13 +1512,15 @@ class _ResultScreenState extends State<_ResultScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 _QuizGradientButton(
-                  label: isPassed
+                  label: widget.isInitialPlacementQuiz
+                      ? '\u00cencepe aventura AstroLab'
+                      : isPassed
                       ? widget.isFinalModuleQuiz
-                            ? 'Înapoi la modul'
+                            ? '\u00cenapoi la modul'
                             : widget.isLessonExercise
-                            ? 'Înapoi la lecție'
-                            : 'Înapoi la capitol'
-                      : 'Înapoi (încearcă din nou)',
+                            ? '\u00cenapoi la lec\u021bie'
+                            : '\u00cenapoi la capitol'
+                      : '\u00cenapoi la capitol',
                   icon: Icons.check_rounded,
                   gradient: LinearGradient(
                     colors: isPassed
@@ -1476,11 +1529,13 @@ class _ResultScreenState extends State<_ResultScreen> {
                   ),
                   onPressed: widget.onFinish,
                 ),
-                const SizedBox(height: 10),
-                _QuizOutlinedButton(
-                  label: 'Refă quiz-ul',
-                  onPressed: widget.onRetry,
-                ),
+                if (!widget.isInitialPlacementQuiz) ...[
+                  const SizedBox(height: 10),
+                  _QuizOutlinedButton(
+                    label: 'Ref\u0103 quiz-ul',
+                    onPressed: widget.onRetry,
+                  ),
+                ],
               ],
             ),
           ),
@@ -1516,7 +1571,7 @@ class _AnalysisTile extends StatelessWidget {
               attempt.selectedAnswer >= 0 &&
               attempt.selectedAnswer < q.options.length
         ? q.options[attempt.selectedAnswer].text
-        : '—';
+        : '\u2014';
     final ok = isOpen
         ? q != null
               ? [
@@ -1530,7 +1585,7 @@ class _AnalysisTile extends StatelessWidget {
               attempt.correctAnswer >= 0 &&
               attempt.correctAnswer < q.options.length
         ? q.options[attempt.correctAnswer].text
-        : '—';
+        : '\u2014';
 
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
@@ -1558,8 +1613,8 @@ class _AnalysisTile extends StatelessWidget {
               Expanded(
                 child: Text(
                   attempt.isPartiallyCorrect
-                      ? 'Întrebarea ${index + 1} - parțial corect'
-                      : 'Întrebarea ${index + 1}',
+                      ? '\u00centrebarea ${index + 1} - par\u021bial corect'
+                      : '\u00centrebarea ${index + 1}',
                   style: GoogleFonts.exo2(
                     fontSize: 12,
                     fontWeight: FontWeight.w800,
@@ -1581,7 +1636,7 @@ class _AnalysisTile extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'Răspunsul tău:',
+            'R\u0103spunsul t\u0103u:',
             style: GoogleFonts.exo2(
               fontSize: 12,
               fontWeight: FontWeight.w600,
@@ -1601,7 +1656,7 @@ class _AnalysisTile extends StatelessWidget {
             const SizedBox(height: 6),
             Text(
               attempt.isPartiallyCorrect
-                  ? 'Explicație și răspunsuri corecte:'
+                  ? 'Explica\u021bie \u0219i r\u0103spunsuri corecte:'
                   : 'Corect:',
               style: GoogleFonts.exo2(
                 fontSize: 12,

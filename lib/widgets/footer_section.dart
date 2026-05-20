@@ -9,9 +9,9 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final w        = MediaQuery.sizeOf(context).width;
-    final isMobile = w < 600;
-    final hPad     = isMobile ? 20.0 : (w < 1024 ? 48.0 : 80.0);
+    final w = MediaQuery.sizeOf(context).width;
+    final isMobile = w < 900;
+    final hPad = isMobile ? 20.0 : (w < 1024 ? 48.0 : 80.0);
 
     return Container(
       color: Colors.transparent,
@@ -48,14 +48,18 @@ class FooterSection extends StatelessWidget {
             fontSize: isMobile ? 22 : 28,
             fontWeight: FontWeight.w800,
             color: AppColors.textPrimary,
-            letterSpacing: -0.5,
+            letterSpacing: 0,
           ),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 14),
         const Text(
           'Alătură-te a mii de elevi care au descoperit deja\nfrumosul univers prin AstroLab.',
-          style: TextStyle(fontSize: 15, color: AppColors.textSecondary, height: 1.6),
+          style: TextStyle(
+            fontSize: 15,
+            color: AppColors.textSecondary,
+            height: 1.6,
+          ),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
@@ -69,10 +73,9 @@ class FooterSection extends StatelessWidget {
   );
 
   Widget _bottom(BuildContext context, bool isMobile) {
-    final logo   = _logo();
-    // Exact aceleași linkuri ca în navbar, cu aceleași acțiuni
-    final links  = _navLinks();
-    final copy   = const Text(
+    final logo = _logo();
+    final links = _navLinks();
+    final copy = const Text(
       '© 2026 AstroLab. Toate drepturile rezervate.',
       style: TextStyle(fontSize: 11, color: AppColors.textMuted),
       textAlign: TextAlign.center,
@@ -92,13 +95,7 @@ class FooterSection extends StatelessWidget {
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        logo,
-        const Spacer(),
-        links,
-        const Spacer(),
-        copy,
-      ],
+      children: [logo, const Spacer(), links, const Spacer(), copy],
     );
   }
 
@@ -110,40 +107,41 @@ class FooterSection extends StatelessWidget {
         ClipOval(child: AppPlanetLogo(size: 34)),
         const SizedBox(width: 10),
         RichText(
-          text: const TextSpan(children: [
-            TextSpan(
-              text: 'ASTRO',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w900,
-                color: AppColors.textPrimary,
-                letterSpacing: 0.8,
+          text: const TextSpan(
+            children: [
+              TextSpan(
+                text: 'ASTRO',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w900,
+                  color: AppColors.textPrimary,
+                  letterSpacing: 0.8,
+                ),
               ),
-            ),
-            TextSpan(
-              text: 'LAB',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w900,
-                color: AppColors.primary,
-                letterSpacing: 0.8,
+              TextSpan(
+                text: 'LAB',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w900,
+                  color: AppColors.primary,
+                  letterSpacing: 0.8,
+                ),
               ),
-            ),
-          ]),
+            ],
+          ),
         ),
       ],
     ),
   );
 
-  // Exact aceleași linkuri + acțiuni ca navbar
   Widget _navLinks() => Wrap(
     spacing: 8,
     runSpacing: 4,
     alignment: WrapAlignment.center,
     children: [
-      _link('Acasă',   'hero'),
+      _link('Acasă', 'hero'),
       _link('Funcții', 'features'),
-      _link('Despre',  'about'),
+      _link('Despre', 'about'),
     ],
   );
 
