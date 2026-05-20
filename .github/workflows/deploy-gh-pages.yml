@@ -42,20 +42,38 @@ jobs:
       - name: Verify required build secrets
         env:
           FIREBASE_API_KEY_WEB: ${{ secrets.FIREBASE_API_KEY_WEB }}
+          FIREBASE_API_KEY_ANDROID: ${{ secrets.FIREBASE_API_KEY_ANDROID }}
+          FIREBASE_API_KEY_IOS: ${{ secrets.FIREBASE_API_KEY_IOS }}
+          FIREBASE_APP_ID_ANDROID: ${{ secrets.FIREBASE_APP_ID_ANDROID }}
+          FIREBASE_APP_ID_IOS: ${{ secrets.FIREBASE_APP_ID_IOS }}
           FIREBASE_APP_ID_WEB: ${{ secrets.FIREBASE_APP_ID_WEB }}
+          FIREBASE_APP_ID_WINDOWS: ${{ secrets.FIREBASE_APP_ID_WINDOWS }}
           FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
           FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
+          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
           FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
+          FIREBASE_IOS_BUNDLE_ID: ${{ secrets.FIREBASE_IOS_BUNDLE_ID }}
           FIREBASE_DB_URL: ${{ secrets.FIREBASE_DB_URL }}
+          GOOGLE_WEB_CLIENT_ID: ${{ secrets.GOOGLE_WEB_CLIENT_ID }}
+          ASTRONOMY_API_APP_ID: ${{ secrets.ASTRONOMY_API_APP_ID }}
+          ASTRONOMY_API_APP_SECRET: ${{ secrets.ASTRONOMY_API_APP_SECRET }}
+          OAUTH_CALLBACK_SCHEME: ${{ secrets.OAUTH_CALLBACK_SCHEME }}
+          GOOGLE_DESKTOP_CLIENT_ID: ${{ secrets.GOOGLE_DESKTOP_CLIENT_ID }}
+          GOOGLE_DESKTOP_CLIENT_SECRET: ${{ secrets.GOOGLE_DESKTOP_CLIENT_SECRET }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           missing=0
-          for name in FIREBASE_API_KEY_WEB FIREBASE_APP_ID_WEB FIREBASE_MESSAGING_SENDER_ID FIREBASE_PROJECT_ID FIREBASE_AUTH_DOMAIN FIREBASE_DB_URL; do
-            if [ -z "${!name}" ]; then
-              echo "::error::$name is missing or empty"
+          vars=("FIREBASE_API_KEY_WEB" "FIREBASE_API_KEY_ANDROID" "FIREBASE_API_KEY_IOS" "FIREBASE_APP_ID_ANDROID" "FIREBASE_APP_ID_IOS" "FIREBASE_APP_ID_WEB" "FIREBASE_APP_ID_WINDOWS" "FIREBASE_MESSAGING_SENDER_ID" "FIREBASE_PROJECT_ID" "FIREBASE_STORAGE_BUCKET" "FIREBASE_AUTH_DOMAIN" "FIREBASE_IOS_BUNDLE_ID" "FIREBASE_DB_URL" "GOOGLE_WEB_CLIENT_ID" "ASTRONOMY_API_APP_ID" "ASTRONOMY_API_APP_SECRET" "OAUTH_CALLBACK_SCHEME" "GOOGLE_DESKTOP_CLIENT_ID" "GOOGLE_DESKTOP_CLIENT_SECRET" "GEMINI_API_KEY")
+          for var_name in "${vars[@]}"; do
+            if [ -z "${!var_name}" ]; then
+              echo "::error::Secret $var_name is missing or empty"
               missing=1
             fi
           done
-          exit $missing
+          if [ $missing -eq 1 ]; then
+            echo "::error::Unul sau mai multe secrete lipsesc."
+            exit 1
+          fi
 
       - name: Build Flutter Web
         run: |
@@ -91,11 +109,9 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
