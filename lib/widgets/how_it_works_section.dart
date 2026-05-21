@@ -7,10 +7,30 @@ class HowItWorksSection extends StatelessWidget {
   const HowItWorksSection({super.key, required this.onNavigate});
 
   static const List<Map<String, String>> _steps = [
-    {'number': '01', 'title': 'Creează cont',       'desc': 'Înregistrare rapidă cu email, Google sau Apple. Gratuit și fără abonamente ascunse.'},
-    {'number': '02', 'title': 'Alege traseul',      'desc': 'Sistem solar, stele, cosmologie sau astrofizică avansată. Tu decizi de unde începi.'},
-    {'number': '03', 'title': 'Completează lecții', 'desc': 'Lecții scurte, simulări interactive și provocări după fiecare capitol.'},
-    {'number': '04', 'title': 'Urmărește progresul','desc': 'Dashboard personal cu statistici detaliate, insigne câștigate și obiective viitoare.'},
+    {
+      'number': '01',
+      'title': 'Îți configurezi profilul',
+      'desc':
+      'Îți alegi username-ul, clasa și nivelul de cunoștințe, iar aplicația îți salvează progresul în cont.',
+    },
+    {
+      'number': '02',
+      'title': 'Susții testul inițial',
+      'desc':
+      'AstroLab îți stabilește nivelul potrivit și te conduce către capitolul de la care are sens să continui.',
+    },
+    {
+      'number': '03',
+      'title': 'Parcurgi lecțiile și exercițiile',
+      'desc':
+      'Explorezi lecțiile, exercițiile aplicative și quiz-urile, cu analiză detaliată după fiecare evaluare.',
+    },
+    {
+      'number': '04',
+      'title': 'Obții puncte și diplome',
+      'desc':
+      'Urcă în clasament, compară-ți progresul cu al prietenilor și primește diplome PDF pentru capitolele și modulele finalizate.',
+    },
   ];
 
   @override
@@ -25,14 +45,21 @@ class HowItWorksSection extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: hPad, vertical: 96),
       child: Column(
         children: [
-          const Text('CUM FUNCȚIONEAZĂ',
-              style: TextStyle(
-                  fontSize: 10, letterSpacing: 4,
-                  color: AppColors.primary, fontWeight: FontWeight.w600)),
+          const Text(
+            'CUM FUNCȚIONEAZĂ',
+            style: TextStyle(
+              fontSize: 10,
+              letterSpacing: 4,
+              color: AppColors.primary,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           const SizedBox(height: 14),
-          const Text('4 pași simpli spre stele',
-              style: AppTextStyles.sectionTitle,
-              textAlign: TextAlign.center),
+          const Text(
+            'De la testul inițial la diplomă',
+            style: AppTextStyles.sectionTitle,
+            textAlign: TextAlign.center,
+          ),
           const SizedBox(height: 60),
           isMobile ? _vertical() : _horizontal(),
           const SizedBox(height: 56),
@@ -68,10 +95,7 @@ class HowItWorksSection extends StatelessWidget {
             ),
           );
         }
-        return Expanded(
-          flex: 3,
-          child: _StepCard(data: _steps[i ~/ 2]),
-        );
+        return Expanded(flex: 3, child: _StepCard(data: _steps[i ~/ 2]));
       }),
     );
   }
@@ -116,7 +140,11 @@ class _StepCard extends StatelessWidget {
     if (horizontal) {
       return Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [_numBox(), const SizedBox(width: 18), Expanded(child: _text())],
+        children: [
+          _numBox(),
+          const SizedBox(width: 18),
+          Expanded(child: _text()),
+        ],
       );
     }
     return Column(
@@ -130,19 +158,23 @@ class _StepCard extends StatelessWidget {
     height: 56,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(16),
-      gradient: LinearGradient(colors: [
-        AppColors.primary.withOpacity(0.2),
-        AppColors.primary.withOpacity(0.05),
-      ]),
-      border: Border.all(
-          color: AppColors.primary.withOpacity(0.3), width: 1),
+      gradient: LinearGradient(
+        colors: [
+          AppColors.primary.withOpacity(0.2),
+          AppColors.primary.withOpacity(0.05),
+        ],
+      ),
+      border: Border.all(color: AppColors.primary.withOpacity(0.3), width: 1),
     ),
     child: Center(
-      child: Text(data['number']!,
-          style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-              color: AppColors.primary)),
+      child: Text(
+        data['number']!,
+        style: const TextStyle(
+          fontSize: 15,
+          fontWeight: FontWeight.w800,
+          color: AppColors.primary,
+        ),
+      ),
     ),
   );
 

@@ -61,7 +61,6 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
               kind: _DiplomaKind.chapter,
               title: 'Capitolul ${chapter.number}',
               subtitle: chapter.title,
-              completedTitle: 'Capitolul ${chapter.number}: ${chapter.title}',
               certificateTitle: chapter.title,
               templateAsset: 'diploma_capitol',
               name: studentName,
@@ -78,7 +77,6 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
             kind: _DiplomaKind.module,
             title: 'Modulul ${module.number}',
             subtitle: module.title,
-            completedTitle: 'Modulul ${module.number}: ${module.title}',
             certificateTitle: module.title,
             templateAsset: 'diploma_modul',
             name: studentName,
@@ -156,6 +154,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
       min: 9,
       maxChars: 44,
     );
+    final regularFont = await PdfGoogleFonts.notoSansRegular();
+    final boldFont = await PdfGoogleFonts.notoSansBold();
 
     pdf.addPage(
       pw.Page(
@@ -173,6 +173,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                   entry.name,
                   maxLines: 1,
                   style: pw.TextStyle(
+                    font: boldFont,
+                    fontFallback: [regularFont],
                     fontSize: nameFontSize,
                     fontWeight: pw.FontWeight.bold,
                     color: PdfColor.fromHex('#2D0A4E'),
@@ -190,6 +192,8 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
                   entry.certificateTitle,
                   maxLines: 2,
                   style: pw.TextStyle(
+                    font: boldFont,
+                    fontFallback: [regularFont],
                     fontSize: titleFontSize,
                     fontWeight: pw.FontWeight.bold,
                     color: PdfColor.fromHex('#2D0A4E'),
@@ -569,7 +573,6 @@ class _DiplomaEntry {
   final _DiplomaKind kind;
   final String title;
   final String subtitle;
-  final String completedTitle;
   final String certificateTitle;
   final String templateAsset;
   final String name;
@@ -580,7 +583,6 @@ class _DiplomaEntry {
     required this.kind,
     required this.title,
     required this.subtitle,
-    required this.completedTitle,
     required this.certificateTitle,
     required this.templateAsset,
     required this.name,

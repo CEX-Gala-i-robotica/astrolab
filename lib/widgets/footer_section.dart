@@ -43,7 +43,7 @@ class FooterSection extends StatelessWidget {
     child: Column(
       children: [
         Text(
-          'Pregătit să explorezi cosmosul?',
+          'Ești pregătit să începi aventura AstroLab?',
           style: TextStyle(
             fontSize: isMobile ? 22 : 28,
             fontWeight: FontWeight.w800,
@@ -54,7 +54,7 @@ class FooterSection extends StatelessWidget {
         ),
         const SizedBox(height: 14),
         const Text(
-          'Alătură-te a mii de elevi care au descoperit deja\nfrumosul univers prin AstroLab.',
+          'Parcurge lecțiile, rezolvă exercițiile, urcă în clasament\nși deblochează diplomele pentru progresul tău complet.',
           style: TextStyle(
             fontSize: 15,
             color: AppColors.textSecondary,

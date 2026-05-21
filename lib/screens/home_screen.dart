@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:astrolab/theme/app_theme.dart';
 import '../widgets/navbar.dart';
 import '../widgets/hero_section.dart';
 import '../widgets/features_section.dart';
 import '../widgets/how_it_works_section.dart';
 import '../widgets/about_section.dart';
+import '../widgets/download_section.dart';
 import '../widgets/footer_section.dart';
 import '../widgets/cosmic_background.dart';
 import '../services/auth_service.dart';
@@ -69,7 +71,10 @@ class _HomeScreenState extends State<HomeScreen> {
     final session = await SessionService.load();
     if (!mounted) return;
 
-    if (session != null && session.rememberMe && session.loggedIn && session.uid.isNotEmpty) {
+    if (session != null &&
+        session.rememberMe &&
+        session.loggedIn &&
+        session.uid.isNotEmpty) {
       var token = session.idToken;
       var refreshToken = session.refreshToken;
       if (refreshToken.isNotEmpty) {
@@ -89,7 +94,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
       if (token.isNotEmpty) {
         await ProgressService.configureRemote(uid: session.uid, token: token);
-        final needsSetup = await AuthService.needsProfileSetup(token, session.uid);
+        final needsSetup = await AuthService.needsProfileSetup(
+          token,
+          session.uid,
+        );
         if (!mounted) return;
         Navigator.of(context).push(
           PageRouteBuilder(
@@ -161,6 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     HowItWorksSection(onNavigate: _handleNavigate),
                     AboutSection(key: _aboutKey, onNavigate: _handleNavigate),
+                    if (kIsWeb) const DownloadSection(),
                     FooterSection(onNavigate: _handleNavigate),
                   ],
                 ),

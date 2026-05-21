@@ -46,3 +46,6 @@ app.*.map.json
 
 
 .env
+
+# Local release artifacts
+/installers/

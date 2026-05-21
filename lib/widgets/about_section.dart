@@ -27,13 +27,10 @@ class AboutSection extends StatelessWidget {
               AppColors.primary.withOpacity(0.05),
             ],
           ),
-          border:
-          Border.all(color: AppColors.primary.withOpacity(0.18), width: 1),
+          border: Border.all(color: AppColors.primary.withOpacity(0.18)),
         ),
         padding: EdgeInsets.all(isMobile ? 28 : 56),
-        child: isMobile
-            ? _mobile()
-            : _desktop(),
+        child: isMobile ? _mobile() : _desktop(),
       ),
     );
   }
@@ -54,21 +51,28 @@ class AboutSection extends StatelessWidget {
   Widget _content() => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Text('DESPRE ASTROLAB',
-          style: TextStyle(
-              fontSize: 10, letterSpacing: 4,
-              color: AppColors.primary, fontWeight: FontWeight.w600)),
-      const SizedBox(height: 18),
-      const Text('Facem astrofizica accesibilă pentru toți',
-          style: AppTextStyles.sectionTitle),
+      const Text(
+        'DESPRE ASTROLAB',
+        style: TextStyle(
+          fontSize: 10,
+          letterSpacing: 4,
+          color: AppColors.primary,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
       const SizedBox(height: 18),
       const Text(
-        'AstroLab a fost creat pentru elevi, studenți și pasionați care vor să înțeleagă universul fără a se pierde în formule complicate. Transformăm concepte complexe de astrofizică în experiențe vizuale intuitive și captivante.',
+        'O platformă de învățare pentru astronomie, construită cu grijă',
+        style: AppTextStyles.sectionTitle,
+      ),
+      const SizedBox(height: 18),
+      const Text(
+        'AstroLab îmbină un curriculum în limba română, evaluări punctate, analiză detaliată a răspunsurilor și progres sincronizat în clasament. Elevul învață pas cu pas, poate avansa prin evaluare atunci când este pregătit și revine oricând la istoricul testelor.',
         style: AppTextStyles.sectionSubtitle,
       ),
       const SizedBox(height: 12),
       const Text(
-        'Construită cu Flutter pentru o experiență nativă pe iOS, Android și Web — AstroLab aduce aceleași instrumente de calitate pe orice dispozitiv.',
+        'Aplicația include clasamente, sistem de prieteni, diplome pentru progres complet și Colțul curioșilor, unde poți afla informații astronomice',
         style: AppTextStyles.sectionSubtitle,
       ),
       const SizedBox(height: 32),
@@ -83,40 +87,61 @@ class AboutSection extends StatelessWidget {
   );
 
   Widget _techStack() {
-    final techs = ['Flutter', 'Dart', 'AR/VR', 'Cross-platform', 'Offline'];
+    final techs = [
+      'Flutter',
+      'Certificate PDF',
+      'Clasamente',
+      'Evaluări inteligente',
+      'Curiozități'
+    ];
     return Wrap(
       spacing: 8,
       runSpacing: 8,
       children: techs
-          .map((t) => Container(
-        padding:
-        const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
-        decoration: BoxDecoration(
-          color: AppColors.primary.withOpacity(0.08),
-          borderRadius: BorderRadius.circular(50),
-          border: Border.all(
-              color: AppColors.primary.withOpacity(0.22), width: 0.5),
-        ),
-        child: Text(t,
+          .map(
+            (text) => Container(
+          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
+          decoration: BoxDecoration(
+            color: AppColors.primary.withOpacity(0.08),
+            borderRadius: BorderRadius.circular(50),
+            border: Border.all(
+              color: AppColors.primary.withOpacity(0.22),
+              width: 0.5,
+            ),
+          ),
+          child: Text(
+            text,
             style: const TextStyle(
-                fontSize: 12,
-                color: AppColors.secondary,
-                fontWeight: FontWeight.w500)),
-      ))
+              fontSize: 12,
+              color: AppColors.secondary,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ),
+      )
           .toList(),
     );
   }
 
   Widget _cards() => Column(
     children: [
-      _infoCard(Icons.school_rounded, 'Audiență țintă',
-          'Elevi (12+), studenți și pasionați de astronomie de toate vârstele.'),
+      _infoCard(
+        Icons.menu_book_rounded,
+        'Curriculum complet',
+        '15 capitole, 69 de lecții, 41 de exerciții aplicative și 15 quiz-uri și teste finale.',
+      ),
       const SizedBox(height: 14),
-      _infoCard(Icons.devices_rounded, 'Cross-platform',
-          'Disponibil pe iOS, Android și Web cu sincronizare completă a progresului.'),
+      _infoCard(
+        Icons.account_tree_rounded,
+        'Progres personalizat',
+        'Test inițial, echivalare automată a nivelului, avansare prin evaluare și reluare din ultimul punct studiat.',
+      ),
       const SizedBox(height: 14),
-      _infoCard(Icons.translate_rounded, 'Conținut în română',
-          'Toate lecțiile, testele și simulările sunt disponibile integral în limba română.'),
+      _infoCard(
+        Icons.groups_rounded,
+        'Experiență socială',
+        'Username, prieteni, clasament global, clasament între prieteni și diplome pentru realizările obținute.',
+      ),
     ],
   );
 
@@ -126,7 +151,9 @@ class AboutSection extends StatelessWidget {
       color: AppColors.background.withOpacity(0.55),
       borderRadius: BorderRadius.circular(16),
       border: Border.all(
-          color: AppColors.primary.withOpacity(0.13), width: 0.5),
+        color: AppColors.primary.withOpacity(0.13),
+        width: 0.5,
+      ),
     ),
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,9 +172,10 @@ class AboutSection extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(title,
-                  style: AppTextStyles.cardTitle
-                      .copyWith(fontSize: 14)),
+              Text(
+                title,
+                style: AppTextStyles.cardTitle.copyWith(fontSize: 14),
+              ),
               const SizedBox(height: 4),
               Text(desc, style: AppTextStyles.cardBody),
             ],
