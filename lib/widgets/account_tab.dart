@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:astrolab/theme/app_theme.dart';
+import '../screens/AchievementsScreen.dart';
 import '../services/auth_service.dart';
 import '../services/session_service.dart';
 import '../screens/profile_edit_screen.dart';
@@ -27,13 +28,15 @@ class _AccountTabState extends State<AccountTab> {
   late String _email;
   late String _firstName;
   late String _lastName;
+  String _uid   = '';
+  String _token = '';
 
   @override
   void initState() {
     super.initState();
-    _email = widget.email;
+    _email     = widget.email;
     _firstName = widget.firstName;
-    _lastName = widget.lastName;
+    _lastName  = widget.lastName;
     _loadProfile();
   }
 
@@ -41,44 +44,41 @@ class _AccountTabState extends State<AccountTab> {
     final session = await SessionService.load();
     final profile = await AuthService.loadProfile(
       token: session?.token ?? '',
-      uid: session?.uid ?? '',
+      uid:   session?.uid   ?? '',
     );
 
-    final firstName =
-        profile?['firstName']?.toString() ?? session?.firstName ?? _firstName;
-    final lastName =
-        profile?['lastName']?.toString() ?? session?.lastName ?? _lastName;
-    final email = profile?['email']?.toString() ?? session?.email ?? _email;
-    final username =
-        profile?['username']?.toString() ?? session?.username ?? '';
-    final birthDate =
-        profile?['birthDate']?.toString() ?? session?.birthDate ?? '';
-    final phone = profile?['phone']?.toString() ?? session?.phone ?? '';
-    final classValue =
-        profile?['class']?.toString() ?? session?.classValue ?? '5';
+    final firstName  = profile?['firstName']?.toString() ?? session?.firstName  ?? _firstName;
+    final lastName   = profile?['lastName']?.toString()  ?? session?.lastName   ?? _lastName;
+    final email      = profile?['email']?.toString()     ?? session?.email      ?? _email;
+    final username   = profile?['username']?.toString()  ?? session?.username   ?? '';
+    final birthDate  = profile?['birthDate']?.toString() ?? session?.birthDate  ?? '';
+    final phone      = profile?['phone']?.toString()     ?? session?.phone      ?? '';
+    final classValue = profile?['class']?.toString()     ?? session?.classValue ?? '5';
 
     if (profile != null) {
       await SessionService.updateProfile(
-        firstName: firstName,
-        lastName: lastName,
-        username: username,
-        birthDate: birthDate,
-        phone: phone,
+        firstName:  firstName,
+        lastName:   lastName,
+        username:   username,
+        birthDate:  birthDate,
+        phone:      phone,
         classValue: classValue,
       );
     }
 
     if (!mounted) return;
     setState(() {
-      _email = email;
+      _email     = email;
       _firstName = firstName;
-      _lastName = lastName;
+      _lastName  = lastName;
+      _uid       = session?.uid   ?? '';
+      _token     = session?.token ?? '';
     });
   }
 
   String get _initials {
-    final f = _firstName.trim();
-    final l = _lastName.trim();
+    final f  = _firstName.trim();
+    final l  = _lastName.trim();
     final fi = f.isNotEmpty ? f[0].toUpperCase() : '';
     final li = l.isNotEmpty ? l[0].toUpperCase() : '';
     return '$fi$li'.isEmpty
@@ -95,7 +95,7 @@ class _AccountTabState extends State<AccountTab> {
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
+    final width    = MediaQuery.sizeOf(context).width;
     final isMobile = width < 600;
     final double maxWidth = width < 480
         ? double.infinity
@@ -221,6 +221,22 @@ class _AccountTabState extends State<AccountTab> {
                         ),
                       ),
                     ),
+                    _divider(),
+                    _accountRow(
+                      icon: Icons.workspace_premium_rounded,
+                      label: 'Realizări',
+                      subtitle: 'Vezi certificatele obținute',
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => AchievementsScreen(
+                            uid:       _uid,
+                            token:     _token,
+                            firstName: _firstName,
+                            lastName:  _lastName,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -281,45 +297,46 @@ class _AccountTabState extends State<AccountTab> {
     required String label,
     required String subtitle,
     required VoidCallback onTap,
-  }) => InkWell(
-    onTap: onTap,
-    borderRadius: BorderRadius.circular(18),
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      child: Row(
-        children: [
-          Icon(icon, color: AppColors.textSecondary, size: 20),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(
-                    fontSize: 14,
-                    color: AppColors.textPrimary,
-                    fontWeight: FontWeight.w600,
-                  ),
+  }) =>
+      InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(18),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          child: Row(
+            children: [
+              Icon(icon, color: AppColors.textSecondary, size: 20),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      label,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        color: AppColors.textPrimary,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      subtitle,
+                      style: const TextStyle(
+                        fontSize: 11,
+                        color: AppColors.textMuted,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 2),
-                Text(
-                  subtitle,
-                  style: const TextStyle(
-                    fontSize: 11,
-                    color: AppColors.textMuted,
-                  ),
-                ),
-              ],
-            ),
+              ),
+              Icon(
+                Icons.chevron_right_rounded,
+                color: AppColors.textMuted,
+                size: 18,
+              ),
+            ],
           ),
-          Icon(
-            Icons.chevron_right_rounded,
-            color: AppColors.textMuted,
-            size: 18,
-          ),
-        ],
-      ),
-    ),
-  );
+        ),
+      );
 }
