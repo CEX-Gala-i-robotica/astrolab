@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:astrolab/theme/app_theme.dart';
 import '../screens/AchievementsScreen.dart';
-import '../services/auth_service.dart';
 import '../services/session_service.dart';
 import '../screens/profile_edit_screen.dart';
 import '../screens/test_history_screen.dart';
@@ -11,6 +10,7 @@ class AccountTab extends StatefulWidget {
   final String firstName;
   final String lastName;
   final VoidCallback onSignOut;
+  final Future<void> Function() onProfileUpdated;
 
   const AccountTab({
     super.key,
@@ -18,6 +18,7 @@ class AccountTab extends StatefulWidget {
     required this.firstName,
     required this.lastName,
     required this.onSignOut,
+    required this.onProfileUpdated,
   });
 
   @override
@@ -25,70 +26,38 @@ class AccountTab extends StatefulWidget {
 }
 
 class _AccountTabState extends State<AccountTab> {
-  late String _email;
-  late String _firstName;
-  late String _lastName;
   String _uid   = '';
   String _token = '';
 
   @override
   void initState() {
     super.initState();
-    _email     = widget.email;
-    _firstName = widget.firstName;
-    _lastName  = widget.lastName;
-    _loadProfile();
+    _loadUidToken();
   }
 
-  Future<void> _loadProfile() async {
+  Future<void> _loadUidToken() async {
     final session = await SessionService.load();
-    final profile = await AuthService.loadProfile(
-      token: session?.token ?? '',
-      uid:   session?.uid   ?? '',
-    );
-
-    final firstName  = profile?['firstName']?.toString() ?? session?.firstName  ?? _firstName;
-    final lastName   = profile?['lastName']?.toString()  ?? session?.lastName   ?? _lastName;
-    final email      = profile?['email']?.toString()     ?? session?.email      ?? _email;
-    final username   = profile?['username']?.toString()  ?? session?.username   ?? '';
-    final birthDate  = profile?['birthDate']?.toString() ?? session?.birthDate  ?? '';
-    final phone      = profile?['phone']?.toString()     ?? session?.phone      ?? '';
-    final classValue = profile?['class']?.toString()     ?? session?.classValue ?? '5';
-
-    if (profile != null) {
-      await SessionService.updateProfile(
-        firstName:  firstName,
-        lastName:   lastName,
-        username:   username,
-        birthDate:  birthDate,
-        phone:      phone,
-        classValue: classValue,
-      );
-    }
-
     if (!mounted) return;
     setState(() {
-      _email     = email;
-      _firstName = firstName;
-      _lastName  = lastName;
-      _uid       = session?.uid   ?? '';
-      _token     = session?.token ?? '';
+      _uid   = session?.uid   ?? '';
+      _token = session?.token ?? '';
     });
   }
 
   String get _initials {
-    final f  = _firstName.trim();
-    final l  = _lastName.trim();
+    final f  = widget.firstName.trim();
+    final l  = widget.lastName.trim();
     final fi = f.isNotEmpty ? f[0].toUpperCase() : '';
     final li = l.isNotEmpty ? l[0].toUpperCase() : '';
-    return '$fi$li'.isEmpty
-        ? (_email.isNotEmpty ? _email[0].toUpperCase() : '?')
-        : '$fi$li';
+    final result = '$fi$li';
+    return result.isEmpty
+        ? (widget.email.isNotEmpty ? widget.email[0].toUpperCase() : '?')
+        : result;
   }
 
   String get _displayName {
-    final f = _firstName.trim();
-    final l = _lastName.trim();
+    final f = widget.firstName.trim();
+    final l = widget.lastName.trim();
     if (f.isEmpty && l.isEmpty) return 'Utilizator AstroLab';
     return '$f $l'.trim();
   }
@@ -120,12 +89,12 @@ class _AccountTabState extends State<AccountTab> {
                   color: const Color(0xFF071520),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: AppColors.primary.withOpacity(0.28),
+                    color: AppColors.primary.withValues(alpha: 0.28),
                     width: 1,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: AppColors.primary.withOpacity(0.08),
+                      color: AppColors.primary.withValues(alpha: 0.08),
                       blurRadius: 32,
                       spreadRadius: 1,
                     ),
@@ -138,9 +107,9 @@ class _AccountTabState extends State<AccountTab> {
                       height: 52,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: AppColors.primary.withOpacity(0.14),
+                        color: AppColors.primary.withValues(alpha: 0.14),
                         border: Border.all(
-                          color: AppColors.primary.withOpacity(0.45),
+                          color: AppColors.primary.withValues(alpha: 0.45),
                           width: 1.5,
                         ),
                       ),
@@ -170,7 +139,7 @@ class _AccountTabState extends State<AccountTab> {
                           ),
                           const SizedBox(height: 5),
                           Text(
-                            _email,
+                            widget.email,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(
                               fontSize: 13,
@@ -191,7 +160,7 @@ class _AccountTabState extends State<AccountTab> {
                   color: const Color(0xFF071520),
                   borderRadius: BorderRadius.circular(18),
                   border: Border.all(
-                    color: AppColors.primary.withOpacity(0.18),
+                    color: AppColors.primary.withValues(alpha: 0.18),
                     width: 1,
                   ),
                 ),
@@ -207,7 +176,8 @@ class _AccountTabState extends State<AccountTab> {
                             builder: (_) => const ProfileEditScreen(),
                           ),
                         );
-                        await _loadProfile();
+                        // Notifică dashboard-ul să reîncarce datele (actualizează și TopBar)
+                        await widget.onProfileUpdated();
                       },
                     ),
                     _divider(),
@@ -231,8 +201,8 @@ class _AccountTabState extends State<AccountTab> {
                           builder: (_) => AchievementsScreen(
                             uid:       _uid,
                             token:     _token,
-                            firstName: _firstName,
-                            lastName:  _lastName,
+                            firstName: widget.firstName,
+                            lastName:  widget.lastName,
                           ),
                         ),
                       ),
@@ -259,13 +229,13 @@ class _AccountTabState extends State<AccountTab> {
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   side: BorderSide(
-                    color: Colors.redAccent.withOpacity(0.45),
+                    color: Colors.redAccent.withValues(alpha: 0.45),
                     width: 1,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  backgroundColor: Colors.redAccent.withOpacity(0.06),
+                  backgroundColor: Colors.redAccent.withValues(alpha: 0.06),
                 ),
               ),
               const SizedBox(height: 24),
@@ -288,7 +258,7 @@ class _AccountTabState extends State<AccountTab> {
 
   Widget _divider() => Divider(
     height: 0,
-    color: AppColors.primary.withOpacity(0.10),
+    color: AppColors.primary.withValues(alpha: 0.10),
     indent: 56,
   );
 

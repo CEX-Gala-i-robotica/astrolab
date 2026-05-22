@@ -35,21 +35,48 @@ class _DashboardScreenState extends State<DashboardScreen> {
   int _selectedIndex = 0;
   late bool _needsProfileSetup;
   String _firstName = '';
-  String _lastName = '';
+  String _lastName  = '';
+  String _email     = '';
 
   @override
   void initState() {
     super.initState();
+    _email             = widget.email;
     _needsProfileSetup = widget.needsProfileSetup;
     _loadProfileData();
   }
 
   Future<void> _loadProfileData() async {
     final session = await SessionService.load();
-    if (!mounted || session == null) return;
+    final profile = await AuthService.loadProfile(
+      token: session?.token ?? '',
+      uid:   session?.uid   ?? '',
+    );
+
+    final firstName  = profile?['firstName']?.toString() ?? session?.firstName  ?? '';
+    final lastName   = profile?['lastName']?.toString()  ?? session?.lastName   ?? '';
+    final email      = profile?['email']?.toString()     ?? session?.email      ?? widget.email;
+    final username   = profile?['username']?.toString()  ?? session?.username   ?? '';
+    final birthDate  = profile?['birthDate']?.toString() ?? session?.birthDate  ?? '';
+    final phone      = profile?['phone']?.toString()     ?? session?.phone      ?? '';
+    final classValue = profile?['class']?.toString()     ?? session?.classValue ?? '5';
+
+    if (profile != null) {
+      await SessionService.updateProfile(
+        firstName:  firstName,
+        lastName:   lastName,
+        username:   username,
+        birthDate:  birthDate,
+        phone:      phone,
+        classValue: classValue,
+      );
+    }
+
+    if (!mounted) return;
     setState(() {
-      _firstName = session.firstName;
-      _lastName = session.lastName;
+      _firstName = firstName;
+      _lastName  = lastName;
+      _email     = email;
     });
   }
 
@@ -68,7 +95,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
         backgroundColor: const Color(0xFF071520),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
-          side: BorderSide(color: AppColors.primary.withOpacity(0.25)),
+          side: BorderSide(color: AppColors.primary.withValues(alpha: 0.25)),
         ),
         title: const Text(
           'Deconectare',
@@ -111,24 +138,21 @@ class _DashboardScreenState extends State<DashboardScreen> {
       );
     }
 
+    // 0 → Lecții, 1 → Clasament, 2 → Colțul curioșilor, 3 → Profilul meu
     switch (_selectedIndex) {
       case 0:
         return const LessonsTab();
       case 1:
-        return const _PlaceholderTab(
-          icon: Icons.view_in_ar_rounded,
-          label: 'Laborator VR',
-        );
-      case 2:
         return LeaderboardScreen(uid: widget.uid, token: widget.idToken);
-      case 3:
+      case 2:
         return const CuriosityCornerScreen();
-      case 4:
+      case 3:
         return AccountTab(
-          email: widget.email,
+          email: _email,
           firstName: _firstName,
           lastName: _lastName,
           onSignOut: () => _confirmSignOut(context),
+          onProfileUpdated: _loadProfileData,
         );
       default:
         return const SizedBox.expand();
@@ -174,7 +198,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       );
     }
 
-    final width = MediaQuery.sizeOf(context).width;
+    final width    = MediaQuery.sizeOf(context).width;
     final isMobile = width < 600;
 
     return Scaffold(
@@ -185,7 +209,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
           SafeArea(
             child: Column(
               children: [
-                _TopBar(email: widget.email, isMobile: isMobile),
+                _TopBar(
+                  email: _email,
+                  firstName: _firstName,
+                  lastName: _lastName,
+                  isMobile: isMobile,
+                ),
                 Expanded(child: _buildBody()),
               ],
             ),
@@ -195,9 +224,9 @@ class _DashboardScreenState extends State<DashboardScreen> {
       bottomNavigationBar: _needsProfileSetup
           ? null
           : _BottomNavBar(
-              selectedIndex: _selectedIndex,
-              onTap: (i) => setState(() => _selectedIndex = i),
-            ),
+        selectedIndex: _selectedIndex,
+        onTap: (i) => setState(() => _selectedIndex = i),
+      ),
     );
   }
 }
@@ -206,9 +235,27 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
 class _TopBar extends StatelessWidget {
   final String email;
+  final String firstName;
+  final String lastName;
   final bool isMobile;
 
-  const _TopBar({required this.email, required this.isMobile});
+  const _TopBar({
+    required this.email,
+    required this.firstName,
+    required this.lastName,
+    required this.isMobile,
+  });
+
+  String get _initials {
+    final f  = firstName.trim();
+    final l  = lastName.trim();
+    final fi = f.isNotEmpty ? f[0].toUpperCase() : '';
+    final li = l.isNotEmpty ? l[0].toUpperCase() : '';
+    final result = '$fi$li';
+    return result.isEmpty
+        ? (email.isNotEmpty ? email[0].toUpperCase() : '?')
+        : result;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -218,10 +265,10 @@ class _TopBar extends StatelessWidget {
         vertical: 12,
       ),
       decoration: BoxDecoration(
-        color: const Color(0xFF071520).withOpacity(0.90),
+        color: const Color(0xFF071520).withValues(alpha: 0.90),
         border: Border(
           bottom: BorderSide(
-            color: AppColors.primary.withOpacity(0.15),
+            color: AppColors.primary.withValues(alpha: 0.15),
             width: 0.5,
           ),
         ),
@@ -260,56 +307,21 @@ class _TopBar extends StatelessWidget {
             height: isMobile ? 32 : 36,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppColors.primary.withOpacity(0.18),
-              border: Border.all(color: AppColors.primary.withOpacity(0.4)),
+              color: AppColors.primary.withValues(alpha: 0.14),
+              border: Border.all(
+                color: AppColors.primary.withValues(alpha: 0.45),
+                width: 1.5,
+              ),
             ),
             child: Center(
               child: Text(
-                email.isNotEmpty ? email[0].toUpperCase() : '?',
+                _initials,
                 style: TextStyle(
-                  fontSize: isMobile ? 13 : 15,
-                  fontWeight: FontWeight.w700,
+                  fontSize: isMobile ? 11 : 13,
+                  fontWeight: FontWeight.w800,
                   color: AppColors.primary,
                 ),
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// ── Placeholder Tab ───────────────────────────────────────────────────────────
-
-class _PlaceholderTab extends StatelessWidget {
-  final IconData icon;
-  final String label;
-
-  const _PlaceholderTab({required this.icon, required this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 52, color: AppColors.primary.withOpacity(0.30)),
-          const SizedBox(height: 16),
-          Text(
-            label,
-            style: const TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              color: AppColors.textMuted,
-            ),
-          ),
-          const SizedBox(height: 6),
-          Text(
-            'În curând',
-            style: TextStyle(
-              fontSize: 12,
-              color: AppColors.textMuted.withOpacity(0.45),
             ),
           ),
         ],
@@ -327,16 +339,15 @@ class _BottomNavBar extends StatelessWidget {
   const _BottomNavBar({required this.selectedIndex, required this.onTap});
 
   static const _items = [
-    _NavItem(icon: Icons.menu_book_rounded, label: 'Lecții'),
-    _NavItem(icon: Icons.view_in_ar_rounded, label: 'Laborator VR'),
-    _NavItem(icon: Icons.leaderboard_rounded, label: 'Clasament'),
-    _NavItem(icon: Icons.psychology_alt_rounded, label: 'Colțul curioșilor'),
-    _NavItem(icon: Icons.person_rounded, label: 'Profilul meu'),
+    _NavItem(icon: Icons.menu_book_rounded,       label: 'Lecții'),
+    _NavItem(icon: Icons.leaderboard_rounded,     label: 'Clasament'),
+    _NavItem(icon: Icons.psychology_alt_rounded,  label: 'Colțul curioșilor'),
+    _NavItem(icon: Icons.person_rounded,          label: 'Profilul meu'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.sizeOf(context).width;
+    final width    = MediaQuery.sizeOf(context).width;
     final isMobile = width < 600;
 
     return Container(
@@ -344,13 +355,13 @@ class _BottomNavBar extends StatelessWidget {
         color: const Color(0xFF071520),
         border: Border(
           top: BorderSide(
-            color: AppColors.primary.withOpacity(0.20),
+            color: AppColors.primary.withValues(alpha: 0.20),
             width: 0.5,
           ),
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primary.withOpacity(0.07),
+            color: AppColors.primary.withValues(alpha: 0.07),
             blurRadius: 20,
             offset: const Offset(0, -4),
           ),
@@ -362,12 +373,12 @@ class _BottomNavBar extends StatelessWidget {
           height: isMobile ? 62 : 68,
           child: Row(
             children: List.generate(_items.length, (i) {
-              final item = _items[i];
+              final item     = _items[i];
               final selected = i == selectedIndex;
               return Expanded(
                 child: InkWell(
                   onTap: () => onTap(i),
-                  splashColor: AppColors.primary.withOpacity(0.10),
+                  splashColor: AppColors.primary.withValues(alpha: 0.10),
                   highlightColor: Colors.transparent,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
